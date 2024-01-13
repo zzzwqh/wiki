@@ -4,18 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "eaae8c383c72e828",
+        "id": "9c3d8aada55dc65f",
         "type": "tabs",
         "children": [
           {
-            "id": "81ad5ce47a150083",
+            "id": "e81ca9131b7698dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "structure/README.md",
-                "mode": "source",
-                "source": false
+                "file": "image.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               }
             }
           }
@@ -85,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "structure/README.md",
+                "file": "image.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "structure/README.md",
+                "file": "image.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "structure/README.md"
+                "file": "image.canvas"
               }
             }
           }
@@ -146,12 +149,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "81ad5ce47a150083",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
-    "structure/Pasted image 20240113212601.png",
     "structure/README.md",
+    "structure/Pasted image 20240113212601.png",
+    "image.canvas",
     "README.md",
-    "未命名.canvas",
     "未命名 2.md",
     "未命名 1.md",
     "未命名.md",
