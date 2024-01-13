@@ -11,11 +11,9 @@
             "id": "6ec5f3b2af2ea10c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "structure/README.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing-test.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "structure/README.md",
+                "file": "Excalidraw/Drawing-test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "structure/README.md",
+                "file": "Excalidraw/Drawing-test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "structure/README.md"
+                "file": "Excalidraw/Drawing-test.md"
               }
             }
           },
@@ -158,10 +156,10 @@
   },
   "active": "6ec5f3b2af2ea10c",
   "lastOpenFiles": [
+    "structure/README.md",
     "structure/assets/README/README_image_1.png",
     "structure/assets/README",
     "mysql-backup/README.md",
-    "structure/README.md",
     "structure/assets/README/README_image_3.png",
     "structure/assets/README/README_image_2.png",
     "structure/assets/README/README_image_1.png",
@@ -172,7 +170,6 @@
     "structure/assets/README/README_image_4.png",
     "structure/assets/README/README_image_3.png",
     "structure/assets/README/README_image_1.png",
-    "structure/assets/README/image-20240113223247472.png",
     "Excalidraw/Drawing-test.md",
     "structure/atest.md",
     "structure/assets/atest",
