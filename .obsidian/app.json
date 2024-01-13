@@ -1,5 +1,5 @@
 {
-  "attachmentFolderPath": "./images.assets",
+  "attachmentFolderPath": "./assets/",
   "promptDelete": false,
   "livePreview": true,
   "useMarkdownLinks": false,
