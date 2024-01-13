@@ -1,4 +1,7 @@
 {
   "attachmentFolderPath": "/images/",
-  "promptDelete": false
+  "promptDelete": false,
+  "livePreview": true,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "relative"
 }
