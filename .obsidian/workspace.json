@@ -11,11 +11,9 @@
             "id": "81ad5ce47a150083",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "structure/README.md",
-                "mode": "source",
-                "source": false
+                "file": "structure/Pasted image 20240113212601.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "structure/README.md",
+                "file": "structure/Pasted image 20240113212601.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "structure/README.md",
+                "file": "structure/Pasted image 20240113212601.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "structure/README.md"
+                "file": "structure/Pasted image 20240113212601.png"
               }
             }
           }
@@ -148,10 +146,11 @@
   },
   "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "structure/README.md",
+    "structure/Pasted image 20240113212601.png",
+    "structure/Pasted image 20240113212259.png",
     "mysql-backup/README.md",
     "README.md",
-    "structure/Pasted image 20240113212259.png",
-    "structure/README.md",
     "structure"
   ]
 }
