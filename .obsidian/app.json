@@ -1,8 +1,9 @@
 {
-  "attachmentFolderPath": "./assets/Drawing-test",
+  "attachmentFolderPath": "./assets/README",
   "promptDelete": false,
   "livePreview": true,
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true
 }

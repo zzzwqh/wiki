@@ -1,2 +1,2 @@
-![](assets/README/image-20240113222850567.png)
+![](assets/README/README_image_1.png)
 
