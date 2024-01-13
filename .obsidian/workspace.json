@@ -11,11 +11,9 @@
             "id": "6ec5f3b2af2ea10c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "structure/README.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing-test.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "structure/README.md",
+                "file": "Excalidraw/Drawing-test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "structure/README.md",
+                "file": "Excalidraw/Drawing-test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "structure/README.md"
+                "file": "Excalidraw/Drawing-test.md"
               }
             }
           },
@@ -157,8 +155,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6ec5f3b2af2ea10c",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "structure/README.md",
     "structure/assets/README/README-1.png",
     "structure/assets/README",
     "structure/assets",
@@ -168,15 +167,13 @@
     "structure/assets/atest/atest-2.png",
     "structure/assets/atest/atest-1.png",
     "structure/assets/atest",
-    "structure/README.md",
     "structure/assets/README/README-2.png",
     "structure/assets/README/README-1.png",
     "structure/images.assets/README-5.png",
     "structure/images.assets/README.png",
     "structure/images.assets/{{fileNameKey}}-1.png",
-    "structure/images.assets/README-4.png",
     "mysql-backup/README.md",
-    "Excalidraw/Drawing 2024-01-13 22.17.31.excalidraw.md",
+    "Excalidraw/Drawing-test.md",
     "Excalidraw",
     "structure/images.assets",
     "structure/{{fileName}}.assets",
