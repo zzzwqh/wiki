@@ -8,6 +8,8 @@ tags: [excalidraw]
 
 
 # Text Elements
+阿斯顿发 ^k8bjCbGs
+
 %%
 # Drawing
 ```json
@@ -117,6 +119,43 @@ tags: [excalidraw]
 			"updated": 1705156799329,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "k8bjCbGs",
+			"type": "text",
+			"x": -167,
+			"y": -371.37890625,
+			"width": 80,
+			"height": 25,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 524441718,
+			"version": 29,
+			"versionNonce": 916094058,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1705156830876,
+			"link": null,
+			"locked": false,
+			"text": "阿斯顿发",
+			"rawText": "阿斯顿发",
+			"fontSize": 20,
+			"fontFamily": 1,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 18,
+			"containerId": null,
+			"originalText": "阿斯顿发",
+			"lineHeight": 1.25
 		},
 		{
 			"id": "NqD14Xc7",
