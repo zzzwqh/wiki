@@ -11,9 +11,11 @@
             "id": "81ad5ce47a150083",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "structure/Pasted image 20240113212259.png"
+                "file": "structure/README.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "structure/Pasted image 20240113212259.png",
+                "file": "structure/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "structure/Pasted image 20240113212259.png",
+                "file": "structure/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "structure/Pasted image 20240113212259.png"
+                "file": "structure/README.md"
               }
             }
           }
@@ -144,11 +146,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "81ad5ce47a150083",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
-    "structure/README.md.md",
+    "mysql-backup/README.md",
+    "README.md",
     "structure/Pasted image 20240113212259.png",
-    "README.md.md",
+    "structure/README.md",
     "structure"
   ]
 }
