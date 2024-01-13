@@ -1,1 +1,2 @@
-![[../images/Pasted image 20240113220329.png]]
+
+![name](../images/image1.png)
