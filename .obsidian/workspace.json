@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "structure/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "structure/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "structure/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "structure/README.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "81ad5ce47a150083",
   "lastOpenFiles": [
+    "README.md",
     "structure/Pasted image 20240113212601.png",
     "未命名.canvas",
     "未命名 2.md",
@@ -156,7 +157,6 @@
     "structure/README.md",
     "structure/Pasted image 20240113212259.png",
     "mysql-backup/README.md",
-    "README.md",
     "structure"
   ]
 }
