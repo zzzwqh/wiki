@@ -1,4 +1,3 @@
-[root@localhost nginx]# cat Dockerfile
 FROM ubuntu:latest
 
 # 设置时区
