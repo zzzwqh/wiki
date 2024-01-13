@@ -1,8 +1,8 @@
 {
-  "attachmentFolderPath": "./assets/",
+  "attachmentFolderPath": "./assets/README",
   "promptDelete": false,
   "livePreview": true,
-  "useMarkdownLinks": false,
+  "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "newFileLocation": "current"
 }
