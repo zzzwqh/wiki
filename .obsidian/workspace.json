@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md",
+                "file": "DevOps/Go/负载均衡权重配置工具.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md",
+                "file": "DevOps/Go/负载均衡权重配置工具.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md",
+                "file": "DevOps/Go/负载均衡权重配置工具.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md"
+                "file": "DevOps/Go/负载均衡权重配置工具.md"
               }
             }
           },
@@ -156,9 +156,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6a7136d4fb01c960",
+  "active": "f80bd60e7a0c3d4b",
   "lastOpenFiles": [
-    "未命名",
+    "ubuntu-nginx-vts/README.md",
+    "DevOps/Go/负载均衡权重配置工具.md",
+    "DevOps/Go",
+    "DevOps",
     "mysqlUtils/README.md",
     "MindMap/MindMap.md",
     "MindMap/assets/MindMap/MindMap_image_1.png",
@@ -167,7 +170,6 @@
     "未命名.md",
     "Excalidraw/Drawing.md",
     "MindMap",
-    "ubuntu-nginx-vts/README.md",
     "mysql-backup/MindMapTest.md",
     "structure/README.md",
     "MindMap",
@@ -189,8 +191,6 @@
     "structure/assets/README/README_image_3.png",
     "structure/atest.md",
     "structure/assets/atest",
-    "Excalidraw",
-    "structure/images.assets",
     "image.canvas",
     "未命名 2.md",
     "未命名 1.md"
