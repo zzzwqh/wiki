@@ -8,5 +8,5 @@
 ### Question-02
 ### Question-03
 
-![](assets/MindMap/MindMap_image_1.png)
+
 

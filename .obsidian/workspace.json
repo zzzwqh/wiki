@@ -4,43 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b439eddc81a27da9",
-        "type": "split",
+        "id": "26bc9539473b945c",
+        "type": "tabs",
         "children": [
           {
-            "id": "26bc9539473b945c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f80bd60e7a0c3d4b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "MindMap/MindMap.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
+            "id": "f80bd60e7a0c3d4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ubuntu-nginx-vts/README.md",
+                "mode": "source",
+                "source": false
               }
-            ]
-          },
-          {
-            "id": "e7596d29a82dfdbe",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ea48c258fb69494f",
-                "type": "leaf",
-                "state": {
-                  "type": "mindmap",
-                  "state": {}
-                }
-              }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MindMap/MindMap.md",
+                "file": "ubuntu-nginx-vts/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MindMap/MindMap.md",
+                "file": "ubuntu-nginx-vts/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MindMap/MindMap.md"
+                "file": "ubuntu-nginx-vts/README.md"
               }
             }
           },
@@ -177,13 +156,14 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f80bd60e7a0c3d4b",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "未命名",
+    "mysqlUtils/README.md",
+    "MindMap/MindMap.md",
     "MindMap/assets/MindMap/MindMap_image_1.png",
     "MindMap/assets/MindMap",
     "MindMap/assets",
-    "mysqlUtils/README.md",
-    "MindMap/MindMap.md",
     "未命名.md",
     "Excalidraw/Drawing.md",
     "MindMap",
