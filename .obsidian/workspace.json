@@ -18,6 +18,14 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "250695c06ba34b41",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ]
       }
@@ -156,7 +164,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6ec5f3b2af2ea10c",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
     "structure/README.md",
     "README.md",
