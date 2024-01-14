@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "ubuntu-nginx-vts/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "ubuntu-nginx-vts/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "ubuntu-nginx-vts/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "ubuntu-nginx-vts/README.md"
               }
             }
           },
@@ -158,8 +158,10 @@
   },
   "active": "6ec5f3b2af2ea10c",
   "lastOpenFiles": [
-    "Excalidraw/Drawing-test.md",
     "structure/README.md",
+    "ubuntu-nginx-vts/README.md",
+    "README.md",
+    "Excalidraw/Drawing-test.md",
     "structure/assets/README/README_image_1.png",
     "structure/assets/README",
     "mysql-backup/README.md",
@@ -175,7 +177,6 @@
     "Excalidraw",
     "structure/images.assets",
     "structure/{{fileName}}.assets",
-    "README.md",
     "images",
     "image.canvas",
     "未命名 2.md",
