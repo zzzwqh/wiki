@@ -1,4 +1,4 @@
-# nginx 编译da
+# nginx 编译打包镜像
 
 ```bash
 FROM ubuntu:latest
