@@ -6,6 +6,25 @@
 
 ```go
 
-
 ```
 
+
+
+
+
+> 配置需要填写如下：
+```yaml
+accessKeyId: ""  
+accessKeySecret: ""  
+regionId: "cn-hongkong"  
+vServerGroupId: "rsp-abcde"  
+backendServers:  
+  - serverId: "i-123456789"  
+    weight: "100"  
+    port: "8081"  
+#    description: "" # 选填配置  
+  - serverId: "i-123456789"  
+    weight: "100"  
+    port: "8082"  
+#    description: "" # 选填配置
+```
