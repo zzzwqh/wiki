@@ -136,7 +136,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -154,23 +154,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6ec5f3b2af2ea10c",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
     "structure/README.md",
     "structure/assets/README/README_image_1.png",
+    "Excalidraw/Drawing-test.md",
     "structure/assets/README",
     "mysql-backup/README.md",
     "structure/assets/README/README_image_3.png",
     "structure/assets/README/README_image_2.png",
-    "structure/assets/README/README_image_1.png",
     "structure/assets",
     "structure/assets/README/README_image_2.png",
     "structure/assets/README/README_image_3.png",
-    "structure/assets/README/README_image_1.png",
     "structure/assets/README/README_image_4.png",
     "structure/assets/README/README_image_3.png",
-    "structure/assets/README/README_image_1.png",
-    "Excalidraw/Drawing-test.md",
     "structure/atest.md",
     "structure/assets/atest",
     "Excalidraw",
