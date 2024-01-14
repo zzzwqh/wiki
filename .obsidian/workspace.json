@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ubuntu-nginx-vts/README.md"
+                "file": "README.md"
               }
             }
           },
@@ -158,9 +158,9 @@
   },
   "active": "6ec5f3b2af2ea10c",
   "lastOpenFiles": [
+    "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
     "structure/README.md",
-    "ubuntu-nginx-vts/README.md",
     "README.md",
     "Excalidraw/Drawing-test.md",
     "structure/assets/README/README_image_1.png",
