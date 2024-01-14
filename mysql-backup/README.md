@@ -1,6 +1,5 @@
 
-# MySQL 实例备份
-## 备份脚本
+# MySQL 实例简易备份
 
 ```bash
 #!/bin/bash
@@ -25,8 +24,7 @@ done
 echo "导出完成！文件保存在${EXPORT_DIR}"
 
 ```
-
-## 备份后导入
+# 备份后导入
 ```bash
 # root @ ECS-project-v-alpha-online-public in /data/mysql [14:31:50]
 $ cd dumpfiles
@@ -44,7 +42,6 @@ $ cat import_data.sh
 # 导入数据
 #for  i in $(ls ./20240110123214 |  awk -F'.sql' '{print$1}' | egrep -v "schema|meta"); do mysql -uroot -pRov-alpha -h 127.0.0.1 -D $i < ./20240110123214/$i.sql ;done
 ```
-
 # MySQL 其他备份方式
 ```bash
 # 位点 -> 表结构

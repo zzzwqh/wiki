@@ -11,11 +11,9 @@
             "id": "6ec5f3b2af2ea10c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "mysql-backup/README.md",
-                "mode": "source",
-                "source": false
+                "file": "structure/assets/README/README_image_1.png"
               }
             }
           },
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysql-backup/README.md",
+                "file": "structure/assets/README/README_image_1.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mysql-backup/README.md",
+                "file": "structure/assets/README/README_image_1.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysql-backup/README.md"
+                "file": "structure/assets/README/README_image_1.png"
               }
             }
           },
@@ -164,16 +162,16 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6a7136d4fb01c960",
+  "active": "6ec5f3b2af2ea10c",
   "lastOpenFiles": [
+    "mysql-backup/README.md",
     "structure/README.md",
+    "structure/assets/README/README_image_1.png",
     "README.md",
     "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
     "Excalidraw/Drawing-test.md",
-    "structure/assets/README/README_image_1.png",
     "structure/assets/README",
-    "mysql-backup/README.md",
     "structure/assets/README/README_image_3.png",
     "structure/assets/README/README_image_2.png",
     "structure/assets",
