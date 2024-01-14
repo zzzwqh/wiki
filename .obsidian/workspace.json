@@ -4,41 +4,64 @@
     "type": "split",
     "children": [
       {
-        "id": "8647913169fafbbe",
-        "type": "tabs",
+        "id": "40b00f0a92a6dd70",
+        "type": "split",
         "children": [
           {
-            "id": "6ec5f3b2af2ea10c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "structure/README.md",
-                "mode": "source",
-                "source": false
+            "id": "8647913169fafbbe",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6ec5f3b2af2ea10c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "structure/README.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "e35649b011d60773",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "mysql-backup/README.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "250695c06ba34b41",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {}
+                }
               }
-            }
+            ],
+            "currentTab": 1
           },
           {
-            "id": "e35649b011d60773",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing-test.md"
+            "id": "ceb047bbbc69b0c9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a901c83f0ac25f88",
+                "type": "leaf",
+                "state": {
+                  "type": "mindmap",
+                  "state": {}
+                }
               }
-            }
-          },
-          {
-            "id": "250695c06ba34b41",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
+            ]
           }
         ],
-        "currentTab": 1
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -104,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing-test.md",
+                "file": "mysql-backup/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing-test.md",
+                "file": "mysql-backup/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing-test.md"
+                "file": "mysql-backup/README.md"
               }
             }
           },
@@ -177,17 +200,18 @@
   },
   "active": "e35649b011d60773",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-01-14 22.12.59.excalidraw.md",
-    "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
-    "structure/未命名.md",
     "structure/README.md",
     "structure/assets/README/README_image_1.png",
+    "Excalidraw/Drawing-test.md",
+    "Excalidraw/未命名.md",
+    "structure/未命名.md",
+    "Excalidraw/Drawing 2024-01-14 22.12.59.excalidraw.md",
+    "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
     "Excalidraw/Drawing 2024-01-14 22.11.41.excalidraw.md",
     "README.md",
     "mysql-backup/README.md",
     "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
-    "Excalidraw/Drawing-test.md",
     "structure/assets/README",
     "structure/assets/README/README_image_3.png",
     "structure/assets/README/README_image_2.png",
