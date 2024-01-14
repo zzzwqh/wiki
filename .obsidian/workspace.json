@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ceb047bbbc69b0c9",
+        "id": "26bc9539473b945c",
         "type": "tabs",
         "children": [
           {
-            "id": "3d687274d0f35f6f",
+            "id": "f80bd60e7a0c3d4b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mysql-backup/MindMapTest.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysql-backup/MindMapTest.md",
+                "file": "Excalidraw/Drawing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mysql-backup/MindMapTest.md",
+                "file": "Excalidraw/Drawing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysql-backup/MindMapTest.md"
+                "file": "Excalidraw/Drawing.md"
               }
             }
           },
@@ -156,21 +152,22 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3d687274d0f35f6f",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
-    "structure/README.md",
-    "mysql-backup/README.md",
+    "MindMap",
+    "ubuntu-nginx-vts/README.md",
+    "mysqlUtils/README.md",
     "mysql-backup/MindMapTest.md",
+    "structure/README.md",
     "MindMap",
     "structure/assets/README/README_image_1.png",
-    "Excalidraw/Drawing-test.md",
+    "Excalidraw/Drawing.md",
     "Excalidraw/未命名.md",
     "structure/未命名.md",
     "Excalidraw/Drawing 2024-01-14 22.12.59.excalidraw.md",
     "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
     "Excalidraw/Drawing 2024-01-14 22.11.41.excalidraw.md",
     "README.md",
-    "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
     "structure/assets/README",
     "structure/assets/README/README_image_3.png",
