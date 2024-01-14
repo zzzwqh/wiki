@@ -4,64 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "40b00f0a92a6dd70",
-        "type": "split",
+        "id": "ceb047bbbc69b0c9",
+        "type": "tabs",
         "children": [
           {
-            "id": "8647913169fafbbe",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "6ec5f3b2af2ea10c",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "structure/README.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "e35649b011d60773",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "mysql-backup/README.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "250695c06ba34b41",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {}
-                }
+            "id": "3d687274d0f35f6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mysql-backup/MindMapTest.md",
+                "mode": "source",
+                "source": false
               }
-            ],
-            "currentTab": 1
-          },
-          {
-            "id": "ceb047bbbc69b0c9",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "a901c83f0ac25f88",
-                "type": "leaf",
-                "state": {
-                  "type": "mindmap",
-                  "state": {}
-                }
-              }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -127,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysql-backup/README.md",
+                "file": "mysql-backup/MindMapTest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mysql-backup/README.md",
+                "file": "mysql-backup/MindMapTest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysql-backup/README.md"
+                "file": "mysql-backup/MindMapTest.md"
               }
             }
           },
@@ -198,9 +156,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "e35649b011d60773",
+  "active": "3d687274d0f35f6f",
   "lastOpenFiles": [
     "structure/README.md",
+    "mysql-backup/README.md",
+    "mysql-backup/MindMapTest.md",
+    "MindMap",
     "structure/assets/README/README_image_1.png",
     "Excalidraw/Drawing-test.md",
     "Excalidraw/未命名.md",
@@ -209,7 +170,6 @@
     "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
     "Excalidraw/Drawing 2024-01-14 22.11.41.excalidraw.md",
     "README.md",
-    "mysql-backup/README.md",
     "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
     "structure/assets/README",
