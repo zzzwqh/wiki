@@ -11,9 +11,11 @@
             "id": "6ec5f3b2af2ea10c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "structure/assets/README/README_image_1.png"
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "structure/assets/README/README_image_1.png",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "structure/assets/README/README_image_1.png",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "structure/assets/README/README_image_1.png"
+                "file": "README.md"
               }
             }
           },
@@ -164,9 +166,9 @@
   },
   "active": "6ec5f3b2af2ea10c",
   "lastOpenFiles": [
+    "structure/assets/README/README_image_1.png",
     "mysql-backup/README.md",
     "structure/README.md",
-    "structure/assets/README/README_image_1.png",
     "README.md",
     "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
