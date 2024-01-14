@@ -7,7 +7,7 @@
 DATE=`date "+%Y%m%d%H%M%S"`
 DUMP_ADDR="127.0.0.1"
 DUMP_USER="root"
-DUMP_PASSWORD="Rov-alpha"
+DUMP_PASSWORD="root"
 EXPORT_DIR="./dumpfiles/$DATE"
 LEN=60
 [[ -d ${EXPORT_DIR} ]] || mkdir -pv ${EXPORT_DIR}
