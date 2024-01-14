@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "structure/README.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "e35649b011d60773",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing-test.md"
               }
             }
           },
@@ -27,7 +37,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Excalidraw/Drawing-test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Excalidraw/Drawing-test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +134,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
@@ -133,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Excalidraw/Drawing-test.md"
               }
             }
           },
@@ -146,7 +157,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -164,12 +175,16 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6ec5f3b2af2ea10c",
+  "active": "e35649b011d60773",
   "lastOpenFiles": [
-    "structure/assets/README/README_image_1.png",
-    "mysql-backup/README.md",
+    "Excalidraw/Drawing 2024-01-14 22.12.59.excalidraw.md",
+    "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
+    "structure/未命名.md",
     "structure/README.md",
+    "structure/assets/README/README_image_1.png",
+    "Excalidraw/Drawing 2024-01-14 22.11.41.excalidraw.md",
     "README.md",
+    "mysql-backup/README.md",
     "ubuntu-nginx-vts/README.md",
     "obsidian.tgz",
     "Excalidraw/Drawing-test.md",
