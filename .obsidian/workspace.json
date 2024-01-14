@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "fbfc8a8eaa8fff7f",
+        "id": "b439eddc81a27da9",
         "type": "split",
         "children": [
           {
@@ -17,33 +17,20 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "mysqlUtils/README.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "7f94fee6300620a5",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
                     "file": "MindMap/MindMap.md",
                     "mode": "source",
                     "source": false
                   }
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           },
           {
-            "id": "3c506a2cc2505ea4",
+            "id": "e7596d29a82dfdbe",
             "type": "tabs",
             "children": [
               {
-                "id": "b69cf9c7b3392a4e",
+                "id": "ea48c258fb69494f",
                 "type": "leaf",
                 "state": {
                   "type": "mindmap",
@@ -190,8 +177,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "7f94fee6300620a5",
+  "active": "f80bd60e7a0c3d4b",
   "lastOpenFiles": [
+    "MindMap/assets/MindMap/MindMap_image_1.png",
+    "MindMap/assets/MindMap",
+    "MindMap/assets",
     "mysqlUtils/README.md",
     "MindMap/MindMap.md",
     "未命名.md",
@@ -221,8 +211,6 @@
     "structure/assets/atest",
     "Excalidraw",
     "structure/images.assets",
-    "structure/{{fileName}}.assets",
-    "images",
     "image.canvas",
     "未命名 2.md",
     "未命名 1.md"

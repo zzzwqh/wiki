@@ -1,8 +1,12 @@
-```text
----
-mindmap-plugin: basic
----
-```
-# 1
-## 1.1
-# 2
+# Subject
+## Title-01
+### Question-01
+### Question-02
+### Question-03
+## Title-02
+### Question-01
+### Question-02
+### Question-03
+
+![](assets/MindMap/MindMap_image_1.png)
+
