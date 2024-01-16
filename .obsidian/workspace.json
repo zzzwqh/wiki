@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c568ec6ea2fdfb97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/配置参数.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/SLB 权重配置工具.md",
+                "file": "DevOps/配置参数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/SLB 权重配置工具.md",
+                "file": "DevOps/配置参数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/SLB 权重配置工具.md"
+                "file": "DevOps/配置参数.md"
               }
             }
           },
@@ -157,9 +170,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f80bd60e7a0c3d4b",
+  "active": "c568ec6ea2fdfb97",
   "lastOpenFiles": [
     "DevOps/SLB 权重配置工具.md",
+    "DevOps/配置参数.md",
     "DevOps/Go/main.go",
     "ubuntu-nginx-vts/README.md",
     "DevOps/Go",
