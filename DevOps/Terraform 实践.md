@@ -1,5 +1,5 @@
 
-#  一. 部署
+#  一. 安装部署
 ## 1. 安装 Terraform
 
 > Terraform ： https://developer.hashicorp.com/terraform/install?product_intent=terraform
@@ -68,7 +68,17 @@ provider "alicloud" {
 }
 ```
 
-> 按照这篇文档操作： https://help.aliyun.com/document_detail/111634.html?spm=a2c4g.111280.0.0.473c7c53zy3d0F
+> 按照这篇文档操作： https://help.aliyun.com/document_detail/111634.html?spm=a2c4g.111280.0.0.473c7c53zy3d0F ，添加一个 slb-install.tf 文件
+
+```bash
+~/VSCodeDir/terraform » cat slb-install.tf
+resource "alicloud_slb" "instance" {
+  name                 = "slb_worder"
+  internet_charge_type = "PayByTraffic"
+  address_type         = "internet"
+}
+```
+
 
 > 先执行 terraform plan 后， 可以看到执行计划，而未执行变更动作
 
