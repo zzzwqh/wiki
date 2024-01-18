@@ -34,7 +34,6 @@ provider "alicloud" {
 > 配置阿里云 Provider 需要做认证授权，当前本地有 aliyun CLI 生成的授权文件如下：
 
 
-
 ![](assets/Terraform%20实践/Terraform%20实践_image_2.png)
 
 
@@ -73,17 +72,20 @@ provider "alicloud" {
 ```bash
 ~/VSCodeDir/terraform » cat slb-install.tf
 resource "alicloud_slb" "instance" {
-  load_balancer_name   = "slb_worder"
+  load_balancer_name   = "terraform-slb-test"
   load_balancer_spec   = "slb.s2.small"
   internet_charge_type = "PayByTraffic"
   address_type         = "internet"
 }
 ```
 
-
-> 先执行 terraform plan 后， 可以看到执行计划，而未执行变更动作
+> 可以先执行 terraform plan ，能看到执行计划，而未执行变更动作，这里忽略该步骤，直接执行了 terraform apply
 
 ![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
+
+
+
+
 
 
 
