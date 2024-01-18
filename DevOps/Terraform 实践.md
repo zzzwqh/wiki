@@ -22,6 +22,5 @@ terraform {
 
 provider "alicloud" {
   # Configuration options
-}%
-
+}
 ```
