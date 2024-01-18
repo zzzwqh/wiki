@@ -10,7 +10,7 @@
 
 编辑下面文件，然后运行 `terraform init`
 ```bash
-~/VSCodeDir » cat terraform.tf 
+~/VSCodeDir/terraform » cat terraform.tf 
 terraform {
   required_providers {
     alicloud = {
@@ -24,3 +24,6 @@ provider "alicloud" {
   # Configuration options
 }
 ```
+执行后效果如图
+![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
+
