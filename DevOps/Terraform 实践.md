@@ -167,8 +167,4 @@ resource "alicloud_slb_listener" "http" {
 
 ![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
 
-> 可以看到我框选了几个部分，终端是创建成功的输出结果返回，另外一个就是
-
-
-
-
+> 可以看到框选的几个部分，终端是创建成功的输出结果返回，另外一个是 terraform.tfstate 文件，这个文件是 terraform 的状态文件，是 terraform 本地自动生成的，它记录了 terraform 所管理的所有资源的当前状态，这个文件很有重要也很有用，在接下来的所有Terraform 运行中，Terraform 会使用这个状态文件来确定需要对基础设施做哪些更改，Terraform 只管理它 "认为" 自己负责的资源，即在 Terraform 的状态文件中有记录的。如果一个资源不是由 Terraform 创建的，或者它的信息没被记录在 Terraform 的状态文件中，Terraform 就不会尝试去管理（即修改或销毁）那个资源。
