@@ -26,7 +26,7 @@ provider "alicloud" {
 }
 ```
 
-执行后效果如图所示
+> 执行后效果如图所示
 
 ![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
 ## 3. 阿里云配置
