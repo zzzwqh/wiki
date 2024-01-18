@@ -8,6 +8,8 @@ tags: [excalidraw]
 
 
 # Text Elements
+test ^AlojDqBj
+
 %%
 # Drawing
 ```json
@@ -119,41 +121,76 @@ tags: [excalidraw]
 			"locked": false
 		},
 		{
+			"id": "8aHTXRqyQryfz9QBZO07c",
+			"type": "frame",
+			"x": -548.1086237980769,
+			"y": -487.1148086939103,
+			"width": 0.17828525641027682,
+			"height": 0.3585737179487296,
+			"angle": 0,
+			"strokeColor": "#bbb",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1099226092,
+			"version": 3,
+			"versionNonce": 998691692,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1705547331309,
+			"link": null,
+			"locked": false,
+			"customData": {
+				"frameColor": {
+					"stroke": "#D4D4D4",
+					"fill": "#ADADAD",
+					"nameColor": "#949494"
+				}
+			},
+			"name": null
+		},
+		{
+			"id": "AlojDqBj",
 			"type": "text",
-			"version": 93,
-			"versionNonce": 387964778,
-			"isDeleted": true,
-			"id": "k8bjCbGs",
+			"x": -548.2007712339743,
+			"y": -487.1909304887821,
+			"width": 44.39994812011719,
+			"height": 25,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "transparent",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 100,
-			"angle": 0,
-			"x": -268.99609375,
-			"y": -372.197265625,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"width": 80,
-			"height": 25,
-			"seed": 524441718,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [],
-			"updated": 1705241608624,
+			"seed": 1099112148,
+			"version": 10,
+			"versionNonce": 356994796,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1705547333273,
 			"link": null,
 			"locked": false,
+			"text": "test",
+			"rawText": "test",
 			"fontSize": 20,
 			"fontFamily": 1,
-			"text": "阿斯顿发",
-			"rawText": "阿斯顿发",
 			"textAlign": "left",
 			"verticalAlign": "top",
+			"baseline": 18,
 			"containerId": null,
-			"originalText": "阿斯顿发",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"originalText": "test",
+			"lineHeight": 1.25
 		}
 	],
 	"appState": {
@@ -171,10 +208,10 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 712.4624865301723,
-		"scrollY": 647.3621699892242,
+		"scrollX": 712.8161558493589,
+		"scrollY": 577.8399689503206,
 		"zoom": {
-			"value": 1.4500000000000002
+			"value": 1.9500000000000002
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,

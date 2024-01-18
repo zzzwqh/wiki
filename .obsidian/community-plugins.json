@@ -1,9 +1,9 @@
 [
-  "obsidian-git",
   "obsidian-excalidraw-plugin",
   "table-editor-obsidian",
   "obsidian-custom-attachment-location",
   "obsidian-attachment-name-formatting",
   "obsidian-mind-map",
-  "obsidian-minimal-settings"
+  "obsidian-minimal-settings",
+  "obsidian-git"
 ]
