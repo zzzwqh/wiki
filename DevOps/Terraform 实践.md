@@ -67,7 +67,7 @@ provider "alicloud" {
 }
 ```
 
-
+# 二. 简单使用
 
 > 我需要测试新建 SLB / SLB 监听，添加一个loadbalancer-install.tf 文件，声明 slb 资源
 
