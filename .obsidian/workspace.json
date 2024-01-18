@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/配置参数.md",
+                "file": "DevOps/Terrform 实践.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/配置参数.md",
+                "file": "DevOps/Terrform 实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/配置参数.md",
+                "file": "DevOps/Terrform 实践.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/配置参数.md"
+                "file": "DevOps/Terrform 实践.md"
               }
             }
           },
@@ -173,7 +173,7 @@
   "active": "c568ec6ea2fdfb97",
   "lastOpenFiles": [
     "DevOps/SLB 权重配置工具.md",
-    "DevOps/配置参数.md",
+    "DevOps/Terrform 实践.md",
     "DevOps/Go/main.go",
     "ubuntu-nginx-vts/README.md",
     "DevOps/Go",
