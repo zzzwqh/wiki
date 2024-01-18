@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/Terrform 实践.md",
+                "file": "DevOps/Terraform 实践.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/Terrform 实践.md",
+                "file": "DevOps/Terraform 实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/Terrform 实践.md",
+                "file": "DevOps/Terraform 实践.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/Terrform 实践.md"
+                "file": "DevOps/Terraform 实践.md"
               }
             }
           },
@@ -174,7 +174,7 @@
   "lastOpenFiles": [
     "DevOps/SLB 权重配置工具.md",
     "Excalidraw/Drawing.md",
-    "DevOps/Terrform 实践.md",
+    "DevOps/Terraform 实践.md",
     "DevOps/Go/main.go",
     "ubuntu-nginx-vts/README.md",
     "DevOps/Go",
