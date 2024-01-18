@@ -31,6 +31,23 @@ provider "alicloud" {
 ![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
 ## 3. 阿里云配置
 
-> 我选择了使用阿里云 Credentials File 的方式，需要配置 Credential File 路径，
+> 我选择了使用阿里云 Credentials File 的方式，需要配置 Credential File 路径，这个文件生成方式参考阿里云官方文档 https://www.alibabacloud.com/help/zh/alibaba-cloud-cli/latest/overview
 ![](assets/Terraform%20实践/Terraform%20实践_image_2.png)
+> 代码如下所示：
+```bash
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+      version = "1.214.1"
+    }
+  }
+}
 
+provider "alicloud" {
+  region                  = "cn-hangzhou"
+  shared_credentials_file = "/Users/wangqihan-020037/.aliyun/config.json"
+  profile                 = "customprofile"
+
+}
+```
