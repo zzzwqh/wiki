@@ -9,6 +9,7 @@
 > Aliyun Provider ： https://registry.terraform.io/providers/aliyun/alicloud/latest/docs
 
 编辑下面文件，然后运行 `terraform init`
+
 ```bash
 ~/VSCodeDir/terraform » cat terraform.tf 
 terraform {
@@ -24,6 +25,8 @@ provider "alicloud" {
   # Configuration options
 }
 ```
+
 执行后效果如图所示
+
 ![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
 
