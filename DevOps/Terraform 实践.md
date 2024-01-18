@@ -11,7 +11,7 @@
 编辑下面文件，然后运行 `terraform init`
 
 ```bash
-~/VSCodeDir/terraform » cat terraform.tf 
+~/VSCodeDir/terraform » cat base.tf 
 terraform {
   required_providers {
     alicloud = {
@@ -31,12 +31,23 @@ provider "alicloud" {
 ![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
 ## 3. 阿里云配置
 
-> 我选择了使用阿里云 Credentials File 的方式，需要配置 Credential File 路径
+> 配置阿里云 Provider 需要做认证授权，当前本地有 aliyun CLI 生成的授权文件如下：
+
+
+
 ![](assets/Terraform%20实践/Terraform%20实践_image_2.png)
-  这个文件生成方式参考阿里云官方文档 https://www.alibabacloud.com/help/zh/alibaba-cloud-cli/latest/overview ，更改后的代码如下所示：
+
+
+> 所以我直接选择了使用阿里云 Credentials File 的方式，需要配置 Credential File 路径
+
+
+![](assets/Terraform%20实践/Terraform%20实践_image_3.png)
+
+> 这个文件生成方式参考阿里云官方文档 https://www.alibabacloud.com/help/zh/alibaba-cloud-cli/latest/overview ，更改后的代码如下所示：
+
 
 ```bash
-~/VSCodeDir/terraform » cat terraform.tf 
+~/VSCodeDir/terraform » cat base.tf 
 terraform {
   required_providers {
     alicloud = {
@@ -58,6 +69,7 @@ provider "alicloud" {
 ```
 
 > 按照这篇文档操作： https://help.aliyun.com/document_detail/111634.html?spm=a2c4g.111280.0.0.473c7c53zy3d0F
+
 
 
 
