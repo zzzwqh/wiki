@@ -31,8 +31,9 @@ provider "alicloud" {
 ![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
 ## 3. 阿里云配置
 
-> 我选择了使用阿里云 Credentials File 的方式，需要配置 Credential File 路径，这个文件生成方式参考阿里云官方文档 https://www.alibabacloud.com/help/zh/alibaba-cloud-cli/latest/overview
+> 我选择了使用阿里云 Credentials File 的方式，需要配置 Credential File 路径
 ![](assets/Terraform%20实践/Terraform%20实践_image_2.png)
+  这个文件生成方式参考阿里云官方文档 https://www.alibabacloud.com/help/zh/alibaba-cloud-cli/latest/overview
 
 
 > 代码如下所示：
