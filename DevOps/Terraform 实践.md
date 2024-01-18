@@ -70,6 +70,10 @@ provider "alicloud" {
 
 > 按照这篇文档操作： https://help.aliyun.com/document_detail/111634.html?spm=a2c4g.111280.0.0.473c7c53zy3d0F
 
+> 先执行 terraform plan 后， 可以看到执行计划，而未执行变更动作
+
+![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
+
 
 
 
