@@ -24,6 +24,6 @@ provider "alicloud" {
   # Configuration options
 }
 ```
-执行后效果如图
+执行后效果如图所示
 ![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
 
