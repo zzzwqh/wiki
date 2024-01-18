@@ -26,4 +26,5 @@ provider "alicloud" {
 ```
 执行后效果如图
 
-啊
+![](assets/Terraform%20实践/Terraform%20实践_image_1.png)
+
