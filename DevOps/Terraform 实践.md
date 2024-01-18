@@ -68,12 +68,13 @@ provider "alicloud" {
 }
 ```
 
-> 按照这篇文档操作： https://help.aliyun.com/document_detail/111634.html?spm=a2c4g.111280.0.0.473c7c53zy3d0F ，添加一个 slb-install.tf 文件
+> 我需要测试新建 SLB，则需要添加一个 slb-install.tf 文件
 
 ```bash
 ~/VSCodeDir/terraform » cat slb-install.tf
 resource "alicloud_slb" "instance" {
-  name                 = "slb_worder"
+  load_balancer_name   = "slb_worder"
+  load_balancer_spec   = "slb.s2.small"
   internet_charge_type = "PayByTraffic"
   address_type         = "internet"
 }
