@@ -163,13 +163,11 @@ resource "alicloud_slb_listener" "http" {
 ```
 
 
-> 可以先执行 terraform plan ，能看到执行计划，而未执行变更动作，这里忽略该步骤，直接执行了 terraform apply
+> 可以先执行 terraform plan ，能看到执行计划，而未执行变更动作，这里忽略该步骤，直接执行了 terraform apply，执行结果如图
 
+![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
 
-
-
-
-
+> 可以看到我框选了几个部分，终端是创建成功的输出结果返回，另外一个就是
 
 
 
