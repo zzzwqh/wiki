@@ -23,9 +23,11 @@
             "id": "c568ec6ea2fdfb97",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png"
+                "file": "DevOps/Terraform 实践.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png",
+                "file": "DevOps/Terraform 实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png",
+                "file": "DevOps/Terraform 实践.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png"
+                "file": "DevOps/Terraform 实践.md"
               }
             }
           },
@@ -170,10 +172,9 @@
   },
   "active": "c568ec6ea2fdfb97",
   "lastOpenFiles": [
+    "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png",
     "DevOps/Terraform 实践.md",
-    "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png",
     "DevOps/assets/Terraform 实践",
-    "DevOps/assets/Terraform 实践/Terraform 实践_image_1.png",
     "DevOps/assets",
     "DevOps/SLB 权重配置工具.md",
     "Excalidraw/Drawing.md",
