@@ -166,7 +166,20 @@ resource "alicloud_slb_listener" "http-example" {
 }
 ```
 
-> 上面的 https-example 中使用了  http
+> 上面的 https-example 中声明了  https 协议，声明这个协议后，是必须配置  server_certificate_id  的，所以要添加一个 slb-server-certificate.tf 文件
+
+```
+~/VSCodeDIr/terraform » cat slb-server-certificate.tf                     
+# create a server certificate
+resource "alicloud_slb_server_certificate" "foo" {
+  name               = "slbservercertificate"
+  server_certificate = file("./resources/server_certificate.pem")
+  private_key        = file("./resources/private_key.pem")
+}                                             
+```
+> 指定了文件路径，存放在当前目录下 resources 
+
+![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
 
 
 
@@ -177,6 +190,6 @@ resource "alicloud_slb_listener" "http-example" {
 > 在测试使用中，可以先执行 terraform plan ，能看到执行计划，而未执行变更动作
 > 这里忽略该步骤，直接执行了 terraform apply，执行结果如图，有一个文件比较重要
 
-![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
+![](assets/Terraform%20实践/Terraform%20实践_image_5.png)
 
 > 可以看到框选的几个部分，一个是终端中创建成功的输出结果返回，另外一个是 terraform.tfstate 文件，这个文件是 Terraform 的状态文件，是 Terraform 本地自动生成的，它记录了 Terraform 所管理的所有资源的当前状态，这个文件很有重要也很有用，在接下来的所有Terraform 运行中，Terraform 会使用这个状态文件来确定需要对基础设施做哪些更改，Terraform 只管理它 "认为" 自己负责的资源，即在 Terraform 的状态文件中有记录的。如果一个资源不是由 Terraform 创建的，或者它的信息没被记录在 Terraform 的状态文件中，Terraform 就不会尝试去管理（即修改或销毁）那个资源。
