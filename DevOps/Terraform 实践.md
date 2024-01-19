@@ -187,6 +187,7 @@ resource "alicloud_slb_server_certificate" "foo" {
 # 三. Terraform 的状态文件
 
 > 在测试使用中，可以先执行 terraform plan ，能看到执行计划，而未执行变更动作
+> 
 > 这里忽略该步骤，直接执行了 terraform apply，执行结果如图，有一个文件比较重要
 
 ![](assets/Terraform%20实践/Terraform%20实践_image_5.png)
