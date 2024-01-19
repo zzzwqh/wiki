@@ -177,12 +177,11 @@ resource "alicloud_slb_server_certificate" "foo" {
   private_key        = file("./resources/private_key.pem")
 }                                             
 ```
+
+
 > 指定了文件路径，存放在当前目录下 resources 
 
 ![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
-
-
-
 
 
 # 三. Terraform 的状态文件
