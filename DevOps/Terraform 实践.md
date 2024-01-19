@@ -57,7 +57,7 @@ terraform {
 }
 
 provider "alicloud" {
-  region                  = "cn-hangzhou"
+  region                  = "cn-zhangjiakou"
   # 使用 aliyun CLI 工具生成的 Credentials File 
   shared_credentials_file = "/Users/wangqihan-020037/.aliyun/config.json"
   # 注意要和 aliyun configure list 中的 Profile 名字一致
@@ -69,31 +69,38 @@ provider "alicloud" {
 
 # 二. 简单使用
 
-> 我需要测试新建 SLB / SLB 监听，添加一个loadbalancer-install.tf 文件，声明 slb 资源
+> 我需要测试新建 SLB / SLB 监听，添加一个 slb-load-balancer-install.tf 文件，声明 slb 资源
 
 ```bash
-~/VSCodeDir/terraform » cat loadbalancer-install.tf
-resource "alicloud_slb" "instance-1" {
+~/VSCodeDir/terraform » cat slb-load-balancer-install.tf
+resource "alicloud_slb_load_balancer" "instance-1" {
+  # 负载均衡命名
   load_balancer_name   = "terraform-slb-test-1"
-  load_balancer_spec   = "slb.s1.small"
-  internet_charge_type = "PayByTraffic"
+  # 公网/私网类型
   address_type         = "internet"
+  # 实例付费模式
+  instance_charge_type = "PayByCLCU"
+  # 流量付费模式
+  internet_charge_type = "PayByTraffic"
+  # 主可用区
+  master_zone_id       = "cn-zhangjiakou-a"
+
 }
 
-resource "alicloud_slb" "instance-2" {
+resource "alicloud_slb_load_balancer" "instance-2" {
   load_balancer_name   = "terraform-slb-test-2"
-  load_balancer_spec   = "slb.s1.small"
-  internet_charge_type = "PayByTraffic"
   address_type         = "internet"
-}%
+  instance_charge_type = "PayByCLCU"  
+  master_zone_id       = "cn-zhangjiakou-a"
+}
 ```
 
-> 再添加一个 listener-install.tf 文件，声明监听资源
+> 再添加一个 slb-listener-install.tf 文件，声明监听资源，测试三种监听，http / https / tcp
 
 ```bash
-~/VSCodeDir/terraform » cat listener-install.tf
-resource "alicloud_slb_listener" "tcp-1" {
-  load_balancer_id          = alicloud_slb.instance-1.id
+~/VSCodeDir/terraform » cat slb-listener-install.tf
+resource "alicloud_slb_listener" "tcp-example" {
+  load_balancer_id          = alicloud_slb_load_balancer.instance-1.id
   backend_port              = "22"
   frontend_port             = "22"
   protocol                  = "tcp"
@@ -110,39 +117,34 @@ resource "alicloud_slb_listener" "tcp-1" {
   established_timeout       = 600
 }
 
-resource "alicloud_slb_listener" "tcp-2" {
-  load_balancer_id          = alicloud_slb.instance-1.id
-  backend_port              = "23"
-  frontend_port             = "24"
-  protocol                  = "tcp"
-  bandwidth                 = "10"
-  health_check_type         = "tcp"
-  persistence_timeout       = 3600
+
+resource "alicloud_slb_listener" "https-example" {
+  load_balancer_id          = alicloud_slb_load_balancer.instance-1.id
+  backend_port              = 80
+  frontend_port             = 443
+  # 指定 HTTPS 协议
+  protocol                  = "https"
+  # 指定服务器 HTTPS 证书
+  server_certificate_id     = alicloud_slb_server_certificate.foo.id
+  sticky_session            = "on"
+  sticky_session_type       = "insert"
+  cookie                    = "testslblistenercookie"
+  cookie_timeout            = 86400
+  health_check              = "on"
+  health_check_uri          = "/cons"
+  health_check_connect_port = 20
   healthy_threshold         = 8
   unhealthy_threshold       = 8
   health_check_timeout      = 8
   health_check_interval     = 5
-  health_check_http_code    = "http_2xx"
-  health_check_connect_port = 20
-  health_check_uri          = "/console"
-  established_timeout       = 600
-}
-resource "alicloud_slb_listener" "udp" {
-  load_balancer_id          = alicloud_slb.instance-2.id
-  backend_port              = 2001
-  frontend_port             = 2001
-  protocol                  = "udp"
+  health_check_http_code    = "http_2xx,http_3xx"
   bandwidth                 = 10
-  persistence_timeout       = 3600
-  healthy_threshold         = 8
-  unhealthy_threshold       = 8
-  health_check_timeout      = 8
-  health_check_interval     = 4
-  health_check_connect_port = 20
+  request_timeout           = 80
+  idle_timeout              = 30
 }
 
-resource "alicloud_slb_listener" "http" {
-  load_balancer_id          = alicloud_slb.instance-2.id
+resource "alicloud_slb_listener" "http-example" {
+  load_balancer_id          = alicloud_slb_load_balancer.instance-1.id
   backend_port              = 80
   frontend_port             = 80
   protocol                  = "http"
@@ -164,8 +166,16 @@ resource "alicloud_slb_listener" "http" {
 }
 ```
 
+> 上面的 https-example 中使用了  http
 
-> 可以先执行 terraform plan ，能看到执行计划，而未执行变更动作，这里忽略该步骤，直接执行了 terraform apply，执行结果如图
+
+
+
+
+# 三. Terraform 的状态文件
+
+> 在测试使用中，可以先执行 terraform plan ，能看到执行计划，而未执行变更动作
+> 这里忽略该步骤，直接执行了 terraform apply，执行结果如图，有一个文件比较重要
 
 ![](assets/Terraform%20实践/Terraform%20实践_image_4.png)
 
