@@ -172,8 +172,9 @@
   },
   "active": "c568ec6ea2fdfb97",
   "lastOpenFiles": [
-    "DevOps/Terraform 实践.md",
     "DevOps/SLB 权重配置工具.md",
+    "mysqlUtils/README.md",
+    "DevOps/Terraform 实践.md",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_4.png",
     "DevOps/assets/Terraform 实践/tmp1705568275607_Terraform 实践_image_4.png",
     "DevOps/assets/Terraform 实践/tmp1705561394458_Terraform 实践_image_4.png",
@@ -189,7 +190,6 @@
     "ubuntu-nginx-vts/README.md",
     "DevOps/Go",
     "DevOps",
-    "mysqlUtils/README.md",
     "MindMap/MindMap.md",
     "MindMap/assets/MindMap/MindMap_image_1.png",
     "MindMap/assets/MindMap",
