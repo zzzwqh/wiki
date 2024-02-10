@@ -1,7 +1,7 @@
 
 ```bash
 # 创建一个测试索引
-curl "http://127.0.0.1:9200/test_index" \  
+curl "127.0.0.1:9200/test_index" \  
   -u elastic:gameale \  
   -s \  
   -H "Content-Type: application/json" \  
