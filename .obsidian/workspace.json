@@ -172,10 +172,10 @@
   },
   "active": "c568ec6ea2fdfb97",
   "lastOpenFiles": [
-    "DevOps/Consul.md",
-    "DevOps/Go-Elasticsearch-Alert.md",
-    "DevOps/Terraform 实践.md",
     "DevOps/SLB 权重配置工具.md",
+    "DevOps/Go-Elasticsearch-Alert.md",
+    "DevOps/Consul.md",
+    "DevOps/Terraform 实践.md",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
     "mysqlUtils/README.md",
