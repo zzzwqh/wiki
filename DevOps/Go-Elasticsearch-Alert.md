@@ -81,5 +81,6 @@ done
 ```
 > 正常返回输出如下
 ```bash
+{"_index":"test-idx","_type":"_doc","_id":"2IV-kI0BOEpJpMsp4jQW","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":6,"_primary_term":1}{"_index":"test-idx","_type":"_doc","_id":"2YV-kI0BOEpJpMsp4jQf","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":1}#
 ```
 ## 
