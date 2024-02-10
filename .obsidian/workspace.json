@@ -170,12 +170,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "c568ec6ea2fdfb97",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
-    "DevOps/SLB 权重配置工具.md",
-    "DevOps/Go-Elasticsearch-Alert.md",
-    "DevOps/Consul.md",
+    "README.md",
     "DevOps/Terraform 实践.md",
+    "DevOps/SLB 权重配置工具.md",
+    "DevOps/Consul.md",
+    "DevOps/Go-Elasticsearch-Alert.md",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
     "mysqlUtils/README.md",
@@ -207,7 +208,6 @@
     "Excalidraw/Drawing 2024-01-14 22.12.59.excalidraw.md",
     "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
     "Excalidraw/Drawing 2024-01-14 22.11.41.excalidraw.md",
-    "README.md",
     "obsidian.tgz",
     "structure/atest.md",
     "image.canvas",
