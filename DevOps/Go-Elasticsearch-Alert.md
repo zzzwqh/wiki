@@ -68,17 +68,15 @@ cat <<EOF > /tmp/gea-payload-2.json
   }  
 }  
 EOF
-  
-echo "==> Writing some test data to Elasticsearch..."  
-  
-for f in /tmp/gea-payload-*.json; do  
-  # Write a document to the new index  
-  curl "http://127.0.0.1:9200/test-idx" \ 
+
+for f in /tmp/gea-payload-*.json; do
+  # Write a document to the new index
+  curl "http://127.0.0.1:9200/test-idx/_doc" \
+    -s \
+    -H "Content-Type: application/json" \
+    -X POST \
     -u elastic:gameale \
-    -s \  
-    -H "Content-Type: application/json" \  
-    -X POST \  
-    -d "@${f}" > /dev/null  
+    -d "@${f}"
 done
 ```
 
