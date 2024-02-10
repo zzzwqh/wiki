@@ -1,5 +1,5 @@
 ## 一. 创建测试数据
-> 创建测试索引 test-idx
+- 创建测试索引 test-idx
 ```bash
 curl "http://127.0.0.1:9200/test-idx" \
   -u user:password \
@@ -28,8 +28,14 @@ curl "http://127.0.0.1:9200/test-idx" \
     }
   }'
 ```
-> 执行后，输出如下
+> 执行后，正常返回输出如下
 ```bash
-{"acknowledged":true,"shards_acknowledged":true,"index":"test-idx"}#
+{"acknowledged":true,"shards_acknowledged":true,"index":"test-idx"}
+```
+- 插入测试文档
+```bash
+# 清除测试数据
+rm /tmp/gea-payload-*.json
 ```
 
+## 
