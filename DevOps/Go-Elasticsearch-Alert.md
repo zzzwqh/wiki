@@ -1,5 +1,5 @@
 ## 一. 创建测试数据
-> 创建测试索引
+> 创建测试索引 test-idx
 ```bash
 curl "http://127.0.0.1:9200/test-idx" \
   -u user:password \
@@ -32,3 +32,4 @@ curl "http://127.0.0.1:9200/test-idx" \
 ```bash
 {"acknowledged":true,"shards_acknowledged":true,"index":"test-idx"}#
 ```
+
