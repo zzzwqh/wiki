@@ -67,7 +67,7 @@ cat <<EOF > /tmp/gea-payload-2.json
     }  
   }  
 }  
-EOF  
+EOF
   
 echo "==> Writing some test data to Elasticsearch..."  
   
