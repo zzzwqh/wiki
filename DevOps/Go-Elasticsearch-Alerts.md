@@ -1,4 +1,8 @@
-> 公司的 elastalert2 被人魔改过，不太好用，想用 go 重新写一个，找到一个 github 上的项目，需要做下飞书通知等改进，先测试下
+> 公司的 elastalert2 被人魔改过，不太好用，想用 go 重新写一个，找到一个 github 上的项目，需要做下飞书通知等改进，先测试下，项目地址：
+
+```bash
+ git clone git@github.com:morningconsult/go-elasticsearch-alerts.git 
+```
 
 
 ## 一. 创建测试数据
