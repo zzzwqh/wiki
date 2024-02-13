@@ -83,7 +83,7 @@ for f in /tmp/gea-payload-*.json; do
     -s \
     -H "Content-Type: application/json" \
     -X POST \
-    -u elastic:gameale \
+    -u user:password \
     -d "@${f}"
 done
 ```
