@@ -30,9 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5cb7d0d5c8e7e4d2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -170,7 +180,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "c568ec6ea2fdfb97",
+  "active": "5cb7d0d5c8e7e4d2",
   "lastOpenFiles": [
     "mysqlUtils/README.md",
     "DevOps/Go-Elasticsearch-Alerts.md",
