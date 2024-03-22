@@ -59,7 +59,7 @@
         stage('Pulling Infra Code') {
             steps {
                 echo  "\033[46;35m 拉取 devops 仓库的构建工具代码仓库 ~ \033[0m"
-                checkout scmGit(branches: [[name: '*/test']], extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: './infra']], userRemoteConfigs: [[credentialsId: '**********', url: 'ssh://git@bitbucket.*（*.com:7999/xxxx/server_infra.git']])
+                checkout scmGit(branches: [[name: '*/test']], extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: './infra']], userRemoteConfigs: [[credentialsId: '**********', url: 'ssh://git@bitbucket.*****.com:7999/xxxx/server_infra.git']])
             }
         }
        stage('Build Images') {
