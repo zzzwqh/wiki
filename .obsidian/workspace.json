@@ -20,18 +20,6 @@
             }
           },
           {
-            "id": "c568ec6ea2fdfb97",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevOps/Go-Elasticsearch-Alerts.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5cb7d0d5c8e7e4d2",
             "type": "leaf",
             "state": {
@@ -49,14 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/elasticsearch 数据拉取.md",
+                "file": "DevOps/Sense 语法记录.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -122,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch 数据拉取.md",
+                "file": "DevOps/Sense 语法记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch 数据拉取.md",
+                "file": "DevOps/Sense 语法记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch 数据拉取.md"
+                "file": "DevOps/Sense 语法记录.md"
               }
             }
           },
@@ -196,16 +184,16 @@
   },
   "active": "0ba202ae998d51a2",
   "lastOpenFiles": [
-    "DevOps/elasticsearch 数据拉取.md",
+    "DevOps/SLB 权重配置工具.md",
+    "DevOps/Terraform 实践.md",
     "DevOps/Sense 语法记录.md",
-    "DevOps/Bitbucket 自动触发构建任务.md",
-    "DevOps/Go-Elasticsearch-Alerts.md",
-    "DevOps/Consul.md",
     "DevOps/nsenter 命令记载.md",
+    "DevOps/Go-Elasticsearch-Alerts.md",
+    "DevOps/elasticsearch 数据拉取.md",
+    "DevOps/Bitbucket 自动触发构建任务.md",
+    "DevOps/Consul.md",
     "test.txt",
     "Excalidraw/Drawing.md",
-    "DevOps/Terraform 实践.md",
-    "DevOps/SLB 权重配置工具.md",
     "mysqlUtils/README.md",
     "README.md",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
