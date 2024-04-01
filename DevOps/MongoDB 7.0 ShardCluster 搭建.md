@@ -120,3 +120,26 @@ openssl rand -base64 745 > mongo-keyfile
 chmod 400 ./mongo-keyfile
 chown 999:999 ./mongo-keyfile
 ```
+
+```bash
+# 初始化 mongodb config 节点
+docker-compose exec mongo_config1 bash -c "echo 'rs.initiate({_id: \"fates-mongo-config\",configsvr: true, members: [{ _id : 0, host : \"mongo_config1:27019\" },{ _id : 1, host : \"mongo_config2:27019\" }, { _id : 2, host : \"mongo_config3:27019\" }]})' | mongosh --port 27019"
+
+  
+# 初始化 mongodb shard 节点
+docker-compose exec mongo_shard1 bash -c "echo 'rs.initiate({_id: \"mongo_shard1\",members: [{ _id : 0, host : \"mongo_shard1:27018\" }]})' | mongosh --port 27018"
+
+docker-compose exec mongo_shard2 bash -c "echo 'rs.initiate({_id: \"mongo_shard2\",members: [{ _id : 0, host : \"mongo_shard2:27018\" }]})' | mongosh --port 27018"
+
+
+  
+  
+# 将 shard 节点添加到 mongos-1 中
+docker-compose -f docker-compose.yml exec mongo-mongos1 bash -c "echo 'sh.addShard(\"mongo_shard1/mongo_shard1:27018\")' | mongosh"
+docker-compose -f docker-compose.yml exec mongo-mongos1 bash -c "echo 'sh.addShard(\"mongo_shard2/mongo_shard2:27018\")' | mongosh"
+
+  
+# 将 shard 节点添加到 mongos-2 中
+docker-compose -f docker-compose.yml exec mongo-mongos2 bash -c "echo 'sh.addShard(\"mongo_shard1/mongo_shard1:27018\")' | mongosh"
+docker-compose -f docker-compose.yml exec mongo-mongos2 bash -c "echo 'sh.addShard(\"mongo_shard2/mongo_shard2:27018\")' | mongosh"
+```
