@@ -112,13 +112,16 @@ networks:
 先不执行启动，先创建网络 / 证书，命令如下
 
 ```bash
-#创建网络
+# 创建网络
 docker network create --driver bridge dev_network
 
-#创建key：文件放入yml文件目录
+# 创建key：文件放入yml文件目录
 openssl rand -base64 745 > mongo-keyfile
 chmod 400 ./mongo-keyfile
 chown 999:999 ./mongo-keyfile
+
+# 启动
+docker-compose up -d 
 ```
 此时集群还没有关联，需要执行一些初始化命令
 ```bash
