@@ -146,3 +146,28 @@ docker-compose -f docker-compose.yml exec mongo-mongos1 bash -c "echo 'sh.addSha
 docker-compose -f docker-compose.yml exec mongo-mongos2 bash -c "echo 'sh.addShard(\"mongo_shard1/mongo_shard1:27018\")' | mongosh"
 docker-compose -f docker-compose.yml exec mongo-mongos2 bash -c "echo 'sh.addShard(\"mongo_shard2/mongo_shard2:27018\")' | mongosh"
 ```
+
+
+> 授权动作
+
+```bash
+use admin
+
+db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}]})
+
+  
+
+use test
+
+db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}]})
+
+db.auth("admin","admin")
+
+sh.enableSharding("test")
+
+sh.shardCollection("test.mytable", {"_id": "hashed" })
+
+db.mytable.insert({'price': 1})
+
+db.mytable.find().count()
+```
