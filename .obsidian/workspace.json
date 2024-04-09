@@ -4,45 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "26bc9539473b945c",
+        "id": "a4da3d77600707c1",
         "type": "tabs",
         "children": [
           {
-            "id": "f80bd60e7a0c3d4b",
+            "id": "e0cde44126cafdaf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevOps/SLB 权重配置工具.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5cb7d0d5c8e7e4d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevOps/nsenter 命令记载.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ba202ae998d51a2",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing.md"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -145,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md"
-              }
+              "state": {}
             }
           },
           {
@@ -178,18 +149,18 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6a7136d4fb01c960",
+  "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-04-09 15.01.15.excalidraw.md",
-    "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
-    "Excalidraw/Drawing.md",
+    "DevOps/SLB 权重配置工具.md",
     "DevOps/nsenter 命令记载.md",
+    "Excalidraw/Drawing.md",
+    "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
+    "Excalidraw/Drawing 2024-04-09 15.01.15.excalidraw.md",
     "DevOps/elasticsearch 数据拉取.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/kubeadm 证书更新.md",
     "DevOps/Bitbucket 自动触发构建任务.md",
     "DevOps/Sense 语法记录.md",
-    "DevOps/SLB 权重配置工具.md",
     "DevOps/Terraform 实践.md",
     "DevOps/Go-Elasticsearch-Alerts.md",
     "DevOps/Consul.md",
