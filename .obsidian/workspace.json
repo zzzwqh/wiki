@@ -11,8 +11,12 @@
             "id": "e0cde44126cafdaf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/kubeadm 证书更新.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "DevOps/kubeadm 证书更新.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "DevOps/kubeadm 证书更新.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "DevOps/kubeadm 证书更新.md"
+              }
             }
           },
           {
@@ -151,15 +159,15 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/Bitbucket 自动触发构建任务.md",
+    "DevOps/elasticsearch 数据拉取.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/nsenter 命令记载.md",
     "Excalidraw/Drawing.md",
     "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
     "Excalidraw/Drawing 2024-04-09 15.01.15.excalidraw.md",
-    "DevOps/elasticsearch 数据拉取.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/kubeadm 证书更新.md",
-    "DevOps/Bitbucket 自动触发构建任务.md",
     "DevOps/Sense 语法记录.md",
     "DevOps/Terraform 实践.md",
     "DevOps/Go-Elasticsearch-Alerts.md",
