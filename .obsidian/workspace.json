@@ -23,9 +23,11 @@
             "id": "2b86166dcac30c5e",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.12"
+                "file": "DevOps/nsenter 命令记载.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/Bitbucket 自动触发构建任务.md",
+                "file": "DevOps/nsenter 命令记载.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/Bitbucket 自动触发构建任务.md",
+                "file": "DevOps/nsenter 命令记载.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/Bitbucket 自动触发构建任务.md"
+                "file": "DevOps/nsenter 命令记载.md"
               }
             }
           },
