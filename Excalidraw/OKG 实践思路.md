@@ -16,6 +16,8 @@ codeReload-sidecar ^I2Zg4Mtw
 
 GameServerSet-0 ^7G67mrDv
 
+EmptyDir 还是 PVC？ ^GVxvZWnV
+
 %%
 # Drawing
 ```json
@@ -60,8 +62,8 @@ GameServerSet-0 ^7G67mrDv
 		},
 		{
 			"type": "rectangle",
-			"version": 541,
-			"versionNonce": 1020716669,
+			"version": 562,
+			"versionNonce": 105629821,
 			"isDeleted": false,
 			"id": "wsi_BxcKEJyiBtFso0rix",
 			"fillStyle": "solid",
@@ -73,7 +75,7 @@ GameServerSet-0 ^7G67mrDv
 			"x": -754.7340854353095,
 			"y": -629.2659905396038,
 			"strokeColor": "#1971c2",
-			"backgroundColor": "#96f2d7",
+			"backgroundColor": "#ffc9c9",
 			"width": 172.25801319082905,
 			"height": 61.10026160168893,
 			"seed": 476089149,
@@ -88,7 +90,7 @@ GameServerSet-0 ^7G67mrDv
 					"id": "zv3jv4X1"
 				}
 			],
-			"updated": 1713862583713,
+			"updated": 1713862723642,
 			"link": null,
 			"locked": false
 		},
@@ -131,8 +133,8 @@ GameServerSet-0 ^7G67mrDv
 		},
 		{
 			"type": "rectangle",
-			"version": 789,
-			"versionNonce": 1569656541,
+			"version": 790,
+			"versionNonce": 290524755,
 			"isDeleted": false,
 			"id": "166-wHnnYJohQCGllhyGY",
 			"fillStyle": "solid",
@@ -157,13 +159,9 @@ GameServerSet-0 ^7G67mrDv
 				{
 					"type": "text",
 					"id": "zISz1qKu"
-				},
-				{
-					"id": "KySSQ_XK3TFn6EYCK7Ss5",
-					"type": "arrow"
 				}
 			],
-			"updated": 1713862583713,
+			"updated": 1713862653092,
 			"link": null,
 			"locked": false
 		},
@@ -313,69 +311,17 @@ GameServerSet-0 ^7G67mrDv
 			"lineHeight": 1.25
 		},
 		{
-			"id": "KySSQ_XK3TFn6EYCK7Ss5",
-			"type": "arrow",
-			"x": -576.6776473240726,
-			"y": -517.5309325582467,
-			"width": 179.13045960604939,
-			"height": 1.5364468839866277,
-			"angle": 0,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#f3f0ff",
-			"fillStyle": "solid",
-			"strokeWidth": 4,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 70,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 498769533,
-			"version": 936,
-			"versionNonce": 1969633373,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1713862583714,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					179.13045960604939,
-					-1.5364468839866277
-				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": {
-				"elementId": "166-wHnnYJohQCGllhyGY",
-				"focus": -0.06550886691580586,
-				"gap": 5.798424646557521
-			},
-			"endBinding": {
-				"elementId": "DxFxs4tXhJyjlf3fcP39M",
-				"focus": 0.03129513511398781,
-				"gap": 9.533658755435454
-			},
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
-		},
-		{
 			"id": "DxFxs4tXhJyjlf3fcP39M",
 			"type": "rectangle",
-			"x": -388.01352896258777,
-			"y": -671.5669602742769,
-			"width": 338.655741118665,
-			"height": 311.77894969952604,
+			"x": -1272.2270215603758,
+			"y": -570.0432150059314,
+			"width": 309.04587680280366,
+			"height": 57.94523984795959,
 			"angle": 0,
 			"strokeColor": "#1971c2",
-			"backgroundColor": "#f3f0ff",
+			"backgroundColor": "#b2f2bb",
 			"fillStyle": "solid",
-			"strokeWidth": 4,
+			"strokeWidth": 1,
 			"strokeStyle": "solid",
 			"roughness": 1,
 			"opacity": 70,
@@ -385,18 +331,187 @@ GameServerSet-0 ^7G67mrDv
 				"type": 3
 			},
 			"seed": 617600157,
-			"version": 172,
-			"versionNonce": 1343825085,
+			"version": 1025,
+			"versionNonce": 614702643,
 			"isDeleted": false,
 			"boundElements": [
 				{
-					"id": "KySSQ_XK3TFn6EYCK7Ss5",
-					"type": "arrow"
+					"type": "text",
+					"id": "GVxvZWnV"
 				}
 			],
-			"updated": 1713862583714,
+			"updated": 1713862742656,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "GVxvZWnV",
+			"type": "text",
+			"x": -1258.894055082802,
+			"y": -558.5705950819516,
+			"width": 282.37994384765625,
+			"height": 35,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "#f3f0ff",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 80,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 629812819,
+			"version": 649,
+			"versionNonce": 1972854739,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713862742656,
+			"link": null,
+			"locked": false,
+			"text": "EmptyDir 还是 PVC？",
+			"rawText": "EmptyDir 还是 PVC？",
+			"fontSize": 28,
+			"fontFamily": 1,
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"baseline": 25,
+			"containerId": "DxFxs4tXhJyjlf3fcP39M",
+			"originalText": "EmptyDir 还是 PVC？",
+			"lineHeight": 1.25
+		},
+		{
+			"id": "jPRtZG1O36Rgo4R9Kn04K",
+			"type": "line",
+			"x": -760.4125503016471,
+			"y": -600.4133843774545,
+			"width": 201.94448755051405,
+			"height": 62.53167334381283,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "#ffc9c9",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 80,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 719934141,
+			"version": 156,
+			"versionNonce": 62599699,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713862751677,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-201.94448755051405,
+					62.53167334381283
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": null
+		},
+		{
+			"id": "WUehjwOct3fWEJQliq6N3",
+			"type": "line",
+			"x": -756.4241050416039,
+			"y": -512.5904191453642,
+			"width": 203.99151037236925,
+			"height": 23.228022853550556,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "#ffc9c9",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 80,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 1225774419,
+			"version": 118,
+			"versionNonce": 1840910557,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713862734642,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-203.99151037236925,
+					-23.228022853550556
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": null
+		},
+		{
+			"id": "FmZ-LnbV29-e0IVYVBaef",
+			"type": "line",
+			"x": -753.0245849981659,
+			"y": -424.7512077004019,
+			"width": 208.32518765593943,
+			"height": 111.87548338888814,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "#ffc9c9",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 80,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 828239165,
+			"version": 120,
+			"versionNonce": 1315208403,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713862738881,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-208.32518765593943,
+					-111.87548338888814
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": null,
+			"endBinding": null,
+			"startArrowhead": null,
+			"endArrowhead": null
 		},
 		{
 			"id": "7BamchDs",
@@ -510,6 +625,58 @@ GameServerSet-0 ^7G67mrDv
 			"lineHeight": 1.25
 		},
 		{
+			"id": "KySSQ_XK3TFn6EYCK7Ss5",
+			"type": "arrow",
+			"x": -760.1376631373726,
+			"y": -513.3188836382651,
+			"width": 170.18100879896645,
+			"height": 1.2221201045933867,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "#f3f0ff",
+			"fillStyle": "solid",
+			"strokeWidth": 4,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 70,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 498769533,
+			"version": 1872,
+			"versionNonce": 623016957,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1713862653092,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					-170.18100879896645,
+					-1.2221201045933867
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "166-wHnnYJohQCGllhyGY",
+				"focus": -0.06541158254281827,
+				"gap": 5.40357816674242
+			},
+			"endBinding": {
+				"elementId": "DxFxs4tXhJyjlf3fcP39M",
+				"focus": 0.031226416826139768,
+				"gap": 9.928505235250555
+			},
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
+		},
+		{
 			"id": "-DA-BN7nZNbWPRK78F7tv",
 			"type": "arrow",
 			"x": -1202.3299319978341,
@@ -610,27 +777,64 @@ GameServerSet-0 ^7G67mrDv
 			"updated": 1713862582792,
 			"link": null,
 			"locked": false
+		},
+		{
+			"id": "AktL8or4",
+			"type": "text",
+			"x": -865.5824093276725,
+			"y": -571.950019425945,
+			"width": 14,
+			"height": 35,
+			"angle": 0,
+			"strokeColor": "#1971c2",
+			"backgroundColor": "#ffc9c9",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 80,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2035157331,
+			"version": 2,
+			"versionNonce": 398259645,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1713862753029,
+			"link": null,
+			"locked": false,
+			"text": "",
+			"rawText": "",
+			"fontSize": 28,
+			"fontFamily": 1,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 25,
+			"containerId": null,
+			"originalText": "",
+			"lineHeight": 1.25
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#fff9db",
 		"currentItemStrokeColor": "#1971c2",
-		"currentItemBackgroundColor": "#f3f0ff",
+		"currentItemBackgroundColor": "#ffc9c9",
 		"currentItemFillStyle": "solid",
-		"currentItemStrokeWidth": 4,
+		"currentItemStrokeWidth": 1,
 		"currentItemStrokeStyle": "solid",
 		"currentItemRoughness": 1,
-		"currentItemOpacity": 70,
+		"currentItemOpacity": 80,
 		"currentItemFontFamily": 1,
-		"currentItemFontSize": 20,
+		"currentItemFontSize": 28,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 1823.4438678407894,
-		"scrollY": 1307.1200234221951,
+		"scrollX": 1545.5838952925014,
+		"scrollY": 980.3635648117878,
 		"zoom": {
-			"value": 0.5737989613231157
+			"value": 0.9617626041979358
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
