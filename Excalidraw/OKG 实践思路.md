@@ -20,7 +20,7 @@ GameServerSet-0 ^7G67mrDv
 
  configReload-sidecar Notes：
  — 1. 镜像选择
- image: appropriate/curl
+ image: appropriate/curl （apk add rsync）
  要求包含 curl / tar / rsync
  — 2. 容器启动顺序控制
  需要配置如下的环境变量
@@ -28,7 +28,7 @@ GameServerSet-0 ^7G67mrDv
  保证初始化时，配表的同步逻辑
  同步后启动主容器，不会导致主容器启动失败 ^4jW8Wa0p
 
-GameServerSet-0 ^Y6te5I70
+Emptydir ^Y6te5I70
 
 %%
 # Drawing
@@ -44,7 +44,7 @@ GameServerSet-0 ^Y6te5I70
 			"x": -808.8249939055324,
 			"y": -557.2183369172159,
 			"width": 174.08316243345507,
-			"height": 104.10029506050445,
+			"height": 85.64935738743357,
 			"angle": 0,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#b2f2bb",
@@ -57,8 +57,8 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"seed": 2087708339,
-			"version": 3065,
-			"versionNonce": 583261405,
+			"version": 3104,
+			"versionNonce": 197243539,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -66,7 +66,7 @@ GameServerSet-0 ^Y6te5I70
 					"id": "6YTLpLBg"
 				}
 			],
-			"updated": 1713939026985,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false
 		},
@@ -89,11 +89,11 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"seed": 1010486803,
-			"version": 2920,
-			"versionNonce": 1100655475,
+			"version": 2925,
+			"versionNonce": 1347859485,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713939026985,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false,
 			"text": "容器的本地目录，利用\n镜像传输配表压缩包，\n并做同步到容器\nemptydir 共享目录即可",
@@ -109,8 +109,8 @@ GameServerSet-0 ^Y6te5I70
 		},
 		{
 			"type": "rectangle",
-			"version": 1208,
-			"versionNonce": 994982205,
+			"version": 1213,
+			"versionNonce": 213116979,
 			"isDeleted": false,
 			"id": "qFtxZpH6TZkAaUO95Ss9-",
 			"fillStyle": "solid",
@@ -121,7 +121,7 @@ GameServerSet-0 ^Y6te5I70
 			"angle": 0,
 			"x": -1238.7177432238827,
 			"y": -753.5567874452358,
-			"strokeColor": "#f08c00",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "#12b886",
 			"width": 346.67179311929544,
 			"height": 406.8929026932842,
@@ -132,14 +132,14 @@ GameServerSet-0 ^Y6te5I70
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1713939026985,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 813,
-			"versionNonce": 314230035,
+			"version": 829,
+			"versionNonce": 923019389,
 			"isDeleted": false,
 			"id": "wsi_BxcKEJyiBtFso0rix",
 			"fillStyle": "solid",
@@ -170,14 +170,14 @@ GameServerSet-0 ^Y6te5I70
 					"type": "arrow"
 				}
 			],
-			"updated": 1713939026985,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 663,
-			"versionNonce": 521013661,
+			"version": 668,
+			"versionNonce": 1225681363,
 			"isDeleted": false,
 			"id": "zv3jv4X1",
 			"fillStyle": "solid",
@@ -197,7 +197,7 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713939026985,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -213,8 +213,8 @@ GameServerSet-0 ^Y6te5I70
 		},
 		{
 			"type": "rectangle",
-			"version": 1214,
-			"versionNonce": 1937825789,
+			"version": 1228,
+			"versionNonce": 1690570973,
 			"isDeleted": false,
 			"id": "166-wHnnYJohQCGllhyGY",
 			"fillStyle": "solid",
@@ -223,12 +223,12 @@ GameServerSet-0 ^Y6te5I70
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1182.899552190497,
+			"x": -1182.8995521904967,
 			"y": -544.457360902619,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "#9775fa",
 			"width": 237.76212700000013,
-			"height": 47,
+			"height": 50.358927762203734,
 			"seed": 1726586419,
 			"groupIds": [],
 			"frameId": null,
@@ -249,14 +249,14 @@ GameServerSet-0 ^Y6te5I70
 					"type": "arrow"
 				}
 			],
-			"updated": 1713939039427,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1258,
-			"versionNonce": 791989757,
+			"version": 1272,
+			"versionNonce": 1172813683,
 			"isDeleted": false,
 			"id": "zISz1qKu",
 			"fillStyle": "solid",
@@ -265,8 +265,8 @@ GameServerSet-0 ^Y6te5I70
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1139.170832440497,
-			"y": -530.1573609026191,
+			"x": -1139.1708324404967,
+			"y": -528.4778970215172,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 150.3046875,
@@ -276,7 +276,7 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713939026985,
+			"updated": 1713939329567,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -292,8 +292,8 @@ GameServerSet-0 ^Y6te5I70
 		},
 		{
 			"type": "rectangle",
-			"version": 1440,
-			"versionNonce": 633658451,
+			"version": 1701,
+			"versionNonce": 925363517,
 			"isDeleted": false,
 			"id": "m9e69gIjZJW2S35GvfCsR",
 			"fillStyle": "solid",
@@ -302,12 +302,12 @@ GameServerSet-0 ^Y6te5I70
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1183.1234812824543,
-			"y": -471.9231668737764,
+			"x": -1182.8995516810367,
+			"y": -468.1163826911807,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "#da77f2",
 			"width": 237.76212735593472,
-			"height": 46.15096492463637,
+			"height": 47.90764553590387,
 			"seed": 1406288093,
 			"groupIds": [],
 			"frameId": null,
@@ -320,14 +320,14 @@ GameServerSet-0 ^Y6te5I70
 					"id": "I2Zg4Mtw"
 				}
 			],
-			"updated": 1713939026985,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1466,
-			"versionNonce": 717489757,
+			"version": 1727,
+			"versionNonce": 562450707,
 			"isDeleted": false,
 			"id": "I2Zg4Mtw",
 			"fillStyle": "solid",
@@ -336,8 +336,8 @@ GameServerSet-0 ^Y6te5I70
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1135.394761354487,
-			"y": -458.0476844114582,
+			"x": -1135.1708317530693,
+			"y": -453.3625599232288,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 142.3046875,
@@ -347,7 +347,7 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713939026985,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -380,11 +380,11 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"seed": 734939037,
-			"version": 292,
-			"versionNonce": 1479268851,
+			"version": 296,
+			"versionNonce": 1569799581,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713939026985,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
 			"text": "GameServerSet-0",
@@ -402,9 +402,9 @@ GameServerSet-0 ^Y6te5I70
 			"id": "1SrL3CYyzMEpUxzdMHhKl",
 			"type": "arrow",
 			"x": -938.801862005258,
-			"y": -525.1379602766601,
+			"y": -523.1618985178395,
 			"width": 115.62542414868722,
-			"height": 32.47869167711667,
+			"height": 33.63323063406767,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "#b2f2bb",
@@ -419,11 +419,11 @@ GameServerSet-0 ^Y6te5I70
 				"type": 2
 			},
 			"seed": 160704115,
-			"version": 4804,
-			"versionNonce": 82001811,
+			"version": 4828,
+			"versionNonce": 1835054771,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713939070442,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -433,19 +433,19 @@ GameServerSet-0 ^Y6te5I70
 				],
 				[
 					115.62542414868722,
-					-32.47869167711667
+					-33.63323063406767
 				]
 			],
 			"lastCommittedPoint": null,
 			"startBinding": {
 				"elementId": "166-wHnnYJohQCGllhyGY",
-				"focus": 0.5449815103524869,
-				"gap": 6.335563185238584
+				"gap": 6.335563185238584,
+				"focus": 0.5449815103524869
 			},
 			"endBinding": {
 				"elementId": "DxFxs4tXhJyjlf3fcP39M",
-				"focus": 0.2133270615733646,
-				"gap": 9.341184003487115
+				"gap": 9.341184003487115,
+				"focus": 0.2133270615733646
 			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
@@ -458,7 +458,7 @@ GameServerSet-0 ^Y6te5I70
 			"width": 185.42178144926305,
 			"height": 41.978204405833004,
 			"angle": 0,
-			"strokeColor": "#f08c00",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "#12b886",
 			"fillStyle": "solid",
 			"strokeWidth": 1,
@@ -471,8 +471,8 @@ GameServerSet-0 ^Y6te5I70
 				"type": 3
 			},
 			"seed": 617600157,
-			"version": 3026,
-			"versionNonce": 971480691,
+			"version": 3031,
+			"versionNonce": 523338237,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -484,7 +484,7 @@ GameServerSet-0 ^Y6te5I70
 					"type": "arrow"
 				}
 			],
-			"updated": 1713939109227,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false
 		},
@@ -492,9 +492,9 @@ GameServerSet-0 ^Y6te5I70
 			"id": "YEBLzA7LV5RT6Jz8CHGb2",
 			"type": "arrow",
 			"x": -939.8737821349068,
-			"y": -601.5282030335841,
+			"y": -601.6030495630259,
 			"width": 123.08215267286869,
-			"height": 28.780336952265543,
+			"height": 28.837016005619944,
 			"angle": 0,
 			"strokeColor": "#2f9e44",
 			"backgroundColor": "#b2f2bb",
@@ -509,11 +509,11 @@ GameServerSet-0 ^Y6te5I70
 				"type": 2
 			},
 			"seed": 1833583901,
-			"version": 4338,
-			"versionNonce": 432777821,
+			"version": 4344,
+			"versionNonce": 1209886803,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713939067612,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -523,7 +523,7 @@ GameServerSet-0 ^Y6te5I70
 				],
 				[
 					123.08215267286869,
-					28.780336952265543
+					28.837016005619944
 				]
 			],
 			"lastCommittedPoint": null,
@@ -543,10 +543,10 @@ GameServerSet-0 ^Y6te5I70
 		{
 			"id": "ajyFHx1Vez30Lk9Jg8Hcj",
 			"type": "rectangle",
-			"x": -1630.7330111472172,
-			"y": -686.5527624701074,
+			"x": -1595.726806526641,
+			"y": -743.2105382291188,
 			"width": 340.29799067632166,
-			"height": 181.8800540021107,
+			"height": 176,
 			"angle": 0,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "#9775fa",
@@ -559,8 +559,8 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"seed": 1936756381,
-			"version": 1511,
-			"versionNonce": 1725791997,
+			"version": 1834,
+			"versionNonce": 1628060253,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -572,15 +572,15 @@ GameServerSet-0 ^Y6te5I70
 					"type": "arrow"
 				}
 			],
-			"updated": 1713939058716,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "4jW8Wa0p",
 			"type": "text",
-			"x": -1625.7330111472172,
-			"y": -681.5527624701074,
+			"x": -1590.726806526641,
+			"y": -738.2105382291188,
 			"width": 324.4453125,
 			"height": 165.6,
 			"angle": 0,
@@ -595,31 +595,31 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"seed": 997061565,
-			"version": 1295,
-			"versionNonce": 519813971,
+			"version": 1671,
+			"versionNonce": 932374003,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713939058716,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
-			"text": " configReload-sidecar Notes：\n — 1. 镜像选择\n image: appropriate/curl\n 要求包含 curl / tar / rsync\n — 2. 容器启动顺序控制\n 需要配置如下的环境变量\n KRUISE_CONTAINER_PRIORITY = 1\n 保证初始化时，配表的同步逻辑\n 同步后启动主容器，不会导致主容器启动失败",
-			"rawText": " configReload-sidecar Notes：\n — 1. 镜像选择\n image: appropriate/curl\n 要求包含 curl / tar / rsync\n — 2. 容器启动顺序控制\n 需要配置如下的环境变量\n KRUISE_CONTAINER_PRIORITY = 1\n 保证初始化时，配表的同步逻辑\n 同步后启动主容器，不会导致主容器启动失败",
+			"text": " configReload-sidecar Notes：\n — 1. 镜像选择\n image: appropriate/curl （apk add rsync）\n 要求包含 curl / tar / rsync\n — 2. 容器启动顺序控制\n 需要配置如下的环境变量\n KRUISE_CONTAINER_PRIORITY = 1\n 保证初始化时，配表的同步逻辑\n 同步后启动主容器，不会导致主容器启动失败",
+			"rawText": " configReload-sidecar Notes：\n — 1. 镜像选择\n image: appropriate/curl （apk add rsync）\n 要求包含 curl / tar / rsync\n — 2. 容器启动顺序控制\n 需要配置如下的环境变量\n KRUISE_CONTAINER_PRIORITY = 1\n 保证初始化时，配表的同步逻辑\n 同步后启动主容器，不会导致主容器启动失败",
 			"fontSize": 16,
 			"fontFamily": 2,
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"baseline": 162,
 			"containerId": "ajyFHx1Vez30Lk9Jg8Hcj",
-			"originalText": " configReload-sidecar Notes：\n — 1. 镜像选择\n image: appropriate/curl\n 要求包含 curl / tar / rsync\n — 2. 容器启动顺序控制\n 需要配置如下的环境变量\n KRUISE_CONTAINER_PRIORITY = 1\n 保证初始化时，配表的同步逻辑\n 同步后启动主容器，不会导致主容器启动失败",
+			"originalText": " configReload-sidecar Notes：\n — 1. 镜像选择\n image: appropriate/curl （apk add rsync）\n 要求包含 curl / tar / rsync\n — 2. 容器启动顺序控制\n 需要配置如下的环境变量\n KRUISE_CONTAINER_PRIORITY = 1\n 保证初始化时，配表的同步逻辑\n 同步后启动主容器，不会导致主容器启动失败",
 			"lineHeight": 1.15
 		},
 		{
 			"id": "3IWBCKp51deBGzBIoti32",
 			"type": "arrow",
-			"x": -1186.5862400711735,
-			"y": -528.2956068643422,
-			"width": 91.23542752716821,
-			"height": 59.243969733669815,
+			"x": -1190.2308697349897,
+			"y": -525.9975847043497,
+			"width": 53.040171950752665,
+			"height": 77.9576745252017,
 			"angle": 0,
 			"strokeColor": "#6741d9",
 			"backgroundColor": "#da77f2",
@@ -632,11 +632,11 @@ GameServerSet-0 ^Y6te5I70
 			"frameId": null,
 			"roundness": null,
 			"seed": 202134963,
-			"version": 365,
-			"versionNonce": 451849629,
+			"version": 1059,
+			"versionNonce": 1810687677,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713939064549,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -645,8 +645,8 @@ GameServerSet-0 ^Y6te5I70
 					0
 				],
 				[
-					-91.23542752716821,
-					-59.243969733669815
+					-53.040171950752665,
+					-77.9576745252017
 				]
 			],
 			"lastCommittedPoint": [
@@ -655,21 +655,21 @@ GameServerSet-0 ^Y6te5I70
 			],
 			"startBinding": {
 				"elementId": "166-wHnnYJohQCGllhyGY",
-				"focus": -0.7175224497576083,
-				"gap": 3.6866878806766863
+				"gap": 7.33131754449289,
+				"focus": -0.8945328658142531
 			},
 			"endBinding": {
 				"elementId": "ajyFHx1Vez30Lk9Jg8Hcj",
-				"focus": -0.5491031919061399,
-				"gap": 12.613352872553833
+				"gap": 12.15777416457695,
+				"focus": -0.6409576036260821
 			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
 		},
 		{
 			"type": "text",
-			"version": 294,
-			"versionNonce": 1156009203,
+			"version": 505,
+			"versionNonce": 1120382867,
 			"isDeleted": false,
 			"id": "Y6te5I70",
 			"fillStyle": "solid",
@@ -678,326 +678,49 @@ GameServerSet-0 ^Y6te5I70
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1457.3404103541616,
-			"y": -804.0368455250385,
+			"x": -761.9226776462308,
+			"y": -589.7215942286296,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "#e6fcf5",
-			"width": 239.11990356445312,
-			"height": 35,
+			"width": 81.0399169921875,
+			"height": 25,
 			"seed": 596697949,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713939111528,
+			"updated": 1713939329568,
 			"link": null,
 			"locked": false,
-			"fontSize": 28,
+			"fontSize": 20,
 			"fontFamily": 1,
-			"text": "GameServerSet-0",
-			"rawText": "GameServerSet-0",
+			"text": "Emptydir",
+			"rawText": "Emptydir",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "GameServerSet-0",
+			"originalText": "Emptydir",
 			"lineHeight": 1.25,
-			"baseline": 25
-		},
-		{
-			"id": "jPRtZG1O36Rgo4R9Kn04K",
-			"type": "line",
-			"x": -750.2952212356925,
-			"y": -550.2207097098242,
-			"width": 204.5235738439228,
-			"height": 10.417884004084499,
-			"angle": 0,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#ffc9c9",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 80,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 719934141,
-			"version": 266,
-			"versionNonce": 1955410621,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1713939026985,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-204.5235738439228,
-					10.417884004084499
-				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
-		},
-		{
-			"id": "WUehjwOct3fWEJQliq6N3",
-			"type": "line",
-			"x": -746.4042532528804,
-			"y": -464.86716883425737,
-			"width": 207.61035428957757,
-			"height": 67.05624362862733,
-			"angle": 0,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#ffc9c9",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 80,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 1225774419,
-			"version": 278,
-			"versionNonce": 1277305747,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1713939026985,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-207.61035428957757,
-					-67.05624362862733
-				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
-		},
-		{
-			"id": "FmZ-LnbV29-e0IVYVBaef",
-			"type": "line",
-			"x": -752.1310432902133,
-			"y": -380.4071696666433,
-			"width": 200.99002254429195,
-			"height": 142.80421114370324,
-			"angle": 0,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#ffc9c9",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 80,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 828239165,
-			"version": 193,
-			"versionNonce": 422695709,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1713939026985,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					-200.99002254429195,
-					-142.80421114370324
-				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": null,
-			"endBinding": null,
-			"startArrowhead": null,
-			"endArrowhead": null
-		},
-		{
-			"type": "rectangle",
-			"version": 737,
-			"versionNonce": 702429491,
-			"isDeleted": true,
-			"id": "_I-EqLUwkYzx_O7Qh2Ijd",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -749.8644056498041,
-			"y": -652.8024868313053,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#b2f2bb",
-			"width": 172.25801319082905,
-			"height": 61.10026160168893,
-			"seed": 129608029,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 3
-			},
-			"boundElements": [
-				{
-					"type": "text",
-					"id": "RYvSIVyk"
-				}
-			],
-			"updated": 1713939026985,
-			"link": null,
-			"locked": false
-		},
-		{
-			"type": "text",
-			"version": 617,
-			"versionNonce": 354641789,
-			"isDeleted": true,
-			"id": "RYvSIVyk",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -709.9814928043896,
-			"y": -631.4523560304608,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "transparent",
-			"width": 92.4921875,
-			"height": 18.4,
-			"seed": 148272573,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1713939026985,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 2,
-			"text": "Init-container",
-			"rawText": "Init-container",
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"containerId": "_I-EqLUwkYzx_O7Qh2Ijd",
-			"originalText": "Init-container",
-			"lineHeight": 1.15,
-			"baseline": 15
-		},
-		{
-			"id": "GVxvZWnV",
-			"type": "text",
-			"x": -726.1243631284522,
-			"y": -588.7496199088453,
-			"width": 10,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#f08c00",
-			"backgroundColor": "#f3f0ff",
-			"fillStyle": "hachure",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 80,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 629812819,
-			"version": 2653,
-			"versionNonce": 2062637075,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1713939109231,
-			"link": null,
-			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 20,
-			"fontFamily": 1,
-			"textAlign": "center",
-			"verticalAlign": "middle",
-			"baseline": 18,
-			"containerId": "DxFxs4tXhJyjlf3fcP39M",
-			"originalText": "",
-			"lineHeight": 1.25
-		},
-		{
-			"id": "kYzyV3zt",
-			"type": "text",
-			"x": -1445.7755606597714,
-			"y": -593.5256900813197,
-			"width": 7.779296875,
-			"height": 32.199999999999996,
-			"angle": 0,
-			"strokeColor": "#ffffff",
-			"backgroundColor": "#9775fa",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 90,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 240142141,
-			"version": 15,
-			"versionNonce": 741250909,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1713939058716,
-			"link": null,
-			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 28,
-			"fontFamily": 2,
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"baseline": 26,
-			"containerId": "ajyFHx1Vez30Lk9Jg8Hcj",
-			"originalText": "",
-			"lineHeight": 1.15
+			"baseline": 18
 		}
 	],
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#fff9db",
-		"currentItemStrokeColor": "#f08c00",
-		"currentItemBackgroundColor": "#12b886",
+		"currentItemStrokeColor": "#ffffff",
+		"currentItemBackgroundColor": "#40c057",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 1,
 		"currentItemStrokeStyle": "solid",
 		"currentItemRoughness": 2,
 		"currentItemOpacity": 90,
 		"currentItemFontFamily": 2,
-		"currentItemFontSize": 16,
+		"currentItemFontSize": 20,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
 		"scrollX": 1707.4323892207105,
-		"scrollY": 990.9295302733902,
+		"scrollY": 938.6296737231,
 		"zoom": {
 			"value": 1.0117626041979357
 		},
