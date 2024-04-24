@@ -18,7 +18,9 @@ GameServerSet-0 ^7G67mrDv
 
 EmptyDir ^GVxvZWnV
 
-容器的本地目录，利用镜像传输配表 tar 包，同步到容器的 emptydir 共享目录 ^6YTLpLBg
+容器的本地目录，利用
+镜像传输配表 tar 压缩包，解压缩到容器 emptydir 共享目录
+config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 
 %%
 # Drawing
@@ -30,8 +32,8 @@ EmptyDir ^GVxvZWnV
 	"elements": [
 		{
 			"type": "rectangle",
-			"version": 1150,
-			"versionNonce": 346094451,
+			"version": 1162,
+			"versionNonce": 1885645213,
 			"isDeleted": false,
 			"id": "qFtxZpH6TZkAaUO95Ss9-",
 			"fillStyle": "solid",
@@ -41,9 +43,9 @@ EmptyDir ^GVxvZWnV
 			"opacity": 70,
 			"angle": 0,
 			"x": -1238.7177432238827,
-			"y": -753.7807159627162,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#f3f0ff",
+			"y": -753.5567874452358,
+			"strokeColor": "#f08c00",
+			"backgroundColor": "#12b886",
 			"width": 342.4441771427286,
 			"height": 447.8486563731202,
 			"seed": 164441149,
@@ -53,14 +55,14 @@ EmptyDir ^GVxvZWnV
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1713937462685,
+			"updated": 1713938178470,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 750,
-			"versionNonce": 1349981459,
+			"version": 760,
+			"versionNonce": 527287837,
 			"isDeleted": false,
 			"id": "wsi_BxcKEJyiBtFso0rix",
 			"fillStyle": "solid",
@@ -71,8 +73,8 @@ EmptyDir ^GVxvZWnV
 			"angle": 0,
 			"x": -1153.5095650349174,
 			"y": -638.6116244941447,
-			"strokeColor": "#c2255c",
-			"backgroundColor": "#ffc9c9",
+			"strokeColor": "#ffffff",
+			"backgroundColor": "#4dabf7",
 			"width": 172.25801319082905,
 			"height": 61.10026160168893,
 			"seed": 476089149,
@@ -91,14 +93,14 @@ EmptyDir ^GVxvZWnV
 					"type": "arrow"
 				}
 			],
-			"updated": 1713937462685,
+			"updated": 1713938205521,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 608,
-			"versionNonce": 161020595,
+			"version": 611,
+			"versionNonce": 734983731,
 			"isDeleted": false,
 			"id": "zv3jv4X1",
 			"fillStyle": "solid",
@@ -109,7 +111,7 @@ EmptyDir ^GVxvZWnV
 			"angle": 0,
 			"x": -1124.739933439503,
 			"y": -617.2614936933003,
-			"strokeColor": "#c2255c",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 114.71875,
 			"height": 18.4,
@@ -118,7 +120,7 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713937462685,
+			"updated": 1713938205522,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -134,8 +136,8 @@ EmptyDir ^GVxvZWnV
 		},
 		{
 			"type": "rectangle",
-			"version": 1026,
-			"versionNonce": 808719325,
+			"version": 1028,
+			"versionNonce": 672613747,
 			"isDeleted": false,
 			"id": "166-wHnnYJohQCGllhyGY",
 			"fillStyle": "solid",
@@ -146,7 +148,7 @@ EmptyDir ^GVxvZWnV
 			"angle": 0,
 			"x": -1152.0798978375146,
 			"y": -547.7920664550599,
-			"strokeColor": "#1971c2",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "#e9ecef",
 			"width": 172.25801299999998,
 			"height": 47,
@@ -166,14 +168,14 @@ EmptyDir ^GVxvZWnV
 					"type": "arrow"
 				}
 			],
-			"updated": 1713937580816,
+			"updated": 1713938209323,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1076,
-			"versionNonce": 1000312893,
+			"version": 1078,
+			"versionNonce": 2080390973,
 			"isDeleted": false,
 			"id": "zISz1qKu",
 			"fillStyle": "solid",
@@ -184,7 +186,7 @@ EmptyDir ^GVxvZWnV
 			"angle": 0,
 			"x": -1141.1032350875146,
 			"y": -533.4920664550599,
-			"strokeColor": "#1971c2",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 150.3046875,
 			"height": 18.4,
@@ -193,7 +195,7 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713937580816,
+			"updated": 1713938209323,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -209,8 +211,8 @@ EmptyDir ^GVxvZWnV
 		},
 		{
 			"type": "rectangle",
-			"version": 1321,
-			"versionNonce": 1264790781,
+			"version": 1323,
+			"versionNonce": 1201849299,
 			"isDeleted": false,
 			"id": "m9e69gIjZJW2S35GvfCsR",
 			"fillStyle": "solid",
@@ -219,9 +221,9 @@ EmptyDir ^GVxvZWnV
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1147.8471354776589,
-			"y": -471.6490474816885,
-			"strokeColor": "#1971c2",
+			"x": -1148.1212548697467,
+			"y": -471.9231668737764,
+			"strokeColor": "#2f9e44",
 			"backgroundColor": "#e9ecef",
 			"width": 168.9234124132995,
 			"height": 46.15096492463637,
@@ -237,14 +239,14 @@ EmptyDir ^GVxvZWnV
 					"id": "I2Zg4Mtw"
 				}
 			],
-			"updated": 1713937586844,
+			"updated": 1713938145586,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1361,
-			"versionNonce": 265192797,
+			"version": 1363,
+			"versionNonce": 196761309,
 			"isDeleted": false,
 			"id": "I2Zg4Mtw",
 			"fillStyle": "solid",
@@ -253,9 +255,9 @@ EmptyDir ^GVxvZWnV
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1134.5377730210091,
-			"y": -457.7735650193703,
-			"strokeColor": "#1971c2",
+			"x": -1134.811892413097,
+			"y": -458.0476844114582,
+			"strokeColor": "#2f9e44",
 			"backgroundColor": "transparent",
 			"width": 142.3046875,
 			"height": 18.4,
@@ -264,7 +266,7 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713937586844,
+			"updated": 1713938145586,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -286,7 +288,7 @@ EmptyDir ^GVxvZWnV
 			"width": 170.7998504638672,
 			"height": 25,
 			"angle": 0,
-			"strokeColor": "#c2255c",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "#e6fcf5",
 			"fillStyle": "solid",
 			"strokeWidth": 4,
@@ -297,11 +299,11 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"seed": 734939037,
-			"version": 225,
-			"versionNonce": 1242731027,
+			"version": 226,
+			"versionNonce": 964732477,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937462685,
+			"updated": 1713938168413,
 			"link": null,
 			"locked": false,
 			"text": "GameServerSet-0",
@@ -320,7 +322,7 @@ EmptyDir ^GVxvZWnV
 			"type": "rectangle",
 			"x": -857.3352987918763,
 			"y": -561.4449068434963,
-			"width": 161.77801867255528,
+			"width": 185.42178144926305,
 			"height": 41.978204405833004,
 			"angle": 0,
 			"strokeColor": "#1e1e1e",
@@ -336,8 +338,8 @@ EmptyDir ^GVxvZWnV
 				"type": 3
 			},
 			"seed": 617600157,
-			"version": 2841,
-			"versionNonce": 1021486547,
+			"version": 2876,
+			"versionNonce": 2039871795,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -353,14 +355,14 @@ EmptyDir ^GVxvZWnV
 					"type": "arrow"
 				}
 			],
-			"updated": 1713937622460,
+			"updated": 1713937897350,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "GVxvZWnV",
 			"type": "text",
-			"x": -819.0762485620439,
+			"x": -807.2543671736901,
 			"y": -552.9558046405798,
 			"width": 85.25991821289062,
 			"height": 25,
@@ -376,11 +378,11 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"seed": 629812819,
-			"version": 2476,
-			"versionNonce": 1312091795,
+			"version": 2511,
+			"versionNonce": 815061331,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937622407,
+			"updated": 1713937897350,
 			"link": null,
 			"locked": false,
 			"text": "EmptyDir",
@@ -397,10 +399,10 @@ EmptyDir ^GVxvZWnV
 		{
 			"id": "1SrL3CYyzMEpUxzdMHhKl",
 			"type": "arrow",
-			"x": -974.050003782485,
-			"y": -526.6924479764994,
-			"width": 107.37352098712165,
-			"height": 7.275846409123005,
+			"x": -974.0500037824849,
+			"y": -526.4708765083925,
+			"width": 107.37352098712142,
+			"height": 6.974819249384041,
 			"angle": 0,
 			"strokeColor": "#c2255c",
 			"backgroundColor": "#b2f2bb",
@@ -415,11 +417,11 @@ EmptyDir ^GVxvZWnV
 				"type": 2
 			},
 			"seed": 160704115,
-			"version": 3850,
-			"versionNonce": 578522387,
+			"version": 3920,
+			"versionNonce": 1010403443,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937622460,
+			"updated": 1713937897350,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -428,8 +430,8 @@ EmptyDir ^GVxvZWnV
 					0
 				],
 				[
-					107.37352098712165,
-					-7.275846409123005
+					107.37352098712142,
+					-6.974819249384041
 				]
 			],
 			"lastCommittedPoint": null,
@@ -450,9 +452,9 @@ EmptyDir ^GVxvZWnV
 			"id": "YEBLzA7LV5RT6Jz8CHGb2",
 			"type": "arrow",
 			"x": -975.7639799789952,
-			"y": -600.5147700801921,
-			"width": 115.47230557816442,
-			"height": 55.93073912101249,
+			"y": -601.0386770370029,
+			"width": 115.4723055781642,
+			"height": 54.641166984461506,
 			"angle": 0,
 			"strokeColor": "#c2255c",
 			"backgroundColor": "#b2f2bb",
@@ -467,11 +469,11 @@ EmptyDir ^GVxvZWnV
 				"type": 2
 			},
 			"seed": 1833583901,
-			"version": 3851,
-			"versionNonce": 1106486355,
+			"version": 3921,
+			"versionNonce": 607274931,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937622460,
+			"updated": 1713937897350,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -480,8 +482,8 @@ EmptyDir ^GVxvZWnV
 					0
 				],
 				[
-					115.47230557816442,
-					55.93073912101249
+					115.4723055781642,
+					54.641166984461506
 				]
 			],
 			"lastCommittedPoint": null,
@@ -501,10 +503,10 @@ EmptyDir ^GVxvZWnV
 		{
 			"id": "YopnGtPxVxWkr1jQnn23d",
 			"type": "rectangle",
-			"x": -849.5606799043961,
+			"x": -848.8309818043313,
 			"y": -521.1812889489293,
-			"width": 149.79850079637296,
-			"height": 102,
+			"width": 170.29182098232403,
+			"height": 139,
 			"angle": 0,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#b2f2bb",
@@ -517,8 +519,8 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"seed": 2087708339,
-			"version": 244,
-			"versionNonce": 1695897693,
+			"version": 283,
+			"versionNonce": 121756221,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -526,17 +528,17 @@ EmptyDir ^GVxvZWnV
 					"id": "6YTLpLBg"
 				}
 			],
-			"updated": 1713937889370,
+			"updated": 1713937959446,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "6YTLpLBg",
 			"type": "text",
-			"x": -844.5606799043961,
+			"x": -843.8309818043313,
 			"y": -516.1812889489293,
-			"width": 129.796875,
-			"height": 92,
+			"width": 160,
+			"height": 128.79999999999998,
 			"angle": 0,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#b2f2bb",
@@ -549,22 +551,22 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"seed": 1010486803,
-			"version": 238,
-			"versionNonce": 549175773,
+			"version": 401,
+			"versionNonce": 912022109,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937891947,
+			"updated": 1713937962001,
 			"link": null,
 			"locked": false,
-			"text": "容器的本地目录，\n利用镜像传输配表\ntar\n包，同步到容器的\nemptydir 共享目录",
-			"rawText": "容器的本地目录，利用镜像传输配表 tar 包，同步到容器的 emptydir 共享目录",
+			"text": "容器的本地目录，利用\n镜像传输配表 tar\n压缩包，解压缩到容器\nemptydir 共享目录\nconfig-Reload-sidecar\n镜像中带 curl tar\n命令即可）",
+			"rawText": "容器的本地目录，利用\n镜像传输配表 tar 压缩包，解压缩到容器 emptydir 共享目录\nconfig-Reload-sidecar 镜像中带 curl tar 命令即可）",
 			"fontSize": 16,
 			"fontFamily": 2,
 			"textAlign": "left",
 			"verticalAlign": "top",
-			"baseline": 88,
+			"baseline": 125,
 			"containerId": "YopnGtPxVxWkr1jQnn23d",
-			"originalText": "容器的本地目录，利用镜像传输配表 tar 包，同步到容器的 emptydir 共享目录",
+			"originalText": "容器的本地目录，利用\n镜像传输配表 tar 压缩包，解压缩到容器 emptydir 共享目录\nconfig-Reload-sidecar 镜像中带 curl tar 命令即可）",
 			"lineHeight": 1.15
 		},
 		{
@@ -774,8 +776,8 @@ EmptyDir ^GVxvZWnV
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#fff9db",
-		"currentItemStrokeColor": "#1e1e1e",
-		"currentItemBackgroundColor": "#b2f2bb",
+		"currentItemStrokeColor": "#ffffff",
+		"currentItemBackgroundColor": "#4dabf7",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 1,
 		"currentItemStrokeStyle": "solid",
@@ -786,8 +788,8 @@ EmptyDir ^GVxvZWnV
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 1756.8510965267028,
-		"scrollY": 945.4643195518829,
+		"scrollX": 1488.013328782141,
+		"scrollY": 943.4875712596435,
 		"zoom": {
 			"value": 1.0117626041979357
 		},
