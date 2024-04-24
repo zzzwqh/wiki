@@ -18,9 +18,7 @@ GameServerSet-0 ^7G67mrDv
 
 EmptyDir ^GVxvZWnV
 
-容器的本地目录，利用
-镜像传输配表 tar 压缩包，解压缩到容器 emptydir 共享目录
-config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
+容器的本地目录，利用镜像传输配表压缩包，并做同步到容器 emptydir 共享目录即可 ^6YTLpLBg
 
 %%
 # Drawing
@@ -31,9 +29,78 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.17",
 	"elements": [
 		{
+			"id": "YopnGtPxVxWkr1jQnn23d",
 			"type": "rectangle",
-			"version": 1162,
-			"versionNonce": 1885645213,
+			"x": -808.8249939055324,
+			"y": -557.2183369172159,
+			"width": 174.08316243345507,
+			"height": 104.10029506050445,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#b2f2bb",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 90,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2087708339,
+			"version": 3063,
+			"versionNonce": 943867219,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "6YTLpLBg"
+				}
+			],
+			"updated": 1713938495107,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "6YTLpLBg",
+			"type": "text",
+			"x": -803.8249939055324,
+			"y": -552.2183369172159,
+			"width": 161.796875,
+			"height": 73.6,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#b2f2bb",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 90,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1010486803,
+			"version": 2918,
+			"versionNonce": 1762927347,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713938495107,
+			"link": null,
+			"locked": false,
+			"text": "容器的本地目录，利用\n镜像传输配表压缩包，\n并做同步到容器\nemptydir 共享目录即可",
+			"rawText": "容器的本地目录，利用镜像传输配表压缩包，并做同步到容器 emptydir 共享目录即可",
+			"fontSize": 16,
+			"fontFamily": 2,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 70,
+			"containerId": "YopnGtPxVxWkr1jQnn23d",
+			"originalText": "容器的本地目录，利用镜像传输配表压缩包，并做同步到容器 emptydir 共享目录即可",
+			"lineHeight": 1.15
+		},
+		{
+			"type": "rectangle",
+			"version": 1166,
+			"versionNonce": 452084733,
 			"isDeleted": false,
 			"id": "qFtxZpH6TZkAaUO95Ss9-",
 			"fillStyle": "solid",
@@ -55,14 +122,14 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1713938178470,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "rectangle",
-			"version": 760,
-			"versionNonce": 527287837,
+			"version": 811,
+			"versionNonce": 2000799315,
 			"isDeleted": false,
 			"id": "wsi_BxcKEJyiBtFso0rix",
 			"fillStyle": "solid",
@@ -71,11 +138,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1153.5095650349174,
-			"y": -638.6116244941447,
+			"x": -1183.123481,
+			"y": -631.5396724941447,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "#4dabf7",
-			"width": 172.25801319082905,
+			"width": 237.76212700000008,
 			"height": 61.10026160168893,
 			"seed": 476089149,
 			"groupIds": [],
@@ -93,14 +160,14 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 					"type": "arrow"
 				}
 			],
-			"updated": 1713938205521,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 611,
-			"versionNonce": 734983731,
+			"version": 661,
+			"versionNonce": 1801632861,
 			"isDeleted": false,
 			"id": "zv3jv4X1",
 			"fillStyle": "solid",
@@ -109,8 +176,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1124.739933439503,
-			"y": -617.2614936933003,
+			"x": -1121.6017925,
+			"y": -610.1895416933003,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 114.71875,
@@ -120,7 +187,7 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713938205522,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -136,8 +203,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 		},
 		{
 			"type": "rectangle",
-			"version": 1028,
-			"versionNonce": 672613747,
+			"version": 1209,
+			"versionNonce": 2122023923,
 			"isDeleted": false,
 			"id": "166-wHnnYJohQCGllhyGY",
 			"fillStyle": "solid",
@@ -146,11 +213,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1152.0798978375146,
-			"y": -547.7920664550599,
+			"x": -1183.1234807079773,
+			"y": -544.6812894200992,
 			"strokeColor": "#ffffff",
-			"backgroundColor": "#e9ecef",
-			"width": 172.25801299999998,
+			"backgroundColor": "#9775fa",
+			"width": 237.76212700000013,
 			"height": 47,
 			"seed": 1726586419,
 			"groupIds": [],
@@ -168,14 +235,14 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 					"type": "arrow"
 				}
 			],
-			"updated": 1713938209323,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1078,
-			"versionNonce": 2080390973,
+			"version": 1254,
+			"versionNonce": 1541744829,
 			"isDeleted": false,
 			"id": "zISz1qKu",
 			"fillStyle": "solid",
@@ -184,8 +251,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1141.1032350875146,
-			"y": -533.4920664550599,
+			"x": -1139.3947609579773,
+			"y": -530.3812894200993,
 			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 150.3046875,
@@ -195,7 +262,7 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713938209323,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -211,8 +278,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 		},
 		{
 			"type": "rectangle",
-			"version": 1323,
-			"versionNonce": 1201849299,
+			"version": 1437,
+			"versionNonce": 518819219,
 			"isDeleted": false,
 			"id": "m9e69gIjZJW2S35GvfCsR",
 			"fillStyle": "solid",
@@ -221,11 +288,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1148.1212548697467,
+			"x": -1183.1234812824543,
 			"y": -471.9231668737764,
-			"strokeColor": "#2f9e44",
-			"backgroundColor": "#e9ecef",
-			"width": 168.9234124132995,
+			"strokeColor": "#ffffff",
+			"backgroundColor": "#9775fa",
+			"width": 237.76212735593472,
 			"height": 46.15096492463637,
 			"seed": 1406288093,
 			"groupIds": [],
@@ -239,14 +306,14 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 					"id": "I2Zg4Mtw"
 				}
 			],
-			"updated": 1713938145586,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 1363,
-			"versionNonce": 196761309,
+			"version": 1464,
+			"versionNonce": 2115701021,
 			"isDeleted": false,
 			"id": "I2Zg4Mtw",
 			"fillStyle": "solid",
@@ -255,9 +322,9 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": -1134.811892413097,
+			"x": -1135.394761354487,
 			"y": -458.0476844114582,
-			"strokeColor": "#2f9e44",
+			"strokeColor": "#ffffff",
 			"backgroundColor": "transparent",
 			"width": 142.3046875,
 			"height": 18.4,
@@ -266,7 +333,7 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713938145586,
+			"updated": 1713938458137,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -299,11 +366,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"frameId": null,
 			"roundness": null,
 			"seed": 734939037,
-			"version": 226,
-			"versionNonce": 964732477,
+			"version": 230,
+			"versionNonce": 1271620403,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713938168413,
+			"updated": 1713938458138,
 			"link": null,
 			"locked": false,
 			"text": "GameServerSet-0",
@@ -318,10 +385,62 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"lineHeight": 1.25
 		},
 		{
+			"id": "1SrL3CYyzMEpUxzdMHhKl",
+			"type": "arrow",
+			"x": -939.0257905227386,
+			"y": -525.2844954150733,
+			"width": 115.84935266616776,
+			"height": 32.41912838800101,
+			"angle": 0,
+			"strokeColor": "#c2255c",
+			"backgroundColor": "#b2f2bb",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 80,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": {
+				"type": 2
+			},
+			"seed": 160704115,
+			"version": 4797,
+			"versionNonce": 675818877,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713938498051,
+			"link": null,
+			"locked": false,
+			"points": [
+				[
+					0,
+					0
+				],
+				[
+					115.84935266616776,
+					-32.41912838800101
+				]
+			],
+			"lastCommittedPoint": null,
+			"startBinding": {
+				"elementId": "166-wHnnYJohQCGllhyGY",
+				"focus": 0.5449815103524869,
+				"gap": 6.335563185238584
+			},
+			"endBinding": {
+				"elementId": "DxFxs4tXhJyjlf3fcP39M",
+				"focus": 0.2133270615733646,
+				"gap": 9.341184003487115
+			},
+			"startArrowhead": null,
+			"endArrowhead": "arrow"
+		},
+		{
 			"id": "DxFxs4tXhJyjlf3fcP39M",
 			"type": "rectangle",
-			"x": -857.3352987918763,
-			"y": -561.4449068434963,
+			"x": -813.8352538530837,
+			"y": -597.2387221117617,
 			"width": 185.42178144926305,
 			"height": 41.978204405833004,
 			"angle": 0,
@@ -338,8 +457,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 				"type": 3
 			},
 			"seed": 617600157,
-			"version": 2876,
-			"versionNonce": 2039871795,
+			"version": 3012,
+			"versionNonce": 186207379,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -355,15 +474,15 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 					"type": "arrow"
 				}
 			],
-			"updated": 1713937897350,
+			"updated": 1713938495107,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "GVxvZWnV",
 			"type": "text",
-			"x": -807.2543671736901,
-			"y": -552.9558046405798,
+			"x": -763.7543222348975,
+			"y": -588.7496199088453,
 			"width": 85.25991821289062,
 			"height": 25,
 			"angle": 0,
@@ -378,11 +497,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"frameId": null,
 			"roundness": null,
 			"seed": 629812819,
-			"version": 2511,
-			"versionNonce": 815061331,
+			"version": 2647,
+			"versionNonce": 839402035,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937897350,
+			"updated": 1713938495107,
 			"link": null,
 			"locked": false,
 			"text": "EmptyDir",
@@ -397,64 +516,12 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"lineHeight": 1.25
 		},
 		{
-			"id": "1SrL3CYyzMEpUxzdMHhKl",
-			"type": "arrow",
-			"x": -974.0500037824849,
-			"y": -526.4708765083925,
-			"width": 107.37352098712142,
-			"height": 6.974819249384041,
-			"angle": 0,
-			"strokeColor": "#c2255c",
-			"backgroundColor": "#b2f2bb",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 80,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": {
-				"type": 2
-			},
-			"seed": 160704115,
-			"version": 3920,
-			"versionNonce": 1010403443,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1713937897350,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					107.37352098712142,
-					-6.974819249384041
-				]
-			],
-			"lastCommittedPoint": null,
-			"startBinding": {
-				"elementId": "166-wHnnYJohQCGllhyGY",
-				"gap": 5.7718810550297235,
-				"focus": 0.1304231048789029
-			},
-			"endBinding": {
-				"elementId": "DxFxs4tXhJyjlf3fcP39M",
-				"gap": 9.341184003487086,
-				"focus": -0.014103740727281058
-			},
-			"startArrowhead": null,
-			"endArrowhead": "arrow"
-		},
-		{
 			"id": "YEBLzA7LV5RT6Jz8CHGb2",
 			"type": "arrow",
-			"x": -975.7639799789952,
-			"y": -601.0386770370029,
-			"width": 115.4723055781642,
-			"height": 54.641166984461506,
+			"x": -939.8737821349068,
+			"y": -601.5282030335841,
+			"width": 123.08215267286869,
+			"height": 28.780336952265543,
 			"angle": 0,
 			"strokeColor": "#c2255c",
 			"backgroundColor": "#b2f2bb",
@@ -469,11 +536,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 				"type": 2
 			},
 			"seed": 1833583901,
-			"version": 3921,
-			"versionNonce": 607274931,
+			"version": 4335,
+			"versionNonce": 548933811,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937897350,
+			"updated": 1713938495107,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -482,8 +549,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 					0
 				],
 				[
-					115.4723055781642,
-					54.641166984461506
+					123.08215267286869,
+					28.780336952265543
 				]
 			],
 			"lastCommittedPoint": null,
@@ -499,75 +566,6 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
-		},
-		{
-			"id": "YopnGtPxVxWkr1jQnn23d",
-			"type": "rectangle",
-			"x": -848.8309818043313,
-			"y": -521.1812889489293,
-			"width": 170.29182098232403,
-			"height": 139,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "#b2f2bb",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 90,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 2087708339,
-			"version": 283,
-			"versionNonce": 121756221,
-			"isDeleted": false,
-			"boundElements": [
-				{
-					"type": "text",
-					"id": "6YTLpLBg"
-				}
-			],
-			"updated": 1713937959446,
-			"link": null,
-			"locked": false
-		},
-		{
-			"id": "6YTLpLBg",
-			"type": "text",
-			"x": -843.8309818043313,
-			"y": -516.1812889489293,
-			"width": 160,
-			"height": 128.79999999999998,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "#b2f2bb",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 0,
-			"opacity": 90,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 1010486803,
-			"version": 401,
-			"versionNonce": 912022109,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1713937962001,
-			"link": null,
-			"locked": false,
-			"text": "容器的本地目录，利用\n镜像传输配表 tar\n压缩包，解压缩到容器\nemptydir 共享目录\nconfig-Reload-sidecar\n镜像中带 curl tar\n命令即可）",
-			"rawText": "容器的本地目录，利用\n镜像传输配表 tar 压缩包，解压缩到容器 emptydir 共享目录\nconfig-Reload-sidecar 镜像中带 curl tar 命令即可）",
-			"fontSize": 16,
-			"fontFamily": 2,
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"baseline": 125,
-			"containerId": "YopnGtPxVxWkr1jQnn23d",
-			"originalText": "容器的本地目录，利用\n镜像传输配表 tar 压缩包，解压缩到容器 emptydir 共享目录\nconfig-Reload-sidecar 镜像中带 curl tar 命令即可）",
-			"lineHeight": 1.15
 		},
 		{
 			"id": "jPRtZG1O36Rgo4R9Kn04K",
@@ -590,11 +588,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 				"type": 2
 			},
 			"seed": 719934141,
-			"version": 260,
-			"versionNonce": 2065893011,
+			"version": 264,
+			"versionNonce": 863362429,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1713937401315,
+			"updated": 1713938458138,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -634,11 +632,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 				"type": 2
 			},
 			"seed": 1225774419,
-			"version": 272,
-			"versionNonce": 1735693437,
+			"version": 276,
+			"versionNonce": 1300137171,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1713937401989,
+			"updated": 1713938458138,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -678,11 +676,11 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 				"type": 2
 			},
 			"seed": 828239165,
-			"version": 187,
-			"versionNonce": 89754483,
+			"version": 191,
+			"versionNonce": 859252189,
 			"isDeleted": true,
 			"boundElements": null,
-			"updated": 1713937402389,
+			"updated": 1713938458138,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -703,8 +701,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 		},
 		{
 			"type": "rectangle",
-			"version": 731,
-			"versionNonce": 1404919283,
+			"version": 735,
+			"versionNonce": 463237747,
 			"isDeleted": true,
 			"id": "_I-EqLUwkYzx_O7Qh2Ijd",
 			"fillStyle": "solid",
@@ -731,14 +729,14 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 					"id": "RYvSIVyk"
 				}
 			],
-			"updated": 1713937398119,
+			"updated": 1713938458138,
 			"link": null,
 			"locked": false
 		},
 		{
 			"type": "text",
-			"version": 611,
-			"versionNonce": 1472589501,
+			"version": 615,
+			"versionNonce": 1349542461,
 			"isDeleted": true,
 			"id": "RYvSIVyk",
 			"fillStyle": "solid",
@@ -758,7 +756,7 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1713937398119,
+			"updated": 1713938458138,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
@@ -776,8 +774,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#fff9db",
-		"currentItemStrokeColor": "#ffffff",
-		"currentItemBackgroundColor": "#4dabf7",
+		"currentItemStrokeColor": "#e8590c",
+		"currentItemBackgroundColor": "#9775fa",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 1,
 		"currentItemStrokeStyle": "solid",
@@ -788,8 +786,8 @@ config-Reload-sidecar 镜像中带 curl tar 命令即可） ^6YTLpLBg
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 1488.013328782141,
-		"scrollY": 943.4875712596435,
+		"scrollX": 1717.3161306819088,
+		"scrollY": 977.0922922277141,
 		"zoom": {
 			"value": 1.0117626041979357
 		},
