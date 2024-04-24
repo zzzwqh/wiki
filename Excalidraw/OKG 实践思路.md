@@ -18,6 +18,8 @@ GameServerSet-0 ^7G67mrDv
 
 EmptyDir ^GVxvZWnV
 
+容器的本地目录，利用镜像传输配表 tar 包，同步到容器的 emptydir 共享目录 ^6YTLpLBg
+
 %%
 # Drawing
 ```json
@@ -316,13 +318,13 @@ EmptyDir ^GVxvZWnV
 		{
 			"id": "DxFxs4tXhJyjlf3fcP39M",
 			"type": "rectangle",
-			"x": -857.0956671520163,
+			"x": -857.3352987918763,
 			"y": -561.4449068434963,
 			"width": 161.77801867255528,
 			"height": 41.978204405833004,
 			"angle": 0,
-			"strokeColor": "#1971c2",
-			"backgroundColor": "#b2f2bb",
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#38d9a9",
 			"fillStyle": "solid",
 			"strokeWidth": 1,
 			"strokeStyle": "solid",
@@ -334,8 +336,8 @@ EmptyDir ^GVxvZWnV
 				"type": 3
 			},
 			"seed": 617600157,
-			"version": 2834,
-			"versionNonce": 2015547837,
+			"version": 2841,
+			"versionNonce": 1021486547,
 			"isDeleted": false,
 			"boundElements": [
 				{
@@ -351,19 +353,19 @@ EmptyDir ^GVxvZWnV
 					"type": "arrow"
 				}
 			],
-			"updated": 1713937612077,
+			"updated": 1713937622460,
 			"link": null,
 			"locked": false
 		},
 		{
 			"id": "GVxvZWnV",
 			"type": "text",
-			"x": -818.8366169221839,
+			"x": -819.0762485620439,
 			"y": -552.9558046405798,
 			"width": 85.25991821289062,
 			"height": 25,
 			"angle": 0,
-			"strokeColor": "#1971c2",
+			"strokeColor": "#1e1e1e",
 			"backgroundColor": "#f3f0ff",
 			"fillStyle": "hachure",
 			"strokeWidth": 1,
@@ -374,11 +376,11 @@ EmptyDir ^GVxvZWnV
 			"frameId": null,
 			"roundness": null,
 			"seed": 629812819,
-			"version": 2473,
-			"versionNonce": 896243987,
+			"version": 2476,
+			"versionNonce": 1312091795,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937602078,
+			"updated": 1713937622407,
 			"link": null,
 			"locked": false,
 			"text": "EmptyDir",
@@ -395,10 +397,10 @@ EmptyDir ^GVxvZWnV
 		{
 			"id": "1SrL3CYyzMEpUxzdMHhKl",
 			"type": "arrow",
-			"x": -974.0500037824849,
-			"y": -526.6960666541198,
-			"width": 107.61315262698133,
-			"height": 7.281345632592206,
+			"x": -974.050003782485,
+			"y": -526.6924479764994,
+			"width": 107.37352098712165,
+			"height": 7.275846409123005,
 			"angle": 0,
 			"strokeColor": "#c2255c",
 			"backgroundColor": "#b2f2bb",
@@ -413,11 +415,11 @@ EmptyDir ^GVxvZWnV
 				"type": 2
 			},
 			"seed": 160704115,
-			"version": 3846,
-			"versionNonce": 156282963,
+			"version": 3850,
+			"versionNonce": 578522387,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937602078,
+			"updated": 1713937622460,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -426,8 +428,8 @@ EmptyDir ^GVxvZWnV
 					0
 				],
 				[
-					107.61315262698133,
-					-7.281345632592206
+					107.37352098712165,
+					-7.275846409123005
 				]
 			],
 			"lastCommittedPoint": null,
@@ -448,9 +450,9 @@ EmptyDir ^GVxvZWnV
 			"id": "YEBLzA7LV5RT6Jz8CHGb2",
 			"type": "arrow",
 			"x": -975.7639799789952,
-			"y": -600.5077400183494,
-			"width": 115.71193721802433,
-			"height": 55.95216978963447,
+			"y": -600.5147700801921,
+			"width": 115.47230557816442,
+			"height": 55.93073912101249,
 			"angle": 0,
 			"strokeColor": "#c2255c",
 			"backgroundColor": "#b2f2bb",
@@ -465,11 +467,11 @@ EmptyDir ^GVxvZWnV
 				"type": 2
 			},
 			"seed": 1833583901,
-			"version": 3847,
-			"versionNonce": 902363027,
+			"version": 3851,
+			"versionNonce": 1106486355,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1713937602078,
+			"updated": 1713937622460,
 			"link": null,
 			"locked": false,
 			"points": [
@@ -478,8 +480,8 @@ EmptyDir ^GVxvZWnV
 					0
 				],
 				[
-					115.71193721802433,
-					55.95216978963447
+					115.47230557816442,
+					55.93073912101249
 				]
 			],
 			"lastCommittedPoint": null,
@@ -495,6 +497,75 @@ EmptyDir ^GVxvZWnV
 			},
 			"startArrowhead": null,
 			"endArrowhead": "arrow"
+		},
+		{
+			"id": "YopnGtPxVxWkr1jQnn23d",
+			"type": "rectangle",
+			"x": -849.5606799043961,
+			"y": -521.1812889489293,
+			"width": 149.79850079637296,
+			"height": 102,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#b2f2bb",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 90,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 2087708339,
+			"version": 244,
+			"versionNonce": 1695897693,
+			"isDeleted": false,
+			"boundElements": [
+				{
+					"type": "text",
+					"id": "6YTLpLBg"
+				}
+			],
+			"updated": 1713937889370,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "6YTLpLBg",
+			"type": "text",
+			"x": -844.5606799043961,
+			"y": -516.1812889489293,
+			"width": 129.796875,
+			"height": 92,
+			"angle": 0,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#b2f2bb",
+			"fillStyle": "solid",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 90,
+			"groupIds": [],
+			"frameId": null,
+			"roundness": null,
+			"seed": 1010486803,
+			"version": 238,
+			"versionNonce": 549175773,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1713937891947,
+			"link": null,
+			"locked": false,
+			"text": "容器的本地目录，\n利用镜像传输配表\ntar\n包，同步到容器的\nemptydir 共享目录",
+			"rawText": "容器的本地目录，利用镜像传输配表 tar 包，同步到容器的 emptydir 共享目录",
+			"fontSize": 16,
+			"fontFamily": 2,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"baseline": 88,
+			"containerId": "YopnGtPxVxWkr1jQnn23d",
+			"originalText": "容器的本地目录，利用镜像传输配表 tar 包，同步到容器的 emptydir 共享目录",
+			"lineHeight": 1.15
 		},
 		{
 			"id": "jPRtZG1O36Rgo4R9Kn04K",
@@ -703,24 +774,24 @@ EmptyDir ^GVxvZWnV
 	"appState": {
 		"theme": "light",
 		"viewBackgroundColor": "#fff9db",
-		"currentItemStrokeColor": "#c2255c",
+		"currentItemStrokeColor": "#1e1e1e",
 		"currentItemBackgroundColor": "#b2f2bb",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidth": 1,
 		"currentItemStrokeStyle": "solid",
-		"currentItemRoughness": 1,
-		"currentItemOpacity": 80,
-		"currentItemFontFamily": 1,
-		"currentItemFontSize": 20,
+		"currentItemRoughness": 0,
+		"currentItemOpacity": 90,
+		"currentItemFontFamily": 2,
+		"currentItemFontSize": 16,
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 1786.8076640139745,
-		"scrollY": 965.8069580785968,
+		"scrollX": 1756.8510965267028,
+		"scrollY": 945.4643195518829,
 		"zoom": {
-			"value": 0.9617626041979358
+			"value": 1.0117626041979357
 		},
-		"currentItemRoundness": "round",
+		"currentItemRoundness": "sharp",
 		"gridSize": null,
 		"gridColor": {
 			"Bold": "#FFE770FF",
