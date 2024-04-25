@@ -6,3 +6,4 @@
 所以综上所述，并没有好方法，只能开个新集群，给时间服用，后来发现了下面的工具，只需要加 annotation 就可以，是真好用
 https://github.com/CloudNativeGame/fake-time-injector?tab=readme-ov-file
 
+那么我们
