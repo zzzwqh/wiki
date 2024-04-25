@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Excalidraw/fake-time-injector 使用.md",
+                "file": "Excalidraw/fake-time-injector.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/fake-time-injector 使用.md",
+                "file": "Excalidraw/fake-time-injector.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/fake-time-injector 使用.md",
+                "file": "Excalidraw/fake-time-injector.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/fake-time-injector 使用.md"
+                "file": "Excalidraw/fake-time-injector.md"
               }
             }
           },
@@ -160,7 +160,7 @@
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
     "Excalidraw/OKG 实践思路.md",
-    "Excalidraw/fake-time-injector 使用.md",
+    "Excalidraw/fake-time-injector.md",
     "Excalidraw/Drawing 2024-04-25 12.22.19.excalidraw.md",
     "未命名 1.canvas",
     "2024-04-23.md",
