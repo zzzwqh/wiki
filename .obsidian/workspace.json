@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/assets/未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/assets/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/assets/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysqlUtils/README.md"
+                "file": "DevOps/assets/未命名.md"
               }
             }
           },
@@ -159,6 +159,8 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "mysqlUtils/README.md",
+    "DevOps/assets/未命名.md",
     "DevOps/elasticsearch 数据拉取.md",
     "DevOps/Bitbucket 自动触发构建任务.md",
     "DevOps/fake-time-injector.md",
@@ -178,7 +180,6 @@
     "DevOps/Go-Elasticsearch-Alerts.md",
     "DevOps/Consul.md",
     "test.txt",
-    "mysqlUtils/README.md",
     "README.md",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
@@ -206,7 +207,6 @@
     "structure/assets/README/README_image_1.png",
     "structure/未命名.md",
     "Excalidraw/Drawing 2024-01-14 22.12.59.excalidraw.md",
-    "Excalidraw/Drawing 2024-01-14 22.12.58.excalidraw.md",
     "image.canvas"
   ]
 }
