@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/执行 asporf.md",
+                "file": "DevOps/kubeadm 证书更新.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/执行 asporf.md",
+                "file": "DevOps/kubeadm 证书更新.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/执行 asporf.md",
+                "file": "DevOps/kubeadm 证书更新.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/执行 asporf.md"
+                "file": "DevOps/kubeadm 证书更新.md"
               }
             }
           },
@@ -159,8 +159,8 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/执行 asporf 需要宿主机执行.md",
     "DevOps/GOST 配置.md",
-    "DevOps/执行 asporf.md",
     "mysqlUtils/README.md",
     "DevOps/assets/未命名.md",
     "DevOps/elasticsearch 数据拉取.md",
