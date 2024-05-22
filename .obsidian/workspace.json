@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md",
+                "file": "DevOps/Terraform 实践.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md",
+                "file": "DevOps/Terraform 实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md",
+                "file": "DevOps/Terraform 实践.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md"
+                "file": "DevOps/Terraform 实践.md"
               }
             }
           },
@@ -159,7 +159,10 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/Sense 语法记录.md",
+    "DevOps/fake-time-injector.md",
     "DevOps/kubeadm 证书更新.md",
+    "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/ElasticSearch 索引模版.md",
     "DevOps/执行 asporf 需要宿主机执行.md",
     "DevOps/GOST 配置.md",
@@ -167,8 +170,6 @@
     "DevOps/assets/未命名.md",
     "DevOps/elasticsearch 数据拉取.md",
     "DevOps/Bitbucket 自动触发构建任务.md",
-    "DevOps/fake-time-injector.md",
-    "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/nsenter 命令记载.md",
     "DevOps/SLB 权重配置工具.md",
     "Excalidraw/OKG 实践思路.md",
@@ -177,7 +178,6 @@
     "2024-04-23.md",
     "未命名.canvas",
     "DevOps/Terraform 实践.md",
-    "DevOps/Sense 语法记录.md",
     "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
     "Excalidraw/Drawing 2024-04-09 15.01.15.excalidraw.md",
     "DevOps/Go-Elasticsearch-Alerts.md",
