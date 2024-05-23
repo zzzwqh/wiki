@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/容器内执行 asporf.md",
+                "file": "DevOps/容器内执行 asprof.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/容器内执行 asporf.md",
+                "file": "DevOps/容器内执行 asprof.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/容器内执行 asporf.md",
+                "file": "DevOps/容器内执行 asprof.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/容器内执行 asporf.md"
+                "file": "DevOps/容器内执行 asprof.md"
               }
             }
           },
@@ -172,7 +172,7 @@
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/SLB 权重配置工具.md",
     "Excalidraw/OKG 实践思路.md",
-    "DevOps/容器内执行 asporf.md",
+    "DevOps/容器内执行 asprof.md",
     "mysqlUtils/README.md",
     "DevOps/assets/未命名.md",
     "Excalidraw/Drawing 2024-04-25 12.22.19.excalidraw.md",
