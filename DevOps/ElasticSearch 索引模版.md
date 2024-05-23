@@ -154,7 +154,6 @@ PUT _index_template/roc_dev_template
 
 GET _index_template/dev_template
 
-  
 ### 4. 特殊情况处理  
   
 如果现有的索引已经创建，并且没有使用这个模板，你可以：  
