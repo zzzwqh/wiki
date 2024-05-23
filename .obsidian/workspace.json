@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md",
+                "file": "DevOps/bitbucket 自动触发构建任务.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md",
+                "file": "DevOps/bitbucket 自动触发构建任务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md",
+                "file": "DevOps/bitbucket 自动触发构建任务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ElasticSearch 索引模版.md"
+                "file": "DevOps/bitbucket 自动触发构建任务.md"
               }
             }
           },
@@ -159,9 +159,9 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/elasticSearch 索引模版.md",
     "DevOps/elasticsearch 数据拉取.md",
     "DevOps/elasticsearch.md",
-    "DevOps/ElasticSearch 索引模版.md",
     "DevOps/fake-time-injector.md",
     "DevOps/GOST 代理配置.md",
     "DevOps/kubeadm 证书更新.md",
@@ -174,7 +174,7 @@
     "DevOps/执行 asporf 需要宿主机执行.md",
     "mysqlUtils/README.md",
     "DevOps/assets/未命名.md",
-    "DevOps/Bitbucket 自动触发构建任务.md",
+    "DevOps/bitbucket 自动触发构建任务.md",
     "Excalidraw/Drawing 2024-04-25 12.22.19.excalidraw.md",
     "未命名 1.canvas",
     "2024-04-23.md",
