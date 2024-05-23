@@ -8,7 +8,7 @@ PUT _index_template/roc_dev_template
 
 {
 
-"index_patterns": ["roc_dev-*"], // 匹配你的索引模式
+"index_patterns": ["dev-*"], // 匹配你的索引模式
 
 "template": {
 
@@ -144,23 +144,22 @@ PUT _index_template/roc_dev_template
 
  
   
-### 步骤2：将模板应用到新的索引  
+### 2. 将模板应用到新的索引  
   
-一旦模板被创建，你新创建的索引（如匹配 `roc_dev-*` 模式的索引）将自动使用这个模板。即便是通过Filebeat传入Elasticsearch的数据，也会使用这个模板。  
+一旦模板被创建，你新创建的索引（如匹配 `dev-*` 模式的索引）将自动使用这个模板。即便是通过Filebeat传入Elasticsearch的数据，也会使用这个模板。  
   
-### 验证模板是否生效  
+### 3. 验证模板是否生效  
   
 你可以通过查询模板列表来确认你的模板是否已经成功创建。  
 
 GET _index_template/roc_dev_template
 
   
-### 特殊情况处理  
+### 4. 特殊情况处理  
   
 如果现有的索引已经创建，并且没有使用这个模板，你可以：  
 
-1. 重新索引数据:  
-    使用Elasticsearch的Reindex API，将数据从旧的索引重新索引到新的索引中，使其使用新的模板。
+1. 重新索引数据:  使用Elasticsearch的Reindex API，将数据从旧的索引重新索引到新的索引中，使其使用新的模板。
 
 POST _reindex
 
@@ -168,7 +167,7 @@ POST _reindex
 
 "source": {
 
-"index": "roc_dev-old_index"
+"index": "dev-old_index"
 
 },
 
@@ -182,10 +181,9 @@ POST _reindex
 
   
 
-1. 关闭并删除旧索引:  
-    验证新索引的数据正确性后，可以关闭并删除旧索引，以确保将来不再使用旧映射。
+2. 关闭并删除旧索引:  验证新索引的数据正确性后，可以关闭并删除旧索引，以确保将来不再使用旧映射。
 
-DELETE roc_dev-old_index
+DELETE dev-old_index
 
   
 通过以上步骤，你可以实现为特定模式的索引应用预定义的模板，以确保索引映射和设置统一，从而优化日志存储和查询性能。
