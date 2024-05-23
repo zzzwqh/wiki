@@ -159,11 +159,11 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/fake-time-injector.md",
+    "DevOps/ElasticSearch 索引模版.md",
     "DevOps/elasticsearch.md",
     "DevOps/kubeadm 证书更新.md",
     "DevOps/执行 asporf 需要宿主机执行.md",
-    "DevOps/ElasticSearch 索引模版.md",
-    "DevOps/fake-time-injector.md",
     "DevOps/GOST 配置.md",
     "DevOps/Terraform 实践.md",
     "DevOps/Sense 语法记录.md",
