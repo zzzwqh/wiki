@@ -14,7 +14,7 @@ kubectl create -f https://download.elastic.co/downloads/eck/2.12.0/operator.yaml
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
-  name: roc
+  name: project
   namespace: middleware
 spec:
   # 指定 elasticsearch 镜像和版本
@@ -103,7 +103,7 @@ spec:
 apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
 metadata:
-  name: roc
+  name: project
   namespace: middleware
 spec:
   # 禁用 Kibana TLS 
@@ -114,8 +114,8 @@ spec:
   version: 8.13.4
   count: 1
   elasticsearchRef:
-    name: roc
-    namespace: roc
+    name: project
+    namespace: middleware
 ```
 
 
@@ -127,17 +127,17 @@ apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
   name: kibana
-  namespace: roc
+  namespace: middleware
 spec:
   http:
     - name: root
       match:
         hosts:
-          - roc-dev-kibana.xxxx.com
+          - project-dev-kibana.xxxx.com
         paths:
           - "/*"
       backends:
-        - serviceName: roc-kb-http
+        - serviceName: project-kb-http
           servicePort: 5601
 ```
 
@@ -147,18 +147,18 @@ spec:
 apiVersion: beat.k8s.elastic.co/v1beta1
 kind: Beat
 metadata:
-  name: roc
+  name: project
   namespace: middleware
 spec:
   type: filebeat
   version: 8.13.4
   elasticsearchRef:
-    name: roc
+    name: project
   config:
     filebeat.inputs:
     - type: log
       paths:
-          - /data/logs/*game*.log
+        - /data/logs/*game*.log
       tail_files: false
       fields:
         logfile_type: game
@@ -173,32 +173,34 @@ spec:
     # 索引声明周期配置
     setup.ilm.enabled: false
     # 索引模板配置
-    setup.template.name: "roc_dev"
-    setup.template.pattern: "roc_dev*"
+    setup.template.name: "project_dev"
+    setup.template.pattern: "project_dev*"
     setup.template.settings:
       index.number_of_shards: 2
 
     output.elasticsearch:
-      # 正常情况下，用户是 xxx-es-beat-user，但是缺少部分权限，可以用最高权限用户
+      # 正常情况下，用户是 project-es-beat-user，但是缺少部分权限，可以用最高权限用户 elastic
       username: elastic
       password: 'x'
-      index: roc_dev-%{+yyyy.MM.dd}
+      # 指定索引名字
+      index: project_dev-%{+yyyy.MM.dd}
 
     processors:
-     - decode_json_fields:
-         fields: ["log"]
-         process_array: false
-         max_depth: 1
-         target: ""
-         overwrite_keys: true
-         add_error_key: true
-     - rename:
-         fields:
-           - from: "service"
-             to: "service_name"
+    - decode_json_fields:
+        fields: ["log"]
+        process_array: false
+        max_depth: 1
+        target: ""
+        overwrite_keys: true
+        add_error_key: true
+     
+    - rename:
+        fields:
+        - from: "service"
+          to: "service_name"
 
-     - drop_fields:
-         fields: ['log']
+    - drop_fields:
+        fields: ['log']
 
 
   daemonSet:
