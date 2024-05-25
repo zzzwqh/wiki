@@ -199,8 +199,9 @@ spec:
       index: project_dev-%{+yyyy.MM.dd}
 
     processors:
+    # 如果需要拆解
     - decode_json_fields:
-        fields: ["log"]
+        fields: ["message"]
         process_array: false
         max_depth: 1
         target: ""
