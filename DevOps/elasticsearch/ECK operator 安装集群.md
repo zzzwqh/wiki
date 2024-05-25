@@ -167,7 +167,7 @@ spec:
       close_inactive: 5m
       # 在 Filebeat 启动时决定是否忽略某些文件，文件修改时间超过 10 分钟的不会读取
       ignore_older: 10m
-      # Filebeat 强制关闭并重新打开文件的时间间隔
+      # Filebeat 会在经过指定的时间后强制关闭文件，即使文件在这段时间内是活跃的。这有助于避免长时间运行的文件句柄潜在的泄露问题
       close_timeout: 1h
       # symlinks 允许 Filebeat 跟踪符号链接，即软连接文件也可以抓取到日志内容
       symlinks: true
@@ -208,7 +208,7 @@ spec:
         fields:
         - from: "server"
           to: "server_id"
-	# 删除某些不需要的字段
+    # 删除某些不需要的字段
     - drop_fields:
         fields: ['log']
 
