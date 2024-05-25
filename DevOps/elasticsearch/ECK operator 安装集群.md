@@ -162,11 +162,17 @@ spec:
       tail_files: false
       fields:
         logfile_type: game
+      # 
       close_inactive: 5m
+      # 在 Filebeat 启动时决定是否忽略某些文件，文件修改时间超过 10 分钟的不会读取
       ignore_older: 10m
+      # Filebeat 强制关闭并重新打开文件的时间间隔
       close_timeout: 1h
+      # symlinks 允许 Filebeat 跟踪符号链接
       symlinks: true
+      # Filebeat 会将解析的 JSON 文档的字段放置在事件的根级别
       json.keys_under_root: true
+      # Filebeat 会来自 JSON 文档的字段，覆盖现有的同名字段
       json.overwrite_keys: true
 
 
