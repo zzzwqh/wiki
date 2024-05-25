@@ -160,9 +160,10 @@ spec:
       paths:
         - /data/logs/*game*.log
       tail_files: false
+      # 自定义字段加入
       fields:
-        logfile_type: game
-      # 
+        log: game
+      # 在 5 分钟内，仍没有新的日志数据写入情况下关闭文件，避免文件句柄资源的消耗
       close_inactive: 5m
       # 在 Filebeat 启动时决定是否忽略某些文件，文件修改时间超过 10 分钟的不会读取
       ignore_older: 10m
@@ -182,6 +183,7 @@ spec:
     setup.template.name: "project_dev"
     setup.template.pattern: "project_dev*"
     setup.template.settings:
+	  # 主分片数量，官方建议，若一个索引 40Gi 数据量，则设置 1 分片，
       index.number_of_shards: 2
 
     output.elasticsearch:
@@ -199,12 +201,12 @@ spec:
         target: ""
         overwrite_keys: true
         add_error_key: true
-     
+    # 重写字段名，例如读取到字段 service 会被映射为 service_id
     - rename:
         fields:
-        - from: "service"
-          to: "service_name"
-
+        - from: "server"
+          to: "server_id"
+	# 删除某些不需要的字段
     - drop_fields:
         fields: ['log']
 
