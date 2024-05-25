@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/nsenter 命令记载.md",
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/nsenter 命令记载.md",
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/nsenter 命令记载.md",
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/nsenter 命令记载.md"
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md"
               }
             }
           },
@@ -157,21 +157,22 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "e0cde44126cafdaf",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "DevOps/elasticsearch",
+    "DevOps/elasticsearch/elasticSearch 索引模版.md",
+    "DevOps/elasticsearch/ECK operator 安装集群.md",
+    "DevOps/elasticsearch/elasticsearch 数据拉取.md",
+    "DevOps/nsenter 命令记载.md",
     "DevOps/kubeadm 证书更新.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/Terraform 实践.md",
     "DevOps/bitbucket 自动触发构建任务.md",
     "DevOps/容器内执行 asprof.md",
-    "DevOps/elasticSearch 索引模版.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
-    "DevOps/未命名.md",
     "DevOps/GOST 代理配置.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
-    "DevOps/nsenter 命令记载.md",
     "DevOps/Sense 语法记录.md",
-    "DevOps/elasticsearch 数据拉取.md",
     "DevOps/elasticsearch.md",
     "Excalidraw/OKG 实践思路.md",
     "mysqlUtils/README.md",
@@ -200,7 +201,6 @@
     "ubuntu-nginx-vts/README.md",
     "DevOps/Go",
     "DevOps",
-    "MindMap/MindMap.md",
     "MindMap/assets/MindMap/MindMap_image_1.png",
     "MindMap/assets/MindMap",
     "MindMap/assets",
