@@ -156,9 +156,11 @@ spec:
     name: project
   config:
     filebeat.inputs:
+    # 插件类型
     - type: log
       paths:
         - /data/logs/*game*.log
+      # 从日志文件的开头开始读取，收集到日志文件中的所有数据（ignore_）
       tail_files: false
       # 自定义字段加入
       fields:
