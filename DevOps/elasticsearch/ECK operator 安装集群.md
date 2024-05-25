@@ -96,4 +96,33 @@ spec:
           requests:
             storage: 50Gi
         storageClassName: nfs-client
+
+#  # 协调节点配置，非必需，可以提升 data 稳定性
+#  - name: coordinating
+#    count: 2
+#    config:
+#      node.roles: [ ]
+#    # pod 模板，包含了资源限制，
+#    podTemplate:
+#      spec:
+#        containers:
+#        - name: elasticsearch
+#          resources:
+#            limits:
+#              memory: 4Gi
+#              cpu: 2
+#    # 存储卷配置
+#    volumeClaimTemplates:
+#    - metadata:
+#        # 不要更改这个名字！ 
+#        name: elasticsearch-data  
+#      spec:
+#        accessModes:
+#        - ReadWriteOnce
+#        resources:
+#          requests:
+#            storage: 50Gi
+#        storageClassName: nfs-client
+
+
 ```
