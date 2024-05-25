@@ -15,7 +15,7 @@ apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
   name: roc
-  namespace: roc
+  namespace: middleware
 spec:
   # 指定 elasticsearch 镜像和版本
   version: 8.13.4
@@ -104,7 +104,7 @@ apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
 metadata:
   name: roc
-  namespace: roc
+  namespace: middleware
 spec:
   # 禁用 Kibana TLS 
   http:
@@ -144,5 +144,78 @@ spec:
 ## 5. 安装 Beat
 
 ```yaml
+apiVersion: beat.k8s.elastic.co/v1beta1
+kind: Beat
+metadata:
+  name: roc
+  namespace: middleware
+spec:
+  type: filebeat
+  version: 8.13.4
+  elasticsearchRef:
+    name: roc
+  config:
+    filebeat.inputs:
+    - type: log
+      paths:
+          - /data/logs/*game*.log
+      tail_files: false
+      fields:
+        logfile_type: game
+      close_inactive: 5m
+      ignore_older: 10m
+      close_timeout: 1h
+      symlinks: true
+      json.keys_under_root: true
+      json.overwrite_keys: true
 
+
+    # 索引声明周期配置
+    setup.ilm.enabled: false
+    # 索引模板配置
+    setup.template.name: "roc_dev"
+    setup.template.pattern: "roc_dev*"
+    setup.template.settings:
+      index.number_of_shards: 2
+
+    output.elasticsearch:
+      # 正常情况下，用户是 xxx-es-beat-user，但是缺少部分权限，可以用最高权限用户
+      username: elastic
+      password: 'x'
+      index: roc_dev-%{+yyyy.MM.dd}
+
+    processors:
+     - decode_json_fields:
+         fields: ["log"]
+         process_array: false
+         max_depth: 1
+         target: ""
+         overwrite_keys: true
+         add_error_key: true
+     - rename:
+         fields:
+           - from: "service"
+             to: "service_name"
+
+     - drop_fields:
+         fields: ['log']
+
+
+  daemonSet:
+    podTemplate:
+      spec:
+        # 为了 filebeat 获取更多权限，做日志收集
+        dnsPolicy: ClusterFirstWithHostNet
+        hostNetwork: true
+        securityContext:
+          runAsUser: 0
+        containers:
+        - name: filebeat
+          volumeMounts:
+          - name: logs
+            mountPath: /data/logs
+        volumes:
+        - name: logs
+          hostPath:
+            path: /data/logs
 ```
