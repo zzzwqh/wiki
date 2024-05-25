@@ -169,7 +169,7 @@ spec:
       ignore_older: 10m
       # Filebeat 强制关闭并重新打开文件的时间间隔
       close_timeout: 1h
-      # symlinks 允许 Filebeat 跟踪符号链接
+      # symlinks 允许 Filebeat 跟踪符号链接，即软连接文件也可以抓取到日志内容
       symlinks: true
       # Filebeat 会将解析的 JSON 文档的字段放置在事件的根级别
       json.keys_under_root: true
@@ -183,8 +183,10 @@ spec:
     setup.template.name: "project_dev"
     setup.template.pattern: "project_dev*"
     setup.template.settings:
-	  # 主分片数量，官方建议，若一个索引 40Gi 数据量，则设置 1 分片，
-      index.number_of_shards: 2
+	  # 主分片数量，官方建议，若一个索引 40Gi 数据量，则设置 1 分片，80Gi 数据量，设置 2 分片
+      index.number_of_shards: 3
+      # 副本分片未设置，默认为 1
+      # 在设置副本数量 1 的情况下，如果主分片有 3 个，那么副本分片一共也是 3 个，一共 6 个
 
     output.elasticsearch:
       # 正常情况下，用户是 project-es-beat-user，但是缺少部分权限，可以用最高权限用户 elastic
