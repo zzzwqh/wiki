@@ -199,7 +199,7 @@ spec:
       index: project_dev-%{+yyyy.MM.dd}
 
     processors:
-    # 如果需要拆解
+    # 是否需要拆解其中一个字段（ Json 日志的其中一个字段 ）
     - decode_json_fields:
         fields: ["message"]
         process_array: false
@@ -207,14 +207,15 @@ spec:
         target: ""
         overwrite_keys: true
         add_error_key: true
-    # 重写字段名，例如读取到字段 service 会被映射为 service_id
+    # 删除某些不需要的字段，因为 message 已被 decode_json_fields 处理拆解所以删除
+    - drop_fields:
+        fields: ['message']
+	# 重写字段名，例如读取到字段 service 会被映射为 service_id
     - rename:
         fields:
         - from: "server"
           to: "server_id"
-    # 删除某些不需要的字段
-    - drop_fields:
-        fields: ['log']
+
 
   # filebeat daemonset 配置
   daemonSet:
