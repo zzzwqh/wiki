@@ -97,7 +97,7 @@ spec:
             storage: 50Gi
         storageClassName: nfs-client
 
-#  # 协调节点配置，非必需，可以提升 data 稳定性
+#  # 协调节点配置，非必需，可以提升 data 稳定性，但是 ECK 的 
 #  - name: coordinating
 #    count: 2
 #    config:
