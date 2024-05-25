@@ -158,9 +158,10 @@ spec:
     filebeat.inputs:
     # 插件类型
     - type: log
+      # 日志收集路径
       paths:
         - /data/logs/*game*.log
-      # 设置为 false，则不止是通过 tail 获取新增日志，而是从日志文件的开头开始读取，收集到日志文件中的所有数据（ 具体哪些文件和 ignore_older 相关 ）
+      # 设置为 false，则不止是通过 tail 获取新增日志，而是从日志文件的开头开始读取，收集到日志文件中的所有数据（ 具体收集哪些文件和 ignore_older 相关 ）
       tail_files: false
       # 自定义字段加入
       fields:
@@ -214,15 +215,18 @@ spec:
     - drop_fields:
         fields: ['log']
 
-
+  # filebeat daemonset 配置
   daemonSet:
     podTemplate:
       spec:
-        # 为了 filebeat 获取更多权限，做日志收集
+        # 官网建议配置
         dnsPolicy: ClusterFirstWithHostNet
         hostNetwork: true
+        # 为了 filebeat 获取更多权限，做日志收集
         securityContext:
           runAsUser: 0
+        # 配置容器的宿主机映射目录，官网给的是 /var/lib/container 全收集
+        # 当前根据具体需求配置映射
         containers:
         - name: filebeat
           volumeMounts:
