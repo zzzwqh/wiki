@@ -183,7 +183,7 @@ spec:
     setup.template.name: "project_dev"
     setup.template.pattern: "project_dev*"
     setup.template.settings:
-	  # 主分片数量，官方建议，若一个索引 40Gi 数据量，则设置 1 分片，80Gi 数据量，设置 2 分片
+      # 主分片数量，官方建议，若一个索引 40Gi 数据量，则设置 1 分片，80Gi 数据量，设置 2 分片
       index.number_of_shards: 3
       # 副本分片未设置，默认为 1
       # 在设置副本数量 1 的情况下，如果主分片有 3 个，那么副本分片一共也是 3 个，一共 6 个
