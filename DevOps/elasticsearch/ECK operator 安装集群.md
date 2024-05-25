@@ -200,6 +200,7 @@ spec:
 
     processors:
     # 是否需要拆解其中一个字段（ Json 日志的其中一个字段 ）
+    # {"@timestamp":"xxx","level":"xxx","message":{"nacosConfLevel":"xxx"}}
     - decode_json_fields:
         fields: ["message"]
         process_array: false
