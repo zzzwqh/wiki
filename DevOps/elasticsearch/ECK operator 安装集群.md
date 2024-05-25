@@ -1,4 +1,5 @@
-## 安装 CRD / Operator
+## 1. 安装 CRD / Operator
+
 ```bash
 kubectl create -f https://download.elastic.co/downloads/eck/2.12.0/crds.yaml
 kubectl create -f https://download.elastic.co/downloads/eck/2.12.0/operator.yaml
@@ -6,8 +7,7 @@ kubectl create -f https://download.elastic.co/downloads/eck/2.12.0/operator.yaml
 
 -----
 
-## ElasticSearch 集群搭建
-
+## 2. ElasticSearch 集群搭建
 
 ```yaml
 # 这里有个案例可以参考下 ： https://github.com/elastic/cloud-on-k8s/blob/2.10/deploy/eck-stack/examples/elasticsearch/hot-warm-cold.yaml
@@ -15,6 +15,7 @@ apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
   name: roc
+  namespace: roc
 spec:
   # 指定 elasticsearch 镜像和版本
   version: 8.13.4
@@ -95,3 +96,53 @@ spec:
         storageClassName: nfs-client
 ```
 
+
+## 3. 安装 Kibana
+
+```yaml
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: roc
+  namespace: roc
+spec:
+  # 禁用 Kibana TLS 
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true
+  version: 8.13.4
+  count: 1
+  elasticsearchRef:
+    name: roc
+    namespace: roc
+```
+
+
+## 4. 配置 Kibana Ingress
+
+```yaml
+# APISIX Ingress 配置案例 
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: kibana
+  namespace: roc
+spec:
+  http:
+    - name: root
+      match:
+        hosts:
+          - roc-dev-kibana.xxxx.com
+        paths:
+          - "/*"
+      backends:
+        - serviceName: roc-kb-http
+          servicePort: 5601
+```
+
+## 5. 安装 Beat
+
+```yaml
+
+```
