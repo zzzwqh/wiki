@@ -1,3 +1,4 @@
+## 场景一
 研发侧提出一个需求，如果 Json 日志中的 Message 字段为 Json 格式，解析 Message 字段的 Json 字段，到 elasticsearch doc 字段中，比如下面格式的日志
 
 ```json
@@ -45,3 +46,15 @@
 
 ![](assets/Json%20日志字段映射冲突/Json%20日志字段映射冲突_image_1.png)
 
+
+
+
+## 场景二
+
+Filebeat 收集日志入 Elasticsearch 时，报错日志如下
+
+```bash
+2024-05-26T13:23:42.869300259+08:00 {"log.level":"debug","@timestamp":"2024-05-26T05:23:42.869Z","log.logger":"elasticsearch","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/outputs/elasticsearch.(*Client).bulkCollectPublishFails","file.name":"elasticsearch/client.go","file.line":455},"message":"Cannot index event publisher.Event{Content:beat.Event{Timestamp:time.Date(2024, time.May, 26, 13, 14, 44, 80155025, time.Location(\"\")), Meta:null, Fields:{\"@version\":\"2\",\"agent\":{\"ephemeral_id\":\"9a8a4d00-b475-4ba1-b2bb-3d31da82d841\",\"id\":\"1d90cb5a-f1b9-4945-a3f7-9ee5cbef31c8\",\"name\":\"k8s-node-1\",\"type\":\"filebeat\",\"version\":\"8.13.4\"},\"ecs\":{\"version\":\"8.0.0\"},\"fields\":{\"logfile_type\":\"gateway\"},\"host\":{\"name\":\"k8s-node-1\"},\"input\":{\"type\":\"log\"},\"level\":\"INFO\",\"level_value\":20000,\"log\":{\"file\":{\"path\":\"/data/logs/gateway_2024052613.log\"},\"offset\":83799},\"logger_name\":\"com.gameale.gateway.filter.GatewayLogFilter\",\"message\":\"auto flush\",\"message_json\":{\"event\":{\"eventID\":\"1\",\"eventdescription\":\"test\"},\"ip\":\"192.168.1.1\",\"status\":\"successful\",\"user\":\"john_doe\"},\"service_name\":\"gateway\",\"sid\":\"gateway\",\"thread_name\":\"reactor-http-epoll-3\"}, Private:file.State{Id:\"native::4719269-64529\", PrevId:\"\", Finished:false, Fileinfo:(*os.fileStat)(0xc0011d4410), Source:\"/data/logs/gateway_2024052613.log\", Offset:84188, Timestamp:time.Date(2024, time.May, 26, 5, 21, 32, 867856772, time.Local), TTL:-1, Type:\"log\", Meta:map[string]string(nil), FileStateOS:file.StateOS{Inode:0x4802a5, Device:0xfc11}, IdentifierName:\"native\"}, TimeSeries:false}, Flags:0x1, Cache:publisher.EventCache{m:mapstr.M(nil)}} (status=400): {\"type\":\"document_parsing_exception\",\"reason\":\"[1:540] failed to parse field [message_json.event] of type [keyword] in document with id 'Po5as48BV7hhFmdQyjBC'. Preview of field's value: '{eventID=1, eventdescription=test}'\",\"caused_by\":{\"type\":\"illegal_state_exception\",\"reason\":\"Can't get text on a START_OBJECT at 1:500\"}}, dropping event!","service.name":"filebeat","ecs.version":"1.6.0"}
+```
+
+其实我们没有 event 这个字段那为什么 event 会冲突？因为 Filebeat 采用了 ECS（Elasticsearch Common Schema）创建索引
