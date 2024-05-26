@@ -8,5 +8,6 @@ GET /_ssl/certificates
 
 ----
 
-自建 Elasticsearch 需要创建一个 100 年的证书，保证公司黄了都不会出现证书问题，怎么做呢？
+自建 Elasticsearch 需要创建一个 100 年的证书，保证公司黄了都不会出现证书问题
+
 https://www.elastic.co/guide/en/cloud-on-k8s/2.12/k8s-webhook.html
