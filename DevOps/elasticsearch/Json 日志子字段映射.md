@@ -1,7 +1,34 @@
-研发侧提出一个需求，如果 Json 日志中的 Message 字段为 Json 格式，解析 Message 字段的 Json 字段，到 elasticsearch doc 字段中，比如下面格式的日志：
+研发侧提出一个需求，如果 Json 日志中的 Message 字段为 Json 格式，解析 Message 字段的 Json 字段，到 elasticsearch doc 字段中，比如下面格式的日志
+
 ```json
 {"@timestamp":"2024-05-26T12:32:44.080155025+08:00","@version":"2","message":{"event": "login","user": "john_doe","status": "successful","ip": "192.168.1.1"},"logger_name":"com.gameale.gateway.filter.GatewayLogFilter","thread_name":"reactor-http-epoll-3","level":"INFO","level_value":20000,"sid":"gateway","service":"gateway"}
 ```
-想把 message 中的 event / login 等等字段解析到文档的根路径下
 
-但是我们服务日志的 message 字段并非都是 Json 类型，也有文本类型（text），所以使用
+想把 message 中的 event / login 等等字段解析到文档的根路径下
+其实正常情况下，我们配置 filebeat 如下就能够拿到相应的字段到根路径的
+
+```yaml
+    - type: log
+      paths:
+        - /data/logs/*_game_*.log
+      tail_files: false
+      fields:
+        logfile_type: mail
+      close_inactive: 5m
+      ignore_older: 10m
+      close_timeout: 1h
+      symlinks: false
+      # 解析 Json 配置
+      json.keys_under_root: true
+      json.overwrite_keys: true
+      json.expand_keys: true
+      json.add_error_key: true
+```
+
+但是我们服务日志的 message 字段并非都是 Json 类型，大部分业务 meesage 字段都是文本类型，所以导致了冲突，当我讲上面的日志，重定向到日志文件时，filebeat 产生了 droping event 报错：
+
+```bash
+2024-05-26T12:24:22.175512769+08:00 {"log.level":"debug","@timestamp":"2024-05-26T04:24:22.175Z","log.logger":"elasticsearch","log.origin":{"function":"[github.com/elastic/beats/v7/libbeat/outputs/elasticsearch.(*Client).bulkCollectPublishFails](http://github.com/elastic/beats/v7/libbeat/outputs/elasticsearch.(*Client).bulkCollectPublishFails)","file.name":"elasticsearch/client.go","file.line":455},"message":"Cannot index event publisher.Event{Content:beat.Event{Timestamp:time.Date(2024, time.May, 26, 12, 21, 44, 80155025, time.Location(\"\")), Meta:null, Fields:{\"@version\":\"2\",\"agent\":{\"ephemeral_id\":\"36a8b56d-6555-4b0a-aa10-d1e4b8494e7a\",\"id\":\"1d90cb5a-f1b9-4945-a3f7-9ee5cbef31c8\",\"name\":\"k8s-node-1\",\"type\":\"filebeat\",\"version\":\"8.13.4\"},\"ecs\":{\"version\":\"8.0.0\"},\"fields\":{\"logfile_type\":\"gateway\"},\"host\":{\"name\":\"k8s-node-1\"},\"input\":{\"type\":\"log\"},\"level\":\"INFO\",\"level_value\":20000,\"log\":{\"file\":{\"path\":\"/data/logs/gateway_2024052612.log\"},\"offset\":63981},\"logger_name\":\"com.gameale.gateway.filter.GatewayLogFilter\",\"message\":{\"event\":\"login\",\"ip\":\"[192.168.1.1](http://192.168.1.1)\",\"status\":\"successful\",\"user\":\"john_doe\"},\"service_name\":\"gateway\",\"sid\":\"gateway\",\"thread_name\":\"reactor-http-epoll-3\"}, Private:file.State{Id:\"native::4719267-64529\", PrevId:\"\", Finished:false, Fileinfo:(*os.fileStat)(0xc0013cb5f0), Source:\"/data/logs/gateway_2024052612.log\", Offset:64308, Timestamp:time.Date(2024, time.May, 26, 4, 3, 38, 461957640, [time.Local](http://time.Local)), TTL:-1, Type:\"log\", Meta:map[string]string(nil), FileStateOS:file.StateOS{Inode:0x4802a3, Device:0xfc11}, IdentifierName:\"native\"}, TimeSeries:false}, Flags:0x1, Cache:publisher.EventCache{m:mapstr.M(nil)}} (status=400): {\"type\":\"document_parsing_exception\",\"reason\":\"[1:376] failed to parse field [message] of type [match_only_text] in document with id 'o5Eks48BDOdyS-HhdfqU'. Preview of field's value: '{ip=[192.168.1.1](http://192.168.1.1), event=login, user=john_doe, status=successful}'\",\"caused_by\":{\"type\":\"illegal_state_exception\",\"reason\":\"Can't get text on a START_OBJECT at 1:301\"}}, dropping event!","service.name":"filebeat","ecs.version":"1.6.0"}
+```
+
+根据报错得知，message 是 match_only_text 类型的字段
