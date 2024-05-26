@@ -209,7 +209,7 @@ spec:
     # 删除某些不需要的字段
     - drop_fields:
         fields: ['message']
-	# 重写字段名，例如读取到字段 service 会被映射为 service_id
+    # 重写字段名，例如读取到字段 service 会被映射为 service_id
     - rename:
         fields:
         - from: "service"
