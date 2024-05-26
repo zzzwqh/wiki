@@ -199,7 +199,7 @@ spec:
       index: project_dev-%{+yyyy.MM.dd}
 
     processors:
-    # 是否需要拆解其中一个字段（ Json 日志的其中一个字段 ）
+    # 是否需要拆解其中一个字段，如下案例，就不会拿到 message
     # {"@timestamp":"xxx","level":"xxx","message":{"nacosConfLevel":"xxx"}}
     - decode_json_fields:
         fields: ["message"]
