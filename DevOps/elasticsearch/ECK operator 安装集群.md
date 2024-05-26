@@ -155,6 +155,7 @@ spec:
   elasticsearchRef:
     name: project
   config:
+    # 输入插件配置
     filebeat.inputs:
     # 插件类型
     - type: log
@@ -178,6 +179,10 @@ spec:
       json.keys_under_root: true
       # Filebeat 会来自 JSON 文档的字段，覆盖现有的同名字段
       json.overwrite_keys: true
+      # 是否将 key 展开存储，比如 {"a.b.c":"text"} 会展开成 {"a":{"b":{"c":"text"}}}
+      json.expand_keys: true
+      # 若解析错误，会有报错字段和日志输出到 doc 中
+      json.add_error_key: true
 
 
     # 索引声明周期配置
@@ -191,9 +196,7 @@ spec:
       # 副本分片未设置，默认为 1
       # 在设置副本数量 1 的情况下，如果主分片有 3 个，那么副本分片一共也是 3 个，一共 6 个
     
-    # 是否开启 filebeat debug 模式（观察部分日志）
-    # logging.level: debug
-    # logging.selectors: ["*"]
+    # 输出插件的配置
     output.elasticsearch:
       # 正常情况下，用户是 project-es-beat-user，但是缺少部分权限，可以用最高权限用户 elastic
       username: elastic
@@ -201,6 +204,7 @@ spec:
       # 指定索引名字
       index: project_dev-%{+yyyy.MM.dd}
 
+    # 数据处理器配置
     processors:
     # 删除某些不需要的字段
     - drop_fields:
@@ -210,6 +214,10 @@ spec:
         fields:
         - from: "service"
           to: "service_id"
+
+    # 是否开启 filebeat debug 模式（观察部分日志）
+    # logging.level: debug
+    # logging.selectors: ["*"]
 
 
   # filebeat daemonset 配置
