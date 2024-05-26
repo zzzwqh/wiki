@@ -190,7 +190,10 @@ spec:
       index.number_of_shards: 3
       # 副本分片未设置，默认为 1
       # 在设置副本数量 1 的情况下，如果主分片有 3 个，那么副本分片一共也是 3 个，一共 6 个
-
+    
+    # 是否开启 filebeat debug 模式（观察部分日志）
+    # logging.level: debug
+    # logging.selectors: ["*"]
     output.elasticsearch:
       # 正常情况下，用户是 project-es-beat-user，但是缺少部分权限，可以用最高权限用户 elastic
       username: elastic
