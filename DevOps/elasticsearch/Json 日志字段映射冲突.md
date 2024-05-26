@@ -5,7 +5,7 @@
 {"@timestamp":"2024-05-26T12:32:44.080155025+08:00","@version":"2","message":{"event": "login","user": "john_doe","status": "successful","ip": "192.168.1.1"},"logger_name":"com.gameale.gateway.filter.GatewayLogFilter","thread_name":"reactor-http-epoll-3","level":"INFO","level_value":20000,"sid":"gateway","service":"gateway"}
 ```
 
-想把 Message 中的 event / login 等等字段解析到文档的根路径下
+想把 Message 中的 event / user / status 等等字段解析到文档的根路径下
 其实正常情况下，我们配置 filebeat 如下就能够拿到相应的字段到根路径的
 
 ```yaml
