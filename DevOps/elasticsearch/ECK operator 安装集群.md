@@ -202,23 +202,14 @@ spec:
       index: project_dev-%{+yyyy.MM.dd}
 
     processors:
-    # 是否需要拆解其中一个字段，如下案例，就不会拿到 message
-    # {"@timestamp":"xxx","level":"xxx","message":{"nacosConfLevel":"xxx"}}
-    - decode_json_fields:
-        fields: ["message"]
-        process_array: false
-        max_depth: 1
-        target: ""
-        overwrite_keys: true
-        add_error_key: true
-    # 删除某些不需要的字段，因为 message 已被 decode_json_fields 处理拆解所以删除
+    # 删除某些不需要的字段
     - drop_fields:
         fields: ['message']
 	# 重写字段名，例如读取到字段 service 会被映射为 service_id
     - rename:
         fields:
-        - from: "server"
-          to: "server_id"
+        - from: "service"
+          to: "service_id"
 
 
   # filebeat daemonset 配置
