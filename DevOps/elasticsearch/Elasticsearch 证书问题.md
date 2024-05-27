@@ -2,7 +2,7 @@ Elasticsearch 8.0 版本以后，是必须要配置证书的
 
 ECK Operator 默认自动生成的证书有效期是 1 年， 临近 24 小时会更替，ECK 管理的资源（ 例如 Beat ）会更替对应证书，但是非 ECK 管理的资源（ 例如集群外的 ElasticSearch 的客户端 ），不会自动更换证书
 
-查看集群证书过期时间可以用如下命令，elasticsearch operator 的默认维护证书都是 1 年，这不行，证书过期了不是会导致集群不可用吗
+查看集群证书过期时间可以用如下命令，elasticsearch operator 的默认维护证书都是 1 年
 
 ```bash
 GET /_ssl/certificates
