@@ -159,6 +159,8 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/assets/Elasticsearch 证书问题/Elasticsearch 证书问题_image_1.png",
+    "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
@@ -195,7 +197,6 @@
     "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
     "Excalidraw/Drawing 2024-04-09 15.01.15.excalidraw.md",
     "DevOps/Go-Elasticsearch-Alerts.md",
-    "DevOps/Consul.md",
     "test.txt",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
@@ -206,7 +207,6 @@
     "DevOps/assets/Terraform 实践",
     "DevOps/assets",
     "DevOps/Go/main.go",
-    "DevOps/Go",
     "image.canvas"
   ]
 }
