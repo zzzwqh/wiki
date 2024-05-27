@@ -56,6 +56,7 @@ data:
 output:
     elasticsearch:
         hosts:
+            # 此处要注意一点，不能用 IP ，必须要域名，否则证书仍然会报错
             - https://project-es-http.project.svc:9200
         index: project_dev-%{+yyyy.MM.dd}
         password: x
