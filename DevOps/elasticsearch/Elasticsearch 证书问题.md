@@ -51,8 +51,22 @@ data:
 
 集群外的 filebeat 访问 集群内 Elasticsearch 需要配置证书
 ```bash
+# 进入 pod 查看 beat.yaml ，外部的 filebeat 可以参考集群内的 filebeat 配置即可
+...
+output:
+    elasticsearch:
+        hosts:
+            - https://project-es-http.project.svc:9200
+        index: project_dev-%{+yyyy.MM.dd}
+        password: x
+        ssl:
+            certificate_authorities:
+                - /mnt/elastic-internal/elasticsearch-certs/ca.crt
+        username: elastic
+...
 
-# 获取 beat 所挂载的证书
+
+# 获取 beat 所挂载的证书，拷贝到集群外的 filebeat 部署环境中
 kubectl get secret project-beat-es-ca -o jsonpath="{.data.ca\.crt}" | base64 --decode
 ```
 
