@@ -49,6 +49,14 @@ data:
 这样证书就是 100 年的了，提前 1 年更新证书，公司黄了，你化成灰，证书都不会出问题 ~~
 ![](assets/Elasticsearch%20证书问题/Elasticsearch%20证书问题_image_1.png)
 
+集群外的 filebeat 访问 集群内 Elasticsearch 需要配置证书
+```bash
+
+# 获取 beat 所挂载的证书
+kubectl get secret project-beat-es-ca -o jsonpath="{.data.ca\.crt}" | base64 --decode
+```
+
+
 
 
 手动更新的方式
