@@ -50,5 +50,5 @@ data:
 手动更新的方式
 https://github.com/elastic/cloud-on-k8s/issues/4675
 
-记录一个好用的工具
+记录一个好用的工具，自动识别 configmap 变更重载滚动更新 pod 
 https://github.com/stakater/Reloader
