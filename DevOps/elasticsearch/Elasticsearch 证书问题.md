@@ -8,6 +8,47 @@ GET /_ssl/certificates
 
 ----
 
-后来发现，ECK 是实现了
+后来发现，ECK 是实现了证书自动更新的，在 operator.yaml 中，有如下字段配置：
 
-鄙人认为，自建 Elasticsearch 需要一个 100 年的证书，保证公司黄了都不会出现证书问题
+
+```yaml
+...
+...
+---
+# Source: eck-operator/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elastic-operator
+  namespace: elastic-system
+  labels:
+    control-plane: elastic-operator
+    app.kubernetes.io/version: "2.12.0"
+data:
+  eck.yaml: |-
+    log-verbosity: 0
+    metrics-port: 0
+    container-registry: docker.elastic.co
+    max-concurrent-reconciles: 3
+    ca-cert-validity: 8760h
+    ca-cert-rotate-before: 24h
+    cert-validity: 8760h
+    cert-rotate-before: 24h
+...
+...
+```
+
+把上面的证书有效期替换下
+
+- 8760h => 876000h 
+- 24h => 8760h
+
+
+这样证书就是 100 年的了，提前 1 年更新证书，公司黄了证书都没事
+
+
+手动更新的方式
+https://github.com/elastic/cloud-on-k8s/issues/4675
+
+记录一个好用的工具
+https://github.com/stakater/Reloader
