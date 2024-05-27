@@ -1,4 +1,4 @@
-Elasticsearch 8.0 版本以后，是必须要配置证书的
+Elasticsearch 8.0 版本以后，是必须要配置证书的，包括 filebeat 采集也需要配置证书，
 查看集群证书过期时间可以用如下命令，elasticsearch operator 的默认维护证书都是 1 年，这不行，证书过期了不是会导致集群不可用吗
 
 ```bash
@@ -9,7 +9,6 @@ GET /_ssl/certificates
 ----
 
 后来发现，ECK 是实现了证书自动更新的，在 operator.yaml 中，有如下字段配置：
-
 
 ```yaml
 ...
@@ -44,7 +43,7 @@ data:
 - 24h => 8760h
 
 
-这样证书就是 100 年的了，提前 1 年更新证书，公司黄了，我化成灰，证书都不会出问题 ~~
+这样证书就是 100 年的了，提前 1 年更新证书，公司黄了，你化成灰，证书都不会出问题 ~~
 ![](assets/Elasticsearch%20证书问题/Elasticsearch%20证书问题_image_1.png)
 
 
@@ -53,4 +52,5 @@ data:
 https://github.com/elastic/cloud-on-k8s/issues/4675
 
 记录一个好用的工具，自动识别 configmap 变更重载滚动更新 pod 
+
 https://github.com/stakater/Reloader
