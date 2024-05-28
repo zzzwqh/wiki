@@ -11,7 +11,7 @@ GET /_ssl/certificates
 
 ----
 
-后来发现，ECK 是实现了证书自动更新的，在 operator.yaml 中，有如下字段配置：
+ECK 是实现了证书自动更新的，在 operator.yaml 中，有如下字段配置：
 
 ```yaml
 ...
