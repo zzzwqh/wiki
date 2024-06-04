@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/elasticsearch/未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/elasticsearch/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/elasticsearch/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysqlUtils/README.md"
+                "file": "DevOps/elasticsearch/未命名.md"
               }
             }
           },
@@ -159,6 +159,8 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "mysqlUtils/README.md",
+    "DevOps/elasticsearch/未命名.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/容器内执行 asprof.md",
@@ -188,7 +190,6 @@
     "DevOps/Sense 语法记录.md",
     "DevOps/elasticsearch.md",
     "Excalidraw/OKG 实践思路.md",
-    "mysqlUtils/README.md",
     "DevOps/assets/未命名.md",
     "Excalidraw/Drawing 2024-04-25 12.22.19.excalidraw.md",
     "未命名 1.canvas",
