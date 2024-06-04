@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/elasticsearch/MetricBeat 云原生监控.md",
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/MetricBeat 云原生监控.md",
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/MetricBeat 云原生监控.md",
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/MetricBeat 云原生监控.md"
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md"
               }
             }
           },
@@ -159,12 +159,12 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
-    "DevOps/elasticsearch/assets/MetricBeat 云原生监控/image-20240604111753948.png",
+    "DevOps/elasticsearch/MetricBeat 云原生监控.md",
+    "DevOps/elasticsearch/ECK operator 安装集群.md",
+    "DevOps/elasticsearch/assets/MetricBeat 云原生监控/MetricBeat 云原生监控_image_1.png",
     "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
     "mysqlUtils/README.md",
-    "DevOps/elasticsearch/MetricBeat 云原生监控.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
-    "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/容器内执行 asprof.md",
     "DevOps/elasticsearch/Json 日志字段映射冲突.md",
     "DevOps/bitbucket 自动触发构建任务.md",
@@ -204,7 +204,6 @@
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_4.png",
     "DevOps/assets/Terraform 实践/tmp1705568275607_Terraform 实践_image_4.png",
-    "DevOps/assets/Terraform 实践/tmp1705561394458_Terraform 实践_image_4.png",
     "DevOps/assets/Terraform 实践",
     "DevOps/assets",
     "image.canvas"
