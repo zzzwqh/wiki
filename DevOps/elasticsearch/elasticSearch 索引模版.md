@@ -3,7 +3,7 @@
 ### 1. 定义索引模板  
   
 定义一个基本的索引模板，将模板应用到所有以 `dev-` 前缀开头的索引上 
-```json
+```bash
 PUT _index_template/roc_dev_template
 
 {
@@ -159,7 +159,7 @@ GET _index_template/dev_template
 如果现有的索引已经创建，并且没有使用这个模板，你可以：  
 
 1. 重新索引数据:  使用Elasticsearch的Reindex API，将数据从旧的索引重新索引到新的索引中，使其使用新的模板。
-```json
+```bash
 POST _reindex
 {
 "source": {
@@ -176,7 +176,7 @@ POST _reindex
 
 2. 关闭并删除旧索引:  验证新索引的数据正确性后，可以关闭并删除旧索引，以确保将来不再使用旧映射。
 
-```json
+```bash
 DELETE dev-old_index
 ```
 
