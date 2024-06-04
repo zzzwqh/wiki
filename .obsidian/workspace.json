@@ -159,6 +159,8 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/assets/MetricBeat 云原生监控/image-20240604111753948.png",
+    "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
     "mysqlUtils/README.md",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
@@ -197,7 +199,6 @@
     "未命名.canvas",
     "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
     "Excalidraw/Drawing 2024-04-09 15.01.15.excalidraw.md",
-    "DevOps/Go-Elasticsearch-Alerts.md",
     "test.txt",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
@@ -206,7 +207,6 @@
     "DevOps/assets/Terraform 实践/tmp1705561394458_Terraform 实践_image_4.png",
     "DevOps/assets/Terraform 实践",
     "DevOps/assets",
-    "DevOps/Go/main.go",
     "image.canvas"
   ]
 }

@@ -136,3 +136,6 @@ roleRef:
   name: metricbeat
   apiGroup: rbac.authorization.k8s.io
 ```
+
+![](assets/MetricBeat%20云原生监控/MetricBeat%20云原生监控_image_1.png)
+
