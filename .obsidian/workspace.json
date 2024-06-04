@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/elasticsearch/未命名.md",
+                "file": "DevOps/elasticsearch/配置索引生命周期.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/未命名.md",
+                "file": "DevOps/elasticsearch/配置索引生命周期.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/未命名.md",
+                "file": "DevOps/elasticsearch/配置索引生命周期.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/未命名.md"
+                "file": "DevOps/elasticsearch/配置索引生命周期.md"
               }
             }
           },
@@ -160,7 +160,7 @@
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
     "DevOps/elasticsearch/Json 日志字段映射冲突.md",
-    "DevOps/elasticsearch/未命名.md",
+    "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
