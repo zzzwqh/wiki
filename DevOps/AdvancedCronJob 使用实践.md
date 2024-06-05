@@ -1,5 +1,5 @@
 
-> 业务日志放在宿主机 hostpath 上，需要将 hostpath 路径的日志打包并上传到 OSS，Kubernetes 原生的 Cronjob 没发以 DaemonSet 的形式做部署，使用了 Kruise 的 AdvancedCronJob + BroadcastJob
+> 业务日志放在宿主机 hostpath 上，需要将 hostpath 路径的日志打包并上传到 OSS，Kubernetes 原生的 Cronjob 没办法以 DaemonSet 的形式做部署，使用了 Kruise 的 AdvancedCronJob + BroadcastJob
 
 
 ## 构建镜像
