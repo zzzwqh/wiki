@@ -28,6 +28,9 @@ CMD ["/bin/sh","-c","/app/scripts/main.sh"]
 # 一共写了三个脚本
 $ ls scripts 
 archive_and_upload_analytic_logs.sh  archive_and_upload_service_logs.sh  main.sh
+
+
+# 查看主函数
 $ cat scripts/main.sh
 #!/bin/sh
 
