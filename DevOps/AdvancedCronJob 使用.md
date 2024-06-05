@@ -4,7 +4,7 @@
 
 ## 构建镜像
 
-定时任务需要一个镜像，可以采用如下 Dockerfile
+> 定时任务需要一个镜像，可以采用如下 Dockerfile
 ```bash
 # 使用 Alpine 作为基础镜像
 FROM alpine:latest
@@ -25,6 +25,9 @@ CMD ["/bin/sh","-c","/app/scripts/main.sh"]
 
 > 其中 main.sh 脚本如下
 ```bash
+# 一共写了三个脚本
+$ ls scripts 
+archive_and_upload_analytic_logs.sh  archive_and_upload_service_logs.sh  main.sh
 $ cat scripts/main.sh
 #!/bin/sh
 
