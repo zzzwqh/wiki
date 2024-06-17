@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/elasticsearch/配置索引生命周期.md",
+                "file": "DevOps/elasticsearch/Stack Monitoring.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/配置索引生命周期.md",
+                "file": "DevOps/elasticsearch/Stack Monitoring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/配置索引生命周期.md",
+                "file": "DevOps/elasticsearch/Stack Monitoring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/配置索引生命周期.md"
+                "file": "DevOps/elasticsearch/Stack Monitoring.md"
               }
             }
           },
@@ -159,6 +159,10 @@
   },
   "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/assets/Stack Monitoring/Stack Monitoring_image_1.png",
+    "DevOps/elasticsearch/assets/Stack Monitoring",
+    "DevOps/elasticsearch/配置索引生命周期.md",
+    "DevOps/elasticsearch/Stack Monitoring.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
@@ -166,7 +170,6 @@
     "DevOps/SLB 权重配置工具.md",
     "DevOps/GOST 代理配置.md",
     "DevOps/AdvancedCronJob 使用实践.md",
-    "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/elasticsearch/Json 日志字段映射冲突.md",
     "DevOps/elasticsearch/assets/配置索引生命周期/配置索引生命周期_image_1.png",
     "DevOps/elasticsearch/assets/配置索引生命周期/tmp1717496681466_配置索引生命周期_image_1.png",
@@ -200,13 +203,10 @@
     "DevOps/assets/未命名.md",
     "Excalidraw/Drawing 2024-04-25 12.22.19.excalidraw.md",
     "未命名 1.canvas",
-    "2024-04-23.md",
     "未命名.canvas",
-    "Excalidraw/Drawing 2024-04-09 15.01.21.excalidraw.md",
     "test.txt",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_5.png",
     "DevOps/assets/Terraform 实践/Terraform 实践_image_3.png",
-    "DevOps/assets/Terraform 实践",
     "image.canvas"
   ]
 }
