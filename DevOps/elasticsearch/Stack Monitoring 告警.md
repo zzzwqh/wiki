@@ -36,4 +36,7 @@
 ```
 
 
-## 
+> 至此，其实告警方式，只是写了文档到一个指定的索引中，至于怎么告警，可以通过 elastalert2 发出，或者自己写一个，此处不再详细介绍
+
+![](assets/Stack%20Monitoring%20告警/Stack%20Monitoring%20告警_image_6.png)
+
