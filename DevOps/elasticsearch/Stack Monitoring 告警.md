@@ -1,3 +1,5 @@
+配置好 MetricBeat 后，就可以开始告警配置了
+
 
 > 利用 ElasticSearch 本身，可以做监控，但是告警是写到 ES 的（ 邮件什么的需要企业认证的 ）
 > 创建一个 Connector ，指定一个 Index，作告警的输出
