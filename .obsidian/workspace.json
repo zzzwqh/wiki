@@ -28,9 +28,21 @@
                 "currentVersion": "1.6.3"
               }
             }
+          },
+          {
+            "id": "8b6077d6159e4434",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/cadvisor 配置.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -96,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/cadvisor 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/cadvisor 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md"
+                "file": "DevOps/cadvisor 配置.md"
               }
             }
           },
@@ -168,8 +180,9 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "19d683e64252558a",
+  "active": "8b6077d6159e4434",
   "lastOpenFiles": [
+    "DevOps/cadvisor 配置.md",
     "DevOps/elasticsearch/assets/Stack Monitoring 告警/Stack Monitoring 告警_image_1.png",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
     "DevOps/elasticsearch/Json 日志字段映射冲突.md",
@@ -200,7 +213,6 @@
     "DevOps/容器内执行 asprof.md",
     "DevOps/bitbucket 自动触发构建任务.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
-    "DevOps/elasticsearch/assets/Elasticsearch 证书问题/Elasticsearch 证书问题_image_1.png",
     "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
     "DevOps/elasticsearch/expand_keys 作用.md",
     "DevOps/elasticsearch/assets/expand_keys 作用",
