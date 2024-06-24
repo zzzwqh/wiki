@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "19d683e64252558a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,7 +168,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "e0cde44126cafdaf",
+  "active": "19d683e64252558a",
   "lastOpenFiles": [
     "DevOps/elasticsearch/assets/Stack Monitoring 告警/Stack Monitoring 告警_image_1.png",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
