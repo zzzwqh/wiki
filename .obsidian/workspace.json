@@ -40,9 +40,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3fb07674b0c4c878",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -180,7 +190,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8b6077d6159e4434",
+  "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
