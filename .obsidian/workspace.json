@@ -45,9 +45,11 @@
             "id": "3fb07674b0c4c878",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.5"
+                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
