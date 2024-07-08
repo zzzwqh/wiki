@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
+                "file": "DevOps/拉取游戏.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
+                "file": "DevOps/拉取游戏.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
+                "file": "DevOps/拉取游戏.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md"
+                "file": "DevOps/拉取游戏.md"
               }
             }
           },
@@ -194,6 +194,8 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/ECK operator 安装集群.md",
+    "DevOps/拉取游戏.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
@@ -212,7 +214,6 @@
     "DevOps/elasticsearch/assets/Stack Monitoring 告警/Stack Monitoring 告警_image_2.png",
     "DevOps/elasticsearch/assets/Stack Monitoring",
     "DevOps/elasticsearch/配置索引生命周期.md",
-    "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/GOST 代理配置.md",
     "DevOps/AdvancedCronJob 使用实践.md",
@@ -239,7 +240,6 @@
     "DevOps/Sense 语法记录.md",
     "DevOps/elasticsearch.md",
     "Excalidraw/OKG 实践思路.md",
-    "DevOps/assets/未命名.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
