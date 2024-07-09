@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/一些文档.md",
+                "file": "DevOps/一些文档或者常用命令.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/一些文档.md",
+                "file": "DevOps/一些文档或者常用命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/一些文档.md",
+                "file": "DevOps/一些文档或者常用命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/一些文档.md"
+                "file": "DevOps/一些文档或者常用命令.md"
               }
             }
           },
@@ -195,7 +195,7 @@
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
     "DevOps/elasticsearch/ECK operator 安装集群.md",
-    "DevOps/一些文档.md",
+    "DevOps/一些文档或者常用命令.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
