@@ -34,9 +34,9 @@ spec:
                 image: xxxx.xxxx.com/xxx/nodes-cronjob:1.2
                 env:
                   - name: ARCHIVED_SERVICE
-                    value: "true"  # 设置为 "true" 时执行 archived_and_upload_service_logs.sh
+                    value: "true"  # 设置为 "true" 时执行打包服务日志
                   - name: ARCHIVED_ANALYTIC
-                    value: "true"  # 设置为 "true" 时执行 archived_and_upload_analytic_logs.sh
+                    value: "true"  # 设置为 "true" 时执行打包埋点日志
                 volumeMounts:
                   - name: services-logdir
                     mountPath: "/data/logs"
