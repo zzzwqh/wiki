@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md",
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md",
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md",
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md"
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md"
               }
             }
           },
@@ -194,11 +194,12 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
+    "DevOps/nsenter 命令记载.md",
+    "DevOps/openkruise CRD 实践.md",
     "DevOps/assets/Openkruise CRD 实践/openkruise CRD 实践_image_1.png",
     "DevOps/assets/openkruise CRD 实践/openkruise CRD 实践_image_1.png",
     "DevOps/assets/Openkruise CRD 实践",
     "DevOps/assets/运维问题杂记/tmp1721185667065_运维问题杂记_image_1.png",
-    "DevOps/openkruise CRD 实践.md",
     "DevOps/运维问题杂记.md",
     "DevOps/assets/运维问题杂记/运维问题杂记_image_5.png",
     "DevOps/assets/运维问题杂记/运维问题杂记_image_4.png",
@@ -207,7 +208,6 @@
     "DevOps/assets/运维问题杂记/tmp1721187103057_运维问题杂记_image_3.png",
     "DevOps/assets/运维问题杂记/tmp1721187159858_运维问题杂记_image_3.png",
     "DevOps/assets/运维问题杂记/运维问题杂记_image_1.png",
-    "DevOps/assets/运维问题杂记/运维问题杂记_image_2.png",
     "DevOps/assets/test.groovy.md",
     "DevOps/assets/运维问题杂记",
     "Excalidraw/OKG 实践思路.md",
@@ -239,7 +239,6 @@
     "DevOps/elasticsearch/assets/expand_keys 作用",
     "DevOps/elasticsearch/assets/Json 日志字段映射冲突",
     "DevOps/elasticsearch/assets/Json 日志子字段映射",
-    "DevOps/nsenter 命令记载.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
