@@ -1,0 +1,16 @@
+
+
+1. ALB Ingress 替换证书操作流程？
+- 直接更新 Kubernetes secret 即可，ALB 会自动调谐，更新 TLS 证书
+
+
+2. 节点池中根据 IP 做节点下线过程中是否会有新节点加入？（下线过程是否会受节点池期望节点数影响）
+-  ACK 节点池根据 IP 下线节点，可以直接执行，排水 + 下线即可，不会因为节点池设置的节点期望数量，导致下线后新加入节点
+
+
+
+3. 压测相关问题
+```bash
+# 使用 jmeter 工具压测，线程数 500，运行时间 30s，
+jmeter -JThreadCount=500 -JRunTime=30 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./jmeter_report
+```
