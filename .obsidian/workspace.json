@@ -45,9 +45,11 @@
             "id": "3fb07674b0c4c878",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/OKG 实践思路.md"
+                "file": "DevOps/ACK 节点池下节点.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -118,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/OKG 实践思路.md",
+                "file": "DevOps/ACK 节点池下节点.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/OKG 实践思路.md",
+                "file": "DevOps/ACK 节点池下节点.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/OKG 实践思路.md"
+                "file": "DevOps/ACK 节点池下节点.md"
               }
             }
           },
@@ -192,6 +194,8 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
+    "Excalidraw/OKG 实践思路.md",
+    "DevOps/ACK 节点池下节点.md",
     "DevOps/Arthas tunnel.md",
     "DevOps/一些文档或者常用命令.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
@@ -236,8 +240,6 @@
     "DevOps/kubeadm 证书更新.md",
     "DevOps/Terraform 实践.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
-    "DevOps/Sense 语法记录.md",
-    "DevOps/elasticsearch.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
