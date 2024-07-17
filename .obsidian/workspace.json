@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
+                "file": "DevOps/运维问题杂记.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
+                "file": "DevOps/运维问题杂记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
+                "file": "DevOps/运维问题杂记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md"
+                "file": "DevOps/运维问题杂记.md"
               }
             }
           },
@@ -194,6 +194,11 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
+    "DevOps/assets/运维问题杂记/运维问题杂记_image_7.png",
+    "DevOps/assets/运维问题杂记/运维问题杂记_image_6.png",
+    "DevOps/assets/运维问题杂记/tmp1721200671092_运维问题杂记_image_6.png",
+    "DevOps/AdvancedCronJob 使用实践.md",
+    "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/nsenter 命令记载.md",
     "DevOps/openkruise CRD 实践.md",
     "DevOps/assets/Openkruise CRD 实践/openkruise CRD 实践_image_1.png",
@@ -206,8 +211,6 @@
     "DevOps/assets/运维问题杂记/运维问题杂记_image_3.png",
     "DevOps/assets/运维问题杂记/tmp1721186935952_运维问题杂记_image_3.png",
     "DevOps/assets/运维问题杂记/tmp1721187103057_运维问题杂记_image_3.png",
-    "DevOps/assets/运维问题杂记/tmp1721187159858_运维问题杂记_image_3.png",
-    "DevOps/assets/运维问题杂记/运维问题杂记_image_1.png",
     "DevOps/assets/test.groovy.md",
     "DevOps/assets/运维问题杂记",
     "Excalidraw/OKG 实践思路.md",
@@ -227,7 +230,6 @@
     "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/GOST 代理配置.md",
-    "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/elasticsearch/assets/配置索引生命周期",
     "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
     "mysqlUtils/README.md",
@@ -235,7 +237,6 @@
     "DevOps/bitbucket 自动触发构建任务.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
     "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
-    "DevOps/elasticsearch/expand_keys 作用.md",
     "DevOps/elasticsearch/assets/expand_keys 作用",
     "DevOps/elasticsearch/assets/Json 日志字段映射冲突",
     "DevOps/elasticsearch/assets/Json 日志子字段映射",
