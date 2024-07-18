@@ -38,3 +38,10 @@ https://blog.csdn.net/songyun333/article/details/134413242
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_4.png)
 
+## 服务端迹象
+
+查看服务端：
+netstat -s|egrep -i 'syn|ignore|overflow|reject|becau|error|drop|back'
+![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_5.png)
+
+tcp accept队列是满了的，暂时不考虑加机器的话可以先调高连接队列，全队列和半队列连接都调高一下，同时开启tcp_syncookies。然后再压测看看
