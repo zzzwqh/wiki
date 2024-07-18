@@ -68,5 +68,9 @@ https://blog.csdn.net/songyun333/article/details/134413242
 jmeter -JThreadCount=30000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
 ```
 
+命令还是这个命令，jmx 是有变化的（ 可以用 jmeter 的 GUI 生成这个 jmx 文件 ）
+![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_7.png)
 
 
+> 增量压测方式
+https://www.cnblogs.com/xiaodi888/p/18152803
