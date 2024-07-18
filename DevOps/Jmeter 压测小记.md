@@ -72,8 +72,7 @@ jmeter -JThreadCount=30000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeou
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_7.png)
 
 
-> 增量压测方式，这个地址的
-https://www.cnblogs.com/xiaodi888/p/18152803
+> 增量压测方式，这个有个 Blog 系列还不错的地址： https://www.cnblogs.com/xiaodi888/p/18152803
 
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_8.png)
