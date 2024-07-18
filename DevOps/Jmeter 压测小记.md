@@ -51,11 +51,22 @@ https://blog.csdn.net/songyun333/article/details/134413242
 
 可以看到 tcp accept 队列其实是满了的，暂时不考虑加机器的话可以先调高连接队列，全队列和半队列连接都调高一下，同时开启 tcp_syncookies，然后再压测
 
-> 方法如下：
+> 方法如下，需要在节点上运行
 
 1.调整半队列值，先 cat /proc/sys/net/ipv4/tcp_max_syn_backlog 查看这个值的大小，然后 使用文本编辑器编辑 /etc/sysctl.conf文件： sudo vi /etc/sysctl.conf 在文件末尾添加或修改以下行，将<新值>替换为您想要设置的新值（可以先设置刚查看值的2倍）： net.ipv4.tcp_max_syn_backlog = <新值> 保存并退出编辑器。 使配置生效：sudo sysctl -p
 
 2.调整全队列值 先 cat /proc/sys/net/core/somaxconn 查看这个值大小，编辑 /etc/sysctl.conf文件： sudo vi /etc/sysctl.conf 在文件末尾添加或修改如下行，将<新值>替换为您想要设置的新值（可以先设置刚查看值的2倍）： net.core.somaxconn = <新值> 保存并退出编辑器。 使配置生效： sudo sysctl -p 
 
 【 需在非业务高峰期时执行操作，压测场景无需关注 】
+
+
+## 调整压测姿势
+
+> 其实上面服务端调整，可不执行，调整 TreadCount ，然后做梯度压测才是最好的方式
+
+```bash
+jmeter -JThreadCount=30000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
+```
+
+
 
