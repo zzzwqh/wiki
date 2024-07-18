@@ -28,7 +28,11 @@ https://blog.csdn.net/songyun333/article/details/134413242
 
 
 ## 504 报错
-> 
+> 上面的都调整好了，但是压测依然会有 504  gateway time out 报错
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_2.png)
+
+> 使用的是阿里云 ALB Ingress，去查 ALB Ingress 访问日志，发现 ALB 返回的 504 gateway time out 请求的日志，他们的 upstream response time 都是到了 5s，这个 5s 是后端响应超时时间，ALB 没有在 5s 获取到响应，所以给ke
+
+![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_3.png)
 
