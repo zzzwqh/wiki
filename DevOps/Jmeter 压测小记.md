@@ -1,5 +1,5 @@
 
-## SSL 相关报错
+## 1. SSL 相关报错
 
 > 最开始压测命令是这样写的 ...
 ```bash
@@ -14,7 +14,7 @@
 https://www.cnblogs.com/to-here/p/13890622.html
 
 
-## 无法分配地址报错
+## 2. 无法分配地址报错
 
 > 在执行压测时，有如下报错，这也是压测机需要调整配置
  
@@ -27,7 +27,7 @@ Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response messag
 https://blog.csdn.net/songyun333/article/details/134413242
 
 
-## 504 报错
+## 3. 压测报告很多 504 报错
 > 上面的都调整好了，但是压测依然会有 504  gateway time out 报错
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_2.png)
@@ -38,7 +38,7 @@ https://blog.csdn.net/songyun333/article/details/134413242
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_4.png)
 
-## 服务端迹象
+## 4. 服务端丢包迹象
 
 > 查看服务端：netstat -s|egrep -i 'syn|ignore|overflow|reject|becau|error|drop|back'
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_5.png)
@@ -60,7 +60,7 @@ https://blog.csdn.net/songyun333/article/details/134413242
 【 需在非业务高峰期时执行操作，压测场景无需关注 】
 
 
-## 调整压测姿势
+## 6. 调整压测姿势
 
 > 其实上面服务端调整，可不执行，调整 TreadCount ，然后做梯度压测才是最好的方式
 
@@ -73,7 +73,6 @@ jmeter -JThreadCount=30000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeou
 
 
 > 增量压测方式，这个有个 Blog 系列还不错的地址： https://www.cnblogs.com/xiaodi888/p/18152803
-
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_8.png)
 
