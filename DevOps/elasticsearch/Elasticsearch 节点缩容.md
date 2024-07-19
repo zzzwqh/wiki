@@ -3,7 +3,7 @@
 
 
 
-> 备注：扩容相对容易，CPU / 内存不够可以扩节点数量，磁盘不够扩磁盘，磁盘扩容方式：
+> Tips：扩容相对容易，CPU / 内存不够可以扩节点数量，磁盘不够扩磁盘，磁盘扩容方式：
 ```bash
 # 数据节点磁盘扩容，修改 6000Gi 为指定容量即可
 kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-0   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
