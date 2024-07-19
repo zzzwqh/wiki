@@ -2,6 +2,17 @@
 > 磁盘都是不支持缩容的，只能通过节点轮替的操作，将数据重新分配到低存储节点
 
 
+
+> 扩容好扩容，CPU / 内存不够可以扩节点数量，磁盘不够扩磁盘，磁盘扩容方式：
+```bash
+# 数据节点磁盘扩容，修改 6000Gi 为指定容量即可
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-0   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-1   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-2   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-3   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}'
+```
+
+
 ## 原配置
 
 ```bash
@@ -296,4 +307,4 @@ spec:
 
 
 
-Over ~
+> Over ~

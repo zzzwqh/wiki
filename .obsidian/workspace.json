@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/运维问题杂记.md"
+                "file": "DevOps/elasticsearch/Elasticsearch 节点缩容.md"
               }
             }
           },
@@ -196,6 +196,10 @@
   "lastOpenFiles": [
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
+    "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
+    "DevOps/elasticsearch/Elasticsearch 证书问题.md",
+    "DevOps/运维问题杂记.md",
+    "DevOps/一些文档或者常用命令.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_8.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_7.png",
@@ -207,7 +211,6 @@
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_2.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_1.jpeg",
     "DevOps/assets/Jmeter 压测小记",
-    "DevOps/运维问题杂记.md",
     "DevOps/assets/运维问题杂记/运维问题杂记_image_8.jpeg",
     "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
@@ -218,12 +221,9 @@
     "DevOps/assets/运维问题杂记",
     "Excalidraw/OKG 实践思路.md",
     "DevOps/Arthas tunnel.md",
-    "DevOps/一些文档或者常用命令.md",
-    "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
     "DevOps/elasticsearch/Json 日志字段映射冲突.md",
-    "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/cadvisor 配置.md",
     "DevOps/elasticsearch/M.md",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
