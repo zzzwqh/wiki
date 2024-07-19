@@ -3,7 +3,7 @@
 
 
 
-> Tips：扩容相对容易，CPU / 内存不够可以扩节点数量，磁盘不够扩磁盘，磁盘扩容方式：
+> Tips ：扩容相对容易，CPU / 内存不够可以扩节点数量，磁盘不够扩磁盘，磁盘扩容方式：
 ```bash
 # 数据节点磁盘扩容，修改 6000Gi 为指定容量即可
 kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-0   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
@@ -15,7 +15,7 @@ kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-3   -p 
 
 ## 原配置
 
-```bash
+```yaml
 # 这里有个案例可以参考下 ： https://github.com/elastic/cloud-on-k8s/blob/2.12/deploy/eck-stack/examples/elasticsearch/hot-warm-cold.yaml
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
@@ -194,7 +194,7 @@ spec:
 
 > 上述配置不要动，下面配置，直接添加到行尾，此时要保证有 moudule=es 的节点有足够资源
 
-```bash
+```yaml
   # ===================================== 数据节点配置（低配）======================================== #
   # name 一定要不同！（ 代表了一个节点组，和 PVC / PV 挂钩 ）
   - name: data-shrink
@@ -254,7 +254,7 @@ spec:
 
 > 直接在 yaml 文件中，删掉旧的高配节点，删除这段内容：
 
-```bash
+```yaml
   # ===================================== 数据节点配置 ======================================== #
   - name: data
     count: 4
