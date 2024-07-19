@@ -242,3 +242,16 @@ spec:
           hostPath:
             path: /data/logs
 ```
+
+
+
+## 数据盘扩容【 阿里云 ESSD StorageClass 】
+
+```bash
+# 数据节点磁盘扩容，修改 6000Gi 为指定容量即可
+
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-0   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-1   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-2   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
+kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-3   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}'
+```
