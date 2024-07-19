@@ -53,9 +53,9 @@ https://blog.csdn.net/songyun333/article/details/134413242
 
 > 方法如下，需要在节点上运行
 
-1.调整半队列值，先 cat /proc/sys/net/ipv4/tcp_max_syn_backlog 查看这个值的大小，然后 使用文本编辑器编辑 /etc/sysctl.conf文件： sudo vi /etc/sysctl.conf 在文件末尾添加或修改以下行，将<新值>替换为您想要设置的新值（可以先设置刚查看值的2倍）： net.ipv4.tcp_max_syn_backlog = <新值> 保存并退出编辑器。 使配置生效：sudo sysctl -p
+1. 调整半队列值，先 cat /proc/sys/net/ipv4/tcp_max_syn_backlog 查看这个值的大小，然后 使用文本编辑器编辑 /etc/sysctl.conf文件： sudo vi /etc/sysctl.conf 在文件末尾添加或修改以下行，将<新值>替换为您想要设置的新值（可以先设置刚查看值的2倍）： net.ipv4.tcp_max_syn_backlog = <新值> 保存并退出编辑器。 使配置生效：sudo sysctl -p
 
-2.调整全队列值 先 cat /proc/sys/net/core/somaxconn 查看这个值大小，编辑 /etc/sysctl.conf文件： sudo vi /etc/sysctl.conf 在文件末尾添加或修改如下行，将<新值>替换为您想要设置的新值（可以先设置刚查看值的2倍）： net.core.somaxconn = <新值> 保存并退出编辑器。 使配置生效： sudo sysctl -p 
+2. 调整全队列值 先 cat /proc/sys/net/core/somaxconn 查看这个值大小，编辑 /etc/sysctl.conf文件： sudo vi /etc/sysctl.conf 在文件末尾添加或修改如下行，将<新值>替换为您想要设置的新值（可以先设置刚查看值的2倍）： net.core.somaxconn = <新值> 保存并退出编辑器。 使配置生效： sudo sysctl -p 
 
 【 需在非业务高峰期时执行操作，压测场景无需关注 】
 
