@@ -3,7 +3,7 @@
 
 > 最开始压测命令是这样写的 ...
 ```bash
-[root@iZt4n1igqdpps6gm3lrxaaZ ~]# jmeter -JThreadCount=30000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
+[root@iZt4n1igqdpps6gm3lrxaaZ ~]# jmeter -JThreadCount=5000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
 ```
 
 > 报错如下，压测机的 Jmeter 配置（ properties 文件 ）需要调整
