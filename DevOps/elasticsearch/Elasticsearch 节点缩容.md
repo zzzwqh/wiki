@@ -243,5 +243,56 @@ spec:
 
 
 ```bash
-
+  # ===================================== 数据节点配置 ======================================== #
+  - name: data
+    count: 4
+    config:
+      node.roles: ["data", "transform","remote_cluster_client"]
+    # pod 模板，除了资源限制以外，还加了 init Container
+    # init Container 原因详见 => https://www.elastic.co/guide/en/cloud-on-k8s/2.12/k8s-virtual-memory.html#k8s_using_an_init_container_to_set_virtual_memory
+    podTemplate:
+      metadata:
+        labels:
+          # 让 metricbeat 可以抓取
+          scrape: es
+      spec:
+        imagePullSecrets:
+        - name: harbor-auth
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:  # 硬策略
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: module
+                  operator: In
+                  values:
+                  - es
+        initContainers:
+        - name: sysctl
+          securityContext:
+            privileged: true
+            runAsUser: 0
+          command: ['sh', '-c', 'sysctl -w vm.max_map_count=262144']
+        containers:
+        - name: elasticsearch
+          resources:
+            limits:
+              memory: 64Gi
+              cpu: 32
+    # 存储卷配置
+    volumeClaimTemplates:
+    - metadata:
+        # 不要更改这个名字！ 
+        name: elasticsearch-data  
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5000Gi
+        storageClassName: cloud-essd-sc
 ```
+
+
+
+Over ~
