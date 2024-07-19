@@ -3,7 +3,7 @@
 
 > 最开始压测命令是这样写的 ...
 ```bash
-[root@iZt4n1igqdpps6gm3lrxaaZ ~]# jmeter -JThreadCount=5000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
+[root@iZt4n1igqdpps6gm3lrxaaZ ~]# jmeter -JThreadCount=50000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
 ```
 
 > 报错如下，压测机的 Jmeter 配置（ properties 文件 ）需要调整
@@ -63,12 +63,13 @@ https://blog.csdn.net/songyun333/article/details/134413242
 ## 6. 调整压测姿势
 
 > 其实上面服务端调整，可不执行，调整 TreadCount ，然后做梯度压测才是最好的方式
+> 如下命令 + 图中的 iniProp 意思是，10000个线程，分 10s 逐步启动，也就是 1s 起 1000 个，第 10s 起完 10000 个，这就是梯度压测
 
 ```bash
-jmeter -JThreadCount=30000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
+jmeter -JThreadCount=10000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeout=2000 -n -t /root/account-stress.jmx -l testx.jtl -e -o ./report
 ```
 
-命令还是这个命令，jmx 是有变化的（ 可以用 jmeter 的 GUI 生成这个 jmx 文件 ）
+命令还是这个命令，并发数可以变下，jmx 是有变化的（ 可以用 jmeter 的 GUI 生成这个 jmx 文件 ）
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_7.png)
 
 
