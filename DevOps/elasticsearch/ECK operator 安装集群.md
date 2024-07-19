@@ -255,3 +255,25 @@ kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-1   -p 
 kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-2   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}' 
 kubectl -n middleware patch pvc elasticsearch-data-elasticsearch-es-data-3   -p '{"spec":{"resources":{"requests":{"storage":"6000Gi"}}}}'
 ```
+
+## 解码证书
+    
+
+```Bash
+# 解码证书 
+kubectl get secret -n middleware elasticsearch-es-http-certs-public -o jsonpath='{.data.tls\.crt}' | base64 --decode > tls.crt 
+ 
+# 解码私钥 
+kubectl get secret -n middleware elasticsearch-es-http-certs-public -o jsonpath='{.data.ca\.crt}' | base64 --decode > ca.crt
+```
+
+  
+
+## 其他集群创建该证书
+
+```Bash
+kubectl create secret tls elasticsearch-es-http-certs-public \ 
+  --cert=tls.crt \ 
+  --key=tls.key \ 
+  -n middleware   
+```
