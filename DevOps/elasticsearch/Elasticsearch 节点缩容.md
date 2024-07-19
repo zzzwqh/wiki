@@ -181,9 +181,12 @@ spec:
 
 ## 新增配置
 
+> 上述配置不要动，下面配置，直接添加到行尾，此时要有保证，有 moudule=es 的节点有足够资源
+
 ```bash
   # ===================================== 数据节点配置（低配）======================================== #
-  - name: data
+  # name 一定要不同！（ 代表了一个节点组，和 PVC / PV 挂钩 ）
+  - name: data-shrink
     count: 4
     config:
       node.roles: ["data", "transform","remote_cluster_client"]
@@ -216,8 +219,8 @@ spec:
         - name: elasticsearch
           resources:
             limits:
-              memory: 64Gi
-              cpu: 32
+              memory: 32Gi
+              cpu: 16
     # 存储卷配置
     volumeClaimTemplates:
     - metadata:
@@ -228,6 +231,17 @@ spec:
         - ReadWriteOnce
         resources:
           requests:
-            storage: 5000Gi
+            storage: 3000Gi
         storageClassName: cloud-essd-sc
+```
+
+
+
+## 旧节点下线
+
+> 直接在 yaml 文件中，删掉旧的高配节点，删除这段内容：
+
+
+```bash
+
 ```
