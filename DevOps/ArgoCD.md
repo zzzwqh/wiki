@@ -1,4 +1,5 @@
 
+## 
 
 ```bash
 # argocd-apisixroute.yaml
@@ -21,7 +22,6 @@ spec:
 ```
 
 
-
 ```bash
 # argocd-apisixtls.yaml
 apiVersion: apisix.apache.org/v2
@@ -31,6 +31,7 @@ metadata:
 spec:
   hosts:
   - argocd-server.gameale.com
+  # 记得先建立好 tls secret 
   secret:
     name: gameale-tls
     namespace: octopus

@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/APISIX 使用.md",
+                "file": "DevOps/ArgoCD.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/APISIX 使用.md",
+                "file": "DevOps/ArgoCD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/APISIX 使用.md",
+                "file": "DevOps/ArgoCD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/APISIX 使用.md"
+                "file": "DevOps/ArgoCD.md"
               }
             }
           },
@@ -195,7 +195,7 @@
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
     "DevOps/Jmeter 压测小记.md",
-    "DevOps/APISIX 使用.md",
+    "DevOps/ArgoCD.md",
     "DevOps/运维问题杂记.md",
     "DevOps/一些文档或者常用命令.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
