@@ -147,5 +147,197 @@ spec:
 ```
 
 
+查看 Instrumentation 资源，能看到 java 程序配置的自动注入的镜像
 
-查看
+```bash
+$ kubectl describe otelinst otelinst -n test-ns | grep Java -A4
+  Java:
+    Env:
+      Name:   OTEL_EXPORTER_OTLP_ENDPOINT
+      Value:  http://otel-collector.middleware:4317
+    Image:    ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-java:1.32.1
+```
+
+
+# 业务容器加入注解
+
+```bash
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: account
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 5%
+      maxSurge: 25%
+  selector:
+    matchLabels:
+      app: account
+  template:
+    metadata:
+      annotations:
+        instrumentation.opentelemetry.io/inject-java: "true" # 注解
+        prometheus.io/path: "/actuator/prometheus"
+        prometheus.io/port: "9102"
+        prometheus.io/scrape: "true"
+        # cloudnativegame.io/fake-time: "2024-01-01 00:00:00"  # 此处还可以配置时分秒组合的时间间隔，如'3h40s'和'-7h20m40s'， '-'表示过去的时间。
+      labels:
+        app: account
+    spec:
+      terminationGracePeriodSeconds: 300
+      containers:
+        - name: account
+          image: "{{ .Values.global.repository }}/account:{{ .Values.account.imageTag  }}"
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8090
+            name: account
+          - containerPort: 9102
+            name: prometheus
+          readinessProbe:
+            httpGet:
+              path: /account/system/health-check
+              port: 8090
+            initialDelaySeconds: 30
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /account/system/health-check
+              port: 8090
+            initialDelaySeconds: 90
+            periodSeconds: 30
+          envFrom:
+            - configMapRef:
+                name: octopus-cm
+          env:
+          - name: PODNAME # 用于 jvm_args 的 GC 日志，Kubernetes 自带的 HOSTNAME 变量无效
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          {{ if eq .Values.global.jvmLevel "sandbox" }}
+          - name: xmx
+            value: "2g"
+          - name: xms
+            value: "2g"
+          - name: jvm_args
+            value: "-XX:MetaspaceSize=512m -XX:MaxMetaspaceSize=512m -XX:MaxDirectMemorySize=512m -XX:+PrintCommandLineFlags -verbose:gc -Xloggc:heap/$(PODNAME)-gc.log -Dio.netty.noPreferDirect=true -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=heap/"
+          resources:
+            requests:
+              cpu: 2
+              memory: "6Gi"
+            limits:
+              cpu: 2
+              memory: "6Gi"
+          {{ else if eq .Values.global.jvmLevel "low" }}
+          - name: xmx
+            value: "4g"
+          - name: xms
+            value: "4g"
+          - name: jvm_args
+            value: "-XX:MetaspaceSize=512m -XX:MaxMetaspaceSize=512m -XX:MaxDirectMemorySize=1024m -XX:+PrintCommandLineFlags -verbose:gc -Xloggc:heap/$(PODNAME)-gc.log -Dio.netty.noPreferDirect=true -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=heap/"
+          resources:
+            requests:
+              cpu: 4
+              memory: "10Gi"
+            limits:
+              cpu: 4
+              memory: "10Gi"
+          {{ else if eq .Values.global.jvmLevel "medium" }}
+          - name: xmx
+            value: "8g"
+          - name: xms
+            value: "8g"
+          - name: jvm_args
+            value: "-XX:MetaspaceSize=1024m -XX:MaxMetaspaceSize=1024m -XX:MaxDirectMemorySize=2048m -XX:+PrintCommandLineFlags -verbose:gc -Xloggc:heap/$(PODNAME)-gc.log -Dio.netty.noPreferDirect=true -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=heap/"
+          resources:
+            requests:
+              cpu: 8
+              memory: "18Gi"
+            limits:
+              cpu: 8
+              memory: "18Gi"
+          {{ else if eq .Values.global.jvmLevel "high" }}
+          - name: xmx
+            value: "16g"
+          - name: xms
+            value: "16g"
+          - name: jvm_args
+            value: "-XX:MetaspaceSize=2048m -XX:MaxMetaspaceSize=2048m -XX:MaxDirectMemorySize=4096m -XX:+PrintCommandLineFlags -verbose:gc -Xloggc:heap/$(PODNAME)-gc.log -Dio.netty.noPreferDirect=true -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=heap/"
+          resources:
+            requests:
+              cpu: 16
+              memory: "34Gi"
+            limits:
+              cpu: 16
+              memory: "34Gi"
+          {{ else if eq .Values.global.jvmLevel "superhigh" }}
+          - name: xmx
+            value: "32g"
+          - name: xms
+            value: "32g"
+          - name: jvm_args
+            value: "-XX:MetaspaceSize=4096m -XX:MaxMetaspaceSize=4096m -XX:MaxDirectMemorySize=8192m -XX:+PrintCommandLineFlags -verbose:gc -Xloggc:heap/$(PODNAME)-gc.log -Dio.netty.noPreferDirect=true -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=heap/"
+          resources:
+            requests:
+              cpu: 32
+              memory: "66Gi"
+            limits:
+              cpu: 32
+              memory: "66Gi"
+          {{ else }}
+          {{ end }}
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash","-c","cd /octopus/heap && tar -zcvf ${HOSTNAME}-$(date +%Y%m%d%H%M%S).tar.gz ${HOSTNAME}-gc.log* && rm -rf /octopus/heap/${HOSTNAME}-gc.log* && curl http://localhost:8090/account/internal/deregister && sleep 15 "]
+          volumeMounts:
+            - name: localtime
+              mountPath: /etc/localtime
+            - name: timezone
+              mountPath: /etc/timezone
+            - name: logs
+              mountPath: /octopus/logs
+            - name: heap
+              mountPath: /octopus/heap
+            - name: sa
+              mountPath: /octopus/sa
+            - name: sa
+              mountPath: /octopus/logs/default
+      volumes:
+        - name: localtime
+          hostPath:
+            path: /etc/localtime
+        - name: timezone
+          hostPath:
+            path: /etc/timezone
+        - name: logs
+          hostPath:
+            path: /data/logs
+        - name: heap
+          hostPath:
+            path: /data/gc
+        - name: sa
+          hostPath:
+            path: /data/Analytic
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: {{ .Values.global.imagePullSecrets }}
+      # Pod 反亲和，避免单点故障
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution: # 软策略
+            - weight: 1
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname # 拓扑域
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - account
+```
