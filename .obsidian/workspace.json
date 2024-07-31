@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ArgoCD.md",
+                "file": "DevOps/opentelemetry 实践.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ArgoCD.md",
+                "file": "DevOps/opentelemetry 实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ArgoCD.md",
+                "file": "DevOps/opentelemetry 实践.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ArgoCD.md"
+                "file": "DevOps/opentelemetry 实践.md"
               }
             }
           },
@@ -194,8 +194,9 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
-    "DevOps/Jmeter 压测小记.md",
     "DevOps/ArgoCD.md",
+    "DevOps/opentelemetry 实践.md",
+    "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
     "DevOps/一些文档或者常用命令.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
@@ -236,7 +237,6 @@
     "DevOps/SLB 权重配置工具.md",
     "DevOps/elasticsearch/assets/配置索引生命周期",
     "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
-    "mysqlUtils/README.md",
     "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
     "DevOps/elasticsearch/assets/expand_keys 作用",
     "DevOps/elasticsearch/assets/Json 日志字段映射冲突",
