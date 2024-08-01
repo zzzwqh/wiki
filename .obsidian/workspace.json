@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ArgoCD.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ArgoCD.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ArgoCD.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ArgoCD.md"
+                "file": "DevOps/ArgoCD 文档.md"
               }
             }
           },
@@ -194,10 +194,12 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
-    "DevOps/assets/ArgoCD/image-20240801111747488.png",
+    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
+    "DevOps/assets/ArgoCD 文档",
+    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD",
     "DevOps/opentelemetry 实践.md",
-    "DevOps/ArgoCD.md",
+    "DevOps/ArgoCD 文档.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
     "DevOps/一些文档或者常用命令.md",
@@ -224,7 +226,6 @@
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_2.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_1.jpeg",
     "DevOps/assets/Jmeter 压测小记",
-    "DevOps/assets/运维问题杂记/运维问题杂记_image_8.jpeg",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/openkruise CRD 实践.md",
     "DevOps/assets/Openkruise CRD 实践",
@@ -239,7 +240,6 @@
     "DevOps/elasticsearch/assets/配置索引生命周期",
     "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
     "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
-    "DevOps/elasticsearch/assets/expand_keys 作用",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"

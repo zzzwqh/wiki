@@ -1,4 +1,4 @@
-
+貌似没啥写的
 ## 
 
 ```bash
@@ -37,7 +37,9 @@ spec:
     namespace: octopus
 ```
 
+![](assets/ArgoCD%20文档/ArgoCD%20文档_image_1.png)
+
 
 没啥需要注意的
-![](assets/ArgoCD/image-20240801111747488.png)
+![](assets/ArgoCD%20文档/ArgoCD%20文档_image_2.png)
 
