@@ -13,7 +13,7 @@ spec:
     - name: root
       match:
         hosts:
-          - argocd-server.gameale.com
+          - argocd-server.xxx.com
         paths:
           - "/*"
       backends:
@@ -30,9 +30,14 @@ metadata:
   name: sample-tls
 spec:
   hosts:
-  - argocd-server.gameale.com
+  - argocd-server.xxx.com
   # 记得先建立好 tls secret 
   secret:
-    name: gameale-tls
+    name: xxx-tls
     namespace: octopus
 ```
+
+
+没啥需要注意的
+![](assets/ArgoCD/image-20240801111747488.png)
+

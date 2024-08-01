@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/opentelemetry 实践.md",
+                "file": "DevOps/ArgoCD.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/opentelemetry 实践.md",
+                "file": "DevOps/ArgoCD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/opentelemetry 实践.md",
+                "file": "DevOps/ArgoCD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/opentelemetry 实践.md"
+                "file": "DevOps/ArgoCD.md"
               }
             }
           },
@@ -194,8 +194,10 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
-    "DevOps/ArgoCD.md",
+    "DevOps/assets/ArgoCD/image-20240801111747488.png",
+    "DevOps/assets/ArgoCD",
     "DevOps/opentelemetry 实践.md",
+    "DevOps/ArgoCD.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
     "DevOps/一些文档或者常用命令.md",
@@ -234,12 +236,10 @@
     "DevOps/elasticsearch/M.md",
     "DevOps/elasticsearch/assets/Stack Monitoring 告警",
     "DevOps/elasticsearch/assets/Stack Monitoring",
-    "DevOps/SLB 权重配置工具.md",
     "DevOps/elasticsearch/assets/配置索引生命周期",
     "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
     "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
     "DevOps/elasticsearch/assets/expand_keys 作用",
-    "DevOps/elasticsearch/assets/Json 日志字段映射冲突",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
