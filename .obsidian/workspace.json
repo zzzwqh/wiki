@@ -194,6 +194,8 @@
   },
   "active": "3fb07674b0c4c878",
   "lastOpenFiles": [
+    "DevOps/assets/opentelemetry 实践/opentelemetry 实践_image_1.png",
+    "DevOps/assets/opentelemetry 实践",
     "DevOps/未命名.md",
     "DevOps/Arthas tunnel.md",
     "DevOps/ArgoCD 文档.md",
@@ -234,12 +236,10 @@
     "Excalidraw/OKG 实践思路.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
     "DevOps/elasticsearch/Json 日志字段映射冲突.md",
-    "DevOps/elasticsearch/M.md",
     "DevOps/elasticsearch/assets/Stack Monitoring 告警",
     "DevOps/elasticsearch/assets/Stack Monitoring",
     "DevOps/elasticsearch/assets/配置索引生命周期",
     "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
-    "DevOps/elasticsearch/assets/Elasticsearch 证书问题",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"

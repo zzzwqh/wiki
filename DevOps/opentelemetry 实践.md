@@ -385,3 +385,5 @@ spec:
           exporters: [debug,zipkin]
 ```
 
+![](assets/opentelemetry%20实践/opentelemetry%20实践_image_1.png)
+
