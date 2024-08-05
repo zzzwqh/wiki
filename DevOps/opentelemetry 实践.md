@@ -343,7 +343,7 @@ spec:
 ```
 
 
-## Zipkin 作为 Exporter 的 Otel collector 相关配置
+# Zipkin 作为 Exporter 的 Otel collector 相关配置
 
 
 ```yaml
