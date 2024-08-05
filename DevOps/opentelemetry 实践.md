@@ -341,3 +341,47 @@ spec:
                       values:
                         - account
 ```
+
+
+## Zipkin 作为 Exporter 的 Otel collector 相关配置
+
+
+```yaml
+apiVersion: opentelemetry.io/v1beta1
+kind: OpenTelemetryCollector
+metadata:
+  name: otel
+spec:
+  config:
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+            endpoint: 0.0.0.0:4317
+          http:
+            endpoint: 0.0.0.0:4318
+    processors:
+      memory_limiter:
+        check_interval: 1s
+        limit_percentage: 75
+        spike_limit_percentage: 15
+      batch:
+        send_batch_size: 10000
+        timeout: 10s
+
+    exporters:
+      debug: {}
+      zipkin:
+        endpoint: "http://zipkin.kube-otel:9411/api/v2/spans"
+        format: proto
+        tls:
+          insecure: true
+
+    service:
+      pipelines:
+        traces:
+          receivers: [otlp]
+          processors: []
+          exporters: [debug,zipkin]
+```
+
