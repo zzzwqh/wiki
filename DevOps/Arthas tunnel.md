@@ -73,7 +73,7 @@ COPY arthas/ ./arthas
 
 ### 业务启动 agent 端
 
- > 此处使用 arthas-boot 启动，可参考 https://arthas.aliyun.com/doc/download.html
+ > 此处使用 arthas-boot.jar 启动，可参考 https://arthas.aliyun.com/doc/download.html
 
 ```bash
 docker exec  ${SID}_${SERVICE}_1 /bin/bash -c "java -jar /root/arthas/arthas-boot.jar 1 --tunnel-server 'ws://10.30.122.173:7777/ws' --agent-id ${SERVICE}-${SID} --attach-only"
