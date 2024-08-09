@@ -1,8 +1,23 @@
 
 
+## Dockerfile 文件
 
 
-## docker-compose
+```bash
+# root @ test in ~/arthas-tunnel [10:40:11] 
+$ ls
+arthas-tunnel-server-3.7.2-fatjar.jar  Dockerfile
+
+# root @ test in ~/arthas-tunnel [10:40:12] 
+$ cat Dockerfile        
+FROM registry-dev.gameale.com/roc/jdk21:latest
+WORKDIR /root
+COPY arthas-tunnel-server-3.7.2-fatjar.jar .
+CMD ["java", "-jar", "arthas-tunnel-server-3.7.2-fatjar.jar"]
+
+```
+
+## docker-compose.yaml 文件
 
 
 ```bash
@@ -19,6 +34,24 @@ services:
 
 
 ## 业务连接 Arthas tunnel
+
+### 将 arthas agent 打进业务镜像
+
+
+
+> Dockerfile
+
+```bash
+FROM registry-dev.gameale.com/roc/jdk21:latest
+WORKDIR /root
+COPY jar/ .
+COPY arthas/ ./arthas
+```
+
+
+### 业务启动 agent 端
+
+ > 此处使用 arthas-boot 启动，可参考 https://arthas.aliyun.com/doc/download.html
 
 ```bash
 docker exec  ${SID}_${SERVICE}_1 /bin/bash -c "java -jar /root/arthas/arthas-boot.jar 1 --tunnel-server 'ws://10.30.122.173:7777/ws' --agent-id ${SERVICE}-${SID} --attach-only"
