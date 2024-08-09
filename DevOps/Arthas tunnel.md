@@ -10,7 +10,7 @@ arthas-tunnel-server-3.7.2-fatjar.jar  Dockerfile
 
 # root @ test in ~/arthas-tunnel [10:40:12] 
 $ cat Dockerfile        
-FROM registry-dev.gameale.com/roc/jdk21:latest
+FROM registry.xxxx.com/roc/jdk21:latest
 WORKDIR /root
 COPY arthas-tunnel-server-3.7.2-fatjar.jar .
 CMD ["java", "-jar", "arthas-tunnel-server-3.7.2-fatjar.jar"]
