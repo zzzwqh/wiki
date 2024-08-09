@@ -57,9 +57,11 @@
             "id": "4fccf6cfda394a59",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md"
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -130,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md"
+                "file": "DevOps/MongoDB 7.0 ShardCluster 搭建.md"
               }
             }
           },
@@ -204,23 +206,24 @@
   },
   "active": "4fccf6cfda394a59",
   "lastOpenFiles": [
-    "DevOps/opentelemetry 实践.md",
+    "DevOps/Jmeter 压测小记.md",
+    "DevOps/fake-time-injector K8S 时间服工具.md",
+    "DevOps/Arthas tunnel.md",
+    "DevOps/AdvancedCronJob 使用实践.md",
+    "DevOps/运维问题杂记.md",
     "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
+    "DevOps/未命名.md",
+    "DevOps/opentelemetry 实践.md",
     "DevOps/assets/opentelemetry 实践/opentelemetry 实践_image_1.png",
     "DevOps/assets/opentelemetry 实践",
-    "DevOps/未命名.md",
-    "DevOps/Arthas tunnel.md",
     "DevOps/ArgoCD 文档.md",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD",
-    "DevOps/Jmeter 压测小记.md",
-    "DevOps/运维问题杂记.md",
     "DevOps/一些文档或者常用命令.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/bitbucket 自动触发构建任务.md",
-    "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
@@ -245,7 +248,6 @@
     "DevOps/assets/运维问题杂记",
     "Excalidraw/OKG 实践思路.md",
     "DevOps/elasticsearch/Elasticsearch 索引模版.md",
-    "DevOps/elasticsearch/Json 日志字段映射冲突.md",
     "DevOps/elasticsearch/assets/Stack Monitoring 告警",
     "DevOps/elasticsearch/assets/Stack Monitoring",
     "DevOps/elasticsearch/assets/配置索引生命周期",
