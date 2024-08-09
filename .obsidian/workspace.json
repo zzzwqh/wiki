@@ -206,6 +206,8 @@
   },
   "active": "4fccf6cfda394a59",
   "lastOpenFiles": [
+    "DevOps/assets/Arthas tunnel/Arthas tunnel_image_1.png",
+    "DevOps/assets/Arthas tunnel",
     "DevOps/ArgoCD 文档.md",
     "DevOps/Arthas tunnel.md",
     "DevOps/bitbucket 自动触发构建任务.md",
@@ -237,7 +239,6 @@
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/elasticsearch/MetricBeat 云原生监控.md",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
-    "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_8.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_7.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_6.png",
@@ -251,7 +252,6 @@
     "DevOps/elasticsearch/assets/Stack Monitoring 告警",
     "DevOps/elasticsearch/assets/Stack Monitoring",
     "DevOps/elasticsearch/assets/配置索引生命周期",
-    "DevOps/elasticsearch/assets/MetricBeat 云原生监控",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"

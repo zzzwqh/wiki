@@ -24,3 +24,17 @@ services:
 docker exec  ${SID}_${SERVICE}_1 /bin/bash -c "java -jar /root/arthas/arthas-boot.jar 1 --tunnel-server 'ws://10.30.122.173:7777/ws' --agent-id ${SERVICE}-${SID} --attach-only"
 
 ```
+
+
+## 访问 WebUI
+
+> 需要配置 AgentID，连接到业务 JVM 排查问题
+
+```bash
+# 查看系统变量
+[arthas@1]$  ognl '@java.lang.System@getenv("app_env")'
+@String[-Dnacos.config.data.private=game-10101 -Dnacos.config.namespace=dev -Dnacos.config.host=10.30.122.173:8848 -Dnacos.config.username=nacos -Dnacos.config.password=nacos]
+```
+
+![](assets/Arthas%20tunnel/Arthas%20tunnel_image_1.png)
+
