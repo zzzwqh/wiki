@@ -59,7 +59,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md",
+                "file": "DevOps/未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md",
+                "file": "DevOps/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md",
+                "file": "DevOps/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/openkruise CRD 实践.md"
+                "file": "DevOps/未命名.md"
               }
             }
           },
@@ -206,6 +206,8 @@
   },
   "active": "4fccf6cfda394a59",
   "lastOpenFiles": [
+    "DevOps/openkruise CRD 实践.md",
+    "DevOps/未命名.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/nsenter 命令记载.md",
     "DevOps/kubeadm 证书更新.md",
@@ -221,12 +223,10 @@
     "DevOps/assets/Arthas tunnel/Arthas tunnel_image_1.png",
     "DevOps/assets/Arthas tunnel",
     "DevOps/ArgoCD 文档.md",
-    "DevOps/openkruise CRD 实践.md",
     "DevOps/opentelemetry 实践.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/Terraform 实践.md",
     "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
-    "DevOps/未命名.md",
     "DevOps/assets/opentelemetry 实践/opentelemetry 实践_image_1.png",
     "DevOps/assets/opentelemetry 实践",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
