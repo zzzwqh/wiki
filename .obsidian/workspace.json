@@ -59,7 +59,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/一些文档或者常用命令.md",
                 "mode": "source",
                 "source": false
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/一些文档或者常用命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/一些文档或者常用命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/运维问题杂记.md"
+                "file": "DevOps/一些文档或者常用命令.md"
               }
             }
           },
@@ -206,26 +206,26 @@
   },
   "active": "4fccf6cfda394a59",
   "lastOpenFiles": [
+    "DevOps/运维问题杂记.md",
+    "DevOps/ArgoCD 文档.md",
+    "DevOps/bitbucket 自动触发构建任务.md",
+    "DevOps/fake-time-injector K8S 时间服工具.md",
+    "DevOps/Jmeter 压测小记.md",
+    "DevOps/kubeadm 证书更新.md",
+    "DevOps/GOST 代理配置.md",
+    "DevOps/nsenter 命令记载.md",
     "DevOps/TKE Ingress.md",
     "DevOps/assets/TKE Ingress/TKE Ingress_image_1.png",
     "DevOps/assets/TKE Ingress/TKE Ingress_image_2.png",
     "DevOps/assets/TKE Ingress",
     "DevOps/openkruise CRD 实践.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
-    "DevOps/nsenter 命令记载.md",
-    "DevOps/kubeadm 证书更新.md",
-    "DevOps/Jmeter 压测小记.md",
-    "DevOps/GOST 代理配置.md",
-    "DevOps/fake-time-injector K8S 时间服工具.md",
     "DevOps/cadvisor 配置.md",
-    "DevOps/bitbucket 自动触发构建任务.md",
-    "DevOps/运维问题杂记.md",
     "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/一些文档或者常用命令.md",
     "DevOps/Arthas tunnel.md",
     "DevOps/assets/Arthas tunnel/Arthas tunnel_image_1.png",
     "DevOps/assets/Arthas tunnel",
-    "DevOps/ArgoCD 文档.md",
     "DevOps/opentelemetry 实践.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/Terraform 实践.md",
