@@ -59,7 +59,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/TKE Ingress.md",
+                "file": "DevOps/运维问题杂记.md",
                 "mode": "source",
                 "source": false
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/TKE Ingress.md",
+                "file": "DevOps/运维问题杂记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/TKE Ingress.md",
+                "file": "DevOps/运维问题杂记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/TKE Ingress.md"
+                "file": "DevOps/运维问题杂记.md"
               }
             }
           },
@@ -206,11 +206,11 @@
   },
   "active": "4fccf6cfda394a59",
   "lastOpenFiles": [
+    "DevOps/TKE Ingress.md",
     "DevOps/assets/TKE Ingress/TKE Ingress_image_1.png",
     "DevOps/assets/TKE Ingress/TKE Ingress_image_2.png",
     "DevOps/assets/TKE Ingress",
     "DevOps/openkruise CRD 实践.md",
-    "DevOps/TKE Ingress.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/nsenter 命令记载.md",
     "DevOps/kubeadm 证书更新.md",
@@ -246,7 +246,6 @@
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_7.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_6.png",
     "DevOps/assets/Jmeter 压测小记/tmp1721298404780_Jmeter 压测小记_image_6.png",
-    "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_5.png",
     "DevOps/assets/Jmeter 压测小记",
     "DevOps/assets/Openkruise CRD 实践",
     "DevOps/assets/运维问题杂记",
