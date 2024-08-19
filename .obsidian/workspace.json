@@ -64,9 +64,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8b5377e34dc1403c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md"
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -132,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/一些文档或者常用命令.md",
+                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/一些文档或者常用命令.md",
+                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/一些文档或者常用命令.md"
+                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md"
               }
             }
           },
@@ -204,8 +214,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "4fccf6cfda394a59",
+  "active": "8b5377e34dc1403c",
   "lastOpenFiles": [
+    "DevOps/一些文档或者常用命令.md",
+    "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "DevOps/运维问题杂记.md",
     "DevOps/ArgoCD 文档.md",
     "DevOps/bitbucket 自动触发构建任务.md",
@@ -222,7 +234,6 @@
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/cadvisor 配置.md",
     "DevOps/AdvancedCronJob 使用实践.md",
-    "DevOps/一些文档或者常用命令.md",
     "DevOps/Arthas tunnel.md",
     "DevOps/assets/Arthas tunnel/Arthas tunnel_image_1.png",
     "DevOps/assets/Arthas tunnel",
