@@ -1,6 +1,16 @@
 
 因为我们数据库 / NAS 都在可用区 B（ 跨可用区会有 0.5-0.8 ms 的延时 ），为了更好的读写性能，所以在 Serverless ACK 中，想按权重分布业务 Pod ，原生 Kubernetes 可以做到均匀打散 Pod 到各个拓扑域，但是无法按权重比例做分布
 
+最开始想到的办法，是控制两个 Deployment，一个 SVC
+![](assets/WorkloadSpread%20按比例分布负载/image-20240820115118677.png)
+
+
+
+
+
+
+
+
 OpenKruise 中提供了一种 CRD，可以作用于 Deployment ，将 Deployment Pod 按照比例分布在制定的不同区域，叫做 WorkloadSpread，我们有需求如下：
 - 业务 Deployment 中的 80% 的 Pod 会分布在可用区 B， 20% 的 Pod 会分布在可用区 A
 - 即使触发 HPA 弹性扩容，也遵守该拓扑分配规则
