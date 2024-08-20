@@ -69,9 +69,11 @@
             "id": "8b5377e34dc1403c",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md"
+                "file": "DevOps/WorkloadSpread 按比例分布负载.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -142,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
+                "file": "DevOps/WorkloadSpread 按比例分布负载.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
+                "file": "DevOps/WorkloadSpread 按比例分布负载.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md"
+                "file": "DevOps/WorkloadSpread 按比例分布负载.md"
               }
             }
           },
@@ -216,8 +218,13 @@
   },
   "active": "8b5377e34dc1403c",
   "lastOpenFiles": [
-    "DevOps/一些文档或者常用命令.md",
+    "DevOps/AdvanceCronJob 实践.md",
+    "DevOps/WorkloadSpread 按比例分布负载.md",
+    "DevOps/assets/WorkloadSpread 按比例分布负载/WorkloadSpread 按比例分布负载_image_1.png",
+    "DevOps/assets/WorkloadSpread 按比例分布负载",
     "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
+    "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
+    "DevOps/一些文档或者常用命令.md",
     "DevOps/运维问题杂记.md",
     "DevOps/ArgoCD 文档.md",
     "DevOps/bitbucket 自动触发构建任务.md",
@@ -230,7 +237,6 @@
     "DevOps/assets/TKE Ingress/TKE Ingress_image_1.png",
     "DevOps/assets/TKE Ingress/TKE Ingress_image_2.png",
     "DevOps/assets/TKE Ingress",
-    "DevOps/openkruise CRD 实践.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
     "DevOps/cadvisor 配置.md",
     "DevOps/AdvancedCronJob 使用实践.md",
@@ -240,7 +246,6 @@
     "DevOps/opentelemetry 实践.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/Terraform 实践.md",
-    "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
     "DevOps/assets/opentelemetry 实践/opentelemetry 实践_image_1.png",
     "DevOps/assets/opentelemetry 实践",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
@@ -251,17 +256,13 @@
     "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
-    "DevOps/elasticsearch/MetricBeat 云原生监控.md",
-    "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_8.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_7.png",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_6.png",
-    "DevOps/assets/Jmeter 压测小记/tmp1721298404780_Jmeter 压测小记_image_6.png",
     "DevOps/assets/Jmeter 压测小记",
     "DevOps/assets/Openkruise CRD 实践",
     "DevOps/assets/运维问题杂记",
     "DevOps/elasticsearch/assets/Stack Monitoring 告警",
-    "DevOps/elasticsearch/assets/Stack Monitoring",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
