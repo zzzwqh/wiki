@@ -93,9 +93,11 @@
             "id": "dfaf2554c063ab12",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.7"
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -166,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/xxx.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/xxx.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/xxx.md"
+                "file": "README.md"
               }
             }
           },
