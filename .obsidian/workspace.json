@@ -88,9 +88,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "dfaf2554c063ab12",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -228,7 +238,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "889200d5108bbba7",
+  "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/elasticsearch/xxx.md",
