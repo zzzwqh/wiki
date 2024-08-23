@@ -76,9 +76,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "889200d5108bbba7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/elasticsearch/xxx.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -144,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
+                "file": "DevOps/elasticsearch/xxx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md",
+                "file": "DevOps/elasticsearch/xxx.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +196,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/ECK operator 安装集群.md"
+                "file": "DevOps/elasticsearch/xxx.md"
               }
             }
           },
@@ -216,8 +228,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8b5377e34dc1403c",
+  "active": "889200d5108bbba7",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/ECK operator 安装集群.md",
+    "DevOps/elasticsearch/xxx.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
     "DevOps/assets/WorkloadSpread 按比例分布负载/WorkloadSpread 按比例分布负载_image_1.png",
@@ -255,7 +269,6 @@
     "DevOps/assets/ArgoCD 文档",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD",
-    "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
     "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_8.png",
