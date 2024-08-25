@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "DevOps/黑盒监控遇到的问题.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "DevOps/黑盒监控遇到的问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "DevOps/黑盒监控遇到的问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "DevOps/黑盒监控遇到的问题.md"
               }
             }
           },
@@ -242,6 +242,10 @@
   },
   "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
+    "DevOps/assets/黑盒监控遇到的问题/黑盒监控遇到的问题_image_1.png",
+    "DevOps/assets/黑盒监控遇到的问题",
+    "README.md",
+    "DevOps/黑盒监控遇到的问题.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/elasticsearch/xxx.md",
     "DevOps/elasticsearch/Elasticsearch 数据拉取.md",
@@ -274,20 +278,16 @@
     "DevOps/assets/Arthas tunnel",
     "DevOps/opentelemetry 实践.md",
     "DevOps/SLB 权重配置工具.md",
-    "DevOps/Terraform 实践.md",
     "DevOps/assets/opentelemetry 实践/opentelemetry 实践_image_1.png",
     "DevOps/assets/opentelemetry 实践",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD",
-    "DevOps/elasticsearch/Elasticsearch 节点缩容.md",
-    "DevOps/elasticsearch/Elasticsearch 证书问题.md",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_8.png",
     "DevOps/assets/Jmeter 压测小记",
     "DevOps/assets/Openkruise CRD 实践",
     "DevOps/assets/运维问题杂记",
-    "DevOps/elasticsearch/assets/Stack Monitoring 告警",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
