@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/其他.md"
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md"
               }
             }
           },
@@ -242,8 +242,9 @@
   },
   "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
-    "DevOps/黑盒监控遇到的问题.md",
     "DevOps/其他.md",
+    "DevOps/ALB Ingress 配置 301 重定向.md",
+    "DevOps/黑盒监控遇到的问题.md",
     "DevOps/assets/黑盒监控遇到的问题/黑盒监控遇到的问题_image_1.png",
     "DevOps/assets/黑盒监控遇到的问题",
     "README.md",
@@ -278,7 +279,6 @@
     "DevOps/assets/Arthas tunnel/Arthas tunnel_image_1.png",
     "DevOps/assets/Arthas tunnel",
     "DevOps/opentelemetry 实践.md",
-    "DevOps/SLB 权重配置工具.md",
     "DevOps/assets/opentelemetry 实践/opentelemetry 实践_image_1.png",
     "DevOps/assets/opentelemetry 实践",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
