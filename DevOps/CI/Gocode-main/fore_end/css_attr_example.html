@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		div {
+			margin-bottom: 20px;
+			width: 80%;
+		}
+ 		.myclass1 {
+ 			background-color: grey;
+ 			padding: 20px 20px;
+ 			color: orange;
+			border: 5px solid pink;
+			box-shadow:  1px 2px 3px 1px #c2c2c2;
+
+		}
+		 .myclass2  {
+ 			background-color: grey;
+ 			padding: 1px 15px 1px;
+			color: pink;
+			border: 5px solid pink;
+			/* 圆角框 */
+			border-radius: 20px;
+			line-height: 10px;
+			font-size: 12px;
+			/* 容器边框阴影 */
+			box-shadow:  1px 2px 3px 1px #c2c2c2;
+		}
+ 		.flex_test1 {
+ 			/* 想使用 flex 布局，父级元素的属性中必须有 diplay: flex */
+ 			display: flex;
+			flex-direction: row-reverse;
+			justify-content: center;
+		}
+		.flex_test2 {
+			height: 100px;
+			width: 100px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+			background-color: aquamarine;
+			border: 5px solid ivory;
+			border-radius: 5px;
+ 			box-shadow:  1px 2px 3px 1px #c2c2c2;
+			text-align: center;
+			line-height: 100px;
+ 		}
+	</style>
+	<title></title>
+</head>
+<body>
+ 
+<h1 class="myclass1">CSS 样式属性实践</h1>
+<div class="myclass2"> 
+<p> div1 标签文本 </p>
+</div>
+
+<div class="myclass2"> 
+<p> div2 标签文本 </p>
+</div>
+<div class="myclass2"> 
+<p> div3 标签文本 </p>
+</div>
+
+
+<div class="flex_test1"> 
+<div class="flex_test2"> 
+<a> 1 </a>
+</div>
+<div class="flex_test2"> 
+<a> 2 </a>
+</div>
+<div class="flex_test2"> 
+<a> 3 </a>
+</div>
+
+</div>
+
+
+ 
+</body>
+</html>

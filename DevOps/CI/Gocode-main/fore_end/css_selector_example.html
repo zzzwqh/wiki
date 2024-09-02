@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 标签选择器 -->
+		<!-- ID 选择器 -->
+		<!-- 类选择器 -->
+		<!-- 派生选择器 -->
+	<style type="text/css">
+ 		h1,h2,h3 {
+			color: red;
+		}
+ 		#mystyle {
+			color: pink;
+		}
+ 		.myclass1 {
+			color: orange;
+
+		}
+		 .myclass1 p {
+			color: purple;
+		}
+ 
+	</style>
+	<title></title>
+</head>
+<body>
+
+<!-- 标签选择器 -->
+<h1>Red h1</h1>
+<!-- ID 选择器 ，这里一个 ID 选择器虽然可以对应多个标签也可以生效，但是不建议这么做 -->
+<h1 id="mystyle">Pind h1</h1>
+<a id="mystyle">Pind h1</a>
+<!-- 类选择器 -->
+<h1 class="myclass1">Yellow h1</h1>
+<!-- 派生选择器 -->
+<div class="myclass1"> 
+<a> a 标签文本 </a>
+<p> p 标签文本 </p>
+</div>
+</body>
+</html>

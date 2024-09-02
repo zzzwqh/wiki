@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	   MyPage	
+	</title>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+
+<!-- 用 button 触发一些响应事件 -->
+<button onclick="alert('onclick alert!')">onclick</button>
+<button onmousemove="alert('onmousemove alert!')">onmousemove</button>
+<button onmouseleave="alert('onmouseleave alert!')">onmouseleave</button>
+<br>
+
+<!-- 用 JavaScript 触发自定义事件（JavaScript 一般使用 id 获取页面元素） -->
+输入字母鼠标移开会变大写：<input type="text" id="zname" name="fname" onchange="myFunc()">  
+<script type="text/javascript">
+	function myFunc(){
+		var x = document.getElementById("zname")
+		x.value = x.value.toUpperCase()
+	}
+	window.onload = f;
+	function f() {
+		alert('页面加载完毕')
+	}
+</script>
+</body>
+</html>
