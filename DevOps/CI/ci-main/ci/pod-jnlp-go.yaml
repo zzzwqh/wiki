@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: gitops
+  name: jnlp-slave
+  namespace: kube-ops
+spec:
+  volumes:
+  - name: docker-socket
+    emptyDir: {}
+  - name: workspace-volume
+    emptyDir: {}    
+  serviceAccount: jenkins
+  imagePullSecrets:
+    - name: aliyun-secret
+  containers:
+  - name: jnlp
+    image: registry.cn-hangzhou.aliyuncs.com/s-ops/inbound-agent:4.3-4
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+    - name: docker-socket
+      mountPath: /var/run
+  - name: golang
+    image: golang:1.18.3-alpine3.16
+    imagePullPolicy: IfNotPresent
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-socket
+      mountPath: /var/run
+  - name: docker
+    image: registry.cn-hangzhou.aliyuncs.com/s-ops/docker-gettext-git-xmllint:latest
+    imagePullPolicy: IfNotPresent
+    command:
+    - sleep
+    args:
+    - 99d
+    readinessProbe:
+      exec:
+        command: ["ls", "-S", "/var/run/docker.sock"]
+      initialDelaySeconds: 10  
+    volumeMounts:
+    - name: docker-socket
+      mountPath: /var/run
+  - name: docker-daemon
+    image: docker:19.03.1-dind
+    securityContext:
+      privileged: true
+    volumeMounts:
+    - name: docker-socket
+      mountPath: /var/run
+    - name: workspace-volume
+      mountPath: /home/jenkins/agent
+      readOnly: false        
+
+      

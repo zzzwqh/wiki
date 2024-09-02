@@ -1,0 +1,202 @@
+// java
+//def APP = env.JOB_NAME.split('-')[0..-1].join('-')
+
+// 使用split函数以斜杠为分隔符拆分字符串，并提取最后一个元素
+//def APP =  env.JOB_NAME.split('/').last()
+// 引用共享库
+//@Library("jenkins_shareLibrary") _
+
+// 应用共享库中的方法
+//def tools = new org.devops.tools()
+
+
+pipeline {
+    agent {
+    kubernetes {
+        //Jenkins连接的k8s集群设置的别名
+        cloud 'kubernetes'
+
+        //jenkins动态slave的命名
+        //label "jnlp-slave-${UUID.randomUUID().toString().substring(0, 8)}"
+        label "jnlp-slave"
+        //设置为2 意味着当一个构建执行器（worker node）在空闲状态超过 2 分钟时，Jenkins 将会终止与该节点关联的执行器
+        //idleMinutes 2 
+
+        //调用mvn的pod
+        yamlFile "ci/pod-jnlp-mvn.yaml"
+   }
+}
+//parameters {
+    //代码分支
+//   gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', listSize: '8', name: 'BRANCH', type: 'PT_BRANCH'
+//}
+
+
+environment {  
+  //helm template 服务变量
+   APP = "${JOB_NAME}"
+  //APP = "${APP}"
+  
+  
+  //镜像仓库地址
+  REPOSITORY= "registry.cn-hangzhou.aliyuncs.com/gitops-demo"
+  
+  // 命名空间
+  NAMESPACE = "${ENV}"
+  
+  // 业务线
+  PROJECT = "${PROJECT}"
+  
+  // 服务yaml仓库
+  CD_REPO = "${CD_REPO}"
+  
+  //jvm
+  RUN_PROFILE= "${JVM}"
+
+  //RESOURCES
+  MINCPU = "${env.Resources.split(",")[0]}"
+  MAXCPU = "${env.Resources.split(",")[1]}"
+  MINMEM = "${env.Resources.split(",")[2]}"
+  MAXMEM = "${env.Resources.split(",")[3]}"
+  //服务副本数
+  NUM = "${env.Resources.split(",")[4]}"
+}
+
+options {
+    //保持构建15天 最大保持构建的30个 发布包保留15天
+    buildDiscarder logRotator(artifactDaysToKeepStr: '15', artifactNumToKeepStr: '', daysToKeepStr: '15', numToKeepStr: '30')
+    //时间模块
+    timestamps()
+    //超时时间
+    timeout(time:60, unit:'MINUTES')
+    //跳过默认设置的代码check out
+    skipDefaultCheckout true
+    //控制台输出的字符串变成你想要的颜色的显示
+    ansiColor('xterm')
+}
+ 
+    stages {
+        stage('pull code') {
+            steps {
+                echo '\033[34mstart-------------------------\033[0m \033[33mpull------------------------\033[0m \033[35mcode!\033[0m'
+                //拉取业务代码
+                checkout([$class: 'GitSCM', branches: [[name: "${params.BRANCH}"]], 
+                extensions: [], userRemoteConfigs: [[credentialsId: 'gitlab', 
+                url: "${env.GIT_URL}"]]])
+            }
+        }
+        stage('Build message') {
+            steps {
+                script {
+                    //Jenkins页面显示构建信息
+                    buildName ("${env.BUILD_NUMBER}-${APP}-${params.BRANCH}-${ENV}")
+                    wrap([$class: 'BuildUser']) {
+                        def user = env.BUILD_USER
+                        println("${user}")
+                        currentBuild.description = "构建人：${user}"
+                        //tools.PrintMes("构建人: ${user}","green1")
+                    }
+                }
+            }
+        } 
+        stage('mvn jar') {
+            steps {
+                container('maven'){
+                    //mvn打包&&上传私服
+                    script{
+                        //tools.PrintMes("编译打包","green1")
+                        sh ' mvn clean  package  -Dmaven.test.skip=true -U'
+                    }
+                }                
+            }
+        }
+        stage('docker images') {
+            steps {
+                container('docker') {
+                    script {
+                        // 获取 Git 提交的 commit ID 和更新日志，并将这些值存储在环境变量中以供后续使用。
+                        env.COMMITID = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                        env.result = sh(script: "git log -1 --pretty=%B", returnStdout: true).trim()
+                        env.TAG ="${BUILD_ID}-${params.BRANCH}"
+                        // 判断代码根目录是否都dokcerfile,不存在则编写dockerfile
+                        def dockerfile = 'Dockerfile'
+                        if (!fileExists(dockerfile)) {
+                    sh """
+cat >${dockerfile}<<EOF
+FROM registry.cn-hangzhou.aliyuncs.com/s-ops/alpine-jdk8:8u321
+ENV demo=""
+WORKDIR /opt
+COPY  ./target/*.jar /opt/
+ENTRYPOINT ["sh","-c","exec java $demo -jar /opt/*.jar"]
+EOF
+                    """
+                }
+                // 推送 Docker 镜像到 Registry
+                withDockerRegistry(credentialsId: "aliyun-image-registry", url: "https://registry.cn-hangzhou.aliyuncs.com") {
+                        sh"""
+                        docker build -f ${dockerfile} -t ${REPOSITORY}/${APP}:${BUILD_ID}-${params.BRANCH}-${COMMITID} .
+                        docker push ${REPOSITORY}/${APP}:${BUILD_ID}-${params.BRANCH}-${COMMITID} 
+                        docker rmi ${REPOSITORY}/${APP}:${BUILD_ID}-${params.BRANCH}-${COMMITID}
+                        """
+                }
+            }
+        }
+    }
+}       
+        stage('pull  template ') {
+            steps {
+                script{
+                echo '\033[34mstart-------------------------\033[0m \033[33mpull------------------------\033[0m \033[35mtemplate!\033[0m'
+                //拉取helm模板
+                checkout([$class: 'GitSCM', branches: [[name: "main"]], 
+                extensions: [], userRemoteConfigs: [[credentialsId: 'gitlab', 
+                url: "https://gitlab.itsky.tech/devops/ci.git"]]])
+                    }
+                }
+            }
+        stage ('生成yaml') {
+            steps{
+                 container('docker'){
+                script{
+                    echo '\033[34mgenerate-------------------------\033[0m \033[33mtemplate------------------------\033[0m \033[35myaml!\033[0m'
+                    //渲染服务helm模板
+                        sh """
+                       # 通过values.tpl模板生成values.yaml文件,这样可以把values.tpl的变量替换为值
+                       envsubst < ./template/values.tpl > ./template/values.yaml &&  
+                       # 渲染chart, example/${ENV}不需要创建,可以自己定义                   
+                       helm template  --debug  template/${PROJECT}/service --output-dir=example/${ENV} -f template/values.yaml 
+                        """
+                    }
+                }
+            }
+        }
+        stage('push yaml ') {
+            steps {	
+                container('docker'){
+                withCredentials([
+                    sshUserPrivateKey(
+                    credentialsId: 'gitlab-repo', 
+                    keyFileVariable: 'identity')
+                ]) {
+             echo "\033[43m Push template yaml!  \033[0m"
+            //上传业务yaml到对应的业务线
+			sh """
+            # cd到helm template output-dir的目录
+			cd   example/ && 
+			git config --global user.name 'ci'
+            git config --global user.email 'ci@demo.com'
+			git init
+            git remote add ${APP} ${CD_REPO}
+			git config core.sshCommand "ssh -o StrictHostKeyChecking=no -i $identity"
+			git pull ${APP} ${ENV}
+            mv ${ENV}/${PROJECT}/templates/api-service.yaml ${PROJECT}/${ENV}/${APP}-${ENV}-dep.yaml
+			git add ${PROJECT}/${ENV}/${APP}-${ENV}-dep.yaml					
+            git commit -m "${BUILD_NUMBER}-${APP}-${BRANCH}-TO-${ENV}"|| true
+            git push -u ${APP} HEAD:refs/heads/${ENV} --force
+			"""      
+                }     
+	 		  }  
+           }
+        }                 
+    }
+}

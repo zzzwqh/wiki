@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: gitops
+  name: jnlp-slave
+  namespace: kube-ops  
+spec:
+  volumes:    
+  - name: workspace-volume
+    emptyDir: {}
+  serviceAccount: jenkins
+  imagePullSecrets:
+    - name: aliyun-secret
+  containers:
+  - name: jnlp
+    image: jenkins/inbound-agent
+    imagePullPolicy: IfNotPresent
+  - name: golang
+    image: golang:1.18.3-alpine3.16
+    imagePullPolicy: IfNotPresent    
+    command:
+    - cat
+    tty: true    
+    volumeMounts:
+    - name: workspace-volume
+      mountPath: /home/jenkins/agent
+      readOnly: false      
+
