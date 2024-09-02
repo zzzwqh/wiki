@@ -1,0 +1,39 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nfs-client-provisioner
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nfs-client-provisioner
+  strategy:
+    type: Recreate  #---设置升级策略为删除再创建(默认为滚动更新)
+  template:
+    metadata:
+      labels:
+        app: nfs-client-provisioner
+    spec:
+      serviceAccountName: nfs-client-provisioner
+      containers:
+        - name: nfs-client-provisioner
+          image: quay.io/external_storage/nfs-client-provisioner:latest
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: nfs-client-root
+              mountPath: /persistentvolumes
+          env:
+            - name: PROVISIONER_NAME
+              value: nfs-client  #---nfs-provisioner的名称，以后设置的storageclass要和这个保持一致
+            - name: NFS_SERVER
+              value: 10.0.1.231  #---NFS服务器地址，和 valumes 保持一致
+            - name: NFS_PATH
+              value: /data/nfs  #---NFS服务器目录，和 valumes 保持一致
+      volumes:
+        - name: nfs-client-root
+          nfs:
+            server: 10.0.1.231  #---NFS服务器地址
+            path: /data/nfs #---NFS服务器目录
+

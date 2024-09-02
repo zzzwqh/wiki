@@ -1,0 +1,22 @@
+# https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prometheus-ingress
+  namespace: kube-mon 
+  annotations:
+    prometheus.io/scheme: "true" 
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: prom.itsky.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: prometheus-service
+            port:
+              name: prometheus-web

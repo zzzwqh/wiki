@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mysql
+  labels:
+    name: mysql
+spec:
+  replicas: 1
+  selector:
+    name: mysql
+  template:
+    metadata:
+      labels:
+        name: mysql
+    spec:
+      nodeSelector:      
+        kubernetes.io/hostname: 192.168.30.31
+      containers:
+      - name: mysql
+        image: registry.cn-hangzhou.aliyuncs.com/s-ops/nacos-mysql:5.7 
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "nacos@123"
+        - name: MYSQL_DATABASE
+          value: "nacos"
+        - name: MYSQL_USER
+          value: "nacos"
+        - name: MYSQL_PASSWORD
+          value: "nacos@123"
+      volumes:
+      - name: mysql-data
+        persistentVolumeClaim:
+          claimName: nacos-mysql-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  labels:
+    name: mysql
+spec:
+  ports:
+  - port: 3306
+    targetPort: 3306
+  selector:
+    name: mysql

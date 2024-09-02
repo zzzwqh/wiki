@@ -1,0 +1,85 @@
+@Library("devops5") _ 
+
+//Lib
+def build  = new org.devops.Build()
+def myTool = new org.devops.Tools()
+def sonar  = new org.devops.Sonar()
+def art    = new org.devops.Artifact() 
+
+//Pipeline
+pipeline {
+    agent { label "build01"}
+    options{
+        skipDefaultCheckout true
+    }
+    stages{
+        stage("CheckOut"){
+            steps{
+                script{
+                    //下载代码
+                    currentBuild.description = "branch: ${env.branchName}"
+                    myTool.GetCode("${env.branchName}", "${env.srcUrl}")
+                }
+            }
+        }
+
+        stage("Build"){
+            steps{
+                script{
+                    // 构建阶段
+                    build.Build()
+                }
+            }
+        }
+
+        stage("UnitTest"){
+            when {
+                environment name: 'skipUnitTest' , value: 'false'
+            }
+            steps{
+                script{
+                    // 单元测试
+                    build.UnitTest()
+                }
+            }
+        }
+
+        stage("CodeScan"){
+            steps{
+                script{
+                    // 代码扫描
+                    env.commitID = myTool.GetCommitID()
+                    sonar.CodeScan()
+                }
+            }
+        }
+
+        stage("PushArtifacts"){
+            steps{
+                script{
+                    // 上传制品
+                    repoId ="devops5"
+                    buName = "${JOB_NAME}".split('/')[0]  // devops5
+                    appName = "${JOB_NAME}".split('_')[0].split('/')[-1] //devops5-maven-service
+                    appVersion = "${env.branchName}-${env.commitID[0..7]}"
+                    targetDir="${buName}/${appName}/${appVersion}"  //devops5/devops5-maven-service/xxx-xxx
+                    pkgPath = "target"
+
+                    // 通过pom文件获取包名称
+                    POM = readMavenPom file: 'pom.xml'
+                    env.artifactId = "${POM.artifactId}"
+                    env.packaging = "${POM.packaging}"
+                    env.groupId = "${POM.groupId}"
+                    env.art_version = "${POM.version}"
+                    pkgName = "${env.artifactId}-${env.art_version}.${env.packaging}"
+                    newPkgName = "${appName}-${appVersion}.${env.packaging}"
+
+                    sh " mv ${pkgPath}/${pkgName} ${pkgPath}/${newPkgName} " 
+
+                    // push
+                    art.PushNexusArtifact(repoId, targetDir, pkgPath, newPkgName)
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Endpoints","metadata":{"annotations":{},"name":"kubernetes","namespace":"default"},"subsets":[{"addresses":[{"ip":"1.2.3.4"}],"ports":[{"name":"http","port":9999,"protocol":"TCP"}]}]}
+  creationTimestamp: "2023-01-07T20:50:39Z"
+  labels:
+    endpointslice.kubernetes.io/skip-mirror: "true"
+  name: kubernetes
+  namespace: default
+  resourceVersion: "2928776"
+  uid: 0cad0d8c-6144-4d9c-97f1-4a8496cab8d3
+subsets:
+- addresses:
+  - ip: 192.168.17.101
+  - ip: 192.168.17.102
+  - ip: 192.168.17.103
+  ports:
+  - name: https
+    port: 6443
+    protocol: TCP  
+    

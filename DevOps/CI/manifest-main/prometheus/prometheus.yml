@@ -1,0 +1,111 @@
+global:
+  scrape_interval: 15s
+  scrape_timeout: 15s
+scrape_configs:
+- job_name: 'prometheus'
+  static_configs:
+  - targets: ['localhost:9090']
+- job_name: 'coreDns'
+  static_configs:
+  - targets: ['172.27.14.212:9153']
+- job_name: 'redis'
+  static_configs:
+  - targets: ['redis.default:9121']
+- job_name: 'node_exporter'
+  kubernetes_sd_configs:
+    - role: node
+  relabel_configs:
+  - action: replace
+    source_labels: [__address__]
+    regex: (.*):(.*)
+    replacement: "${1}:9100"
+    target_label: __address__
+  - action: labelmap
+    regex: __meta_kubernetes_node_label_(.*)
+- job_name: "kubelet"
+  kubernetes_sd_configs:
+    - role: node
+  scheme: https
+  tls_config: # 访问 kubelet 需要的证书
+    ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    insecure_skip_verify: true # 跳过 Https 认证
+  bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token # 访问 kuberlet 需要的 tocken
+  relabel_configs:
+    - action: labelmap
+      regex: __meta_kubernetes_node_label_(.+)  
+- job_name: "cadvisor"
+  kubernetes_sd_configs:
+    - role: node
+  scheme: https
+  tls_config: 
+    ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    insecure_skip_verify: true # 跳过 Https 认证
+  bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token # 访问 kuberlet 需要的 tocken
+  relabel_configs:
+    - action: replace
+      # source_labels: [__metrics_path__] ###### 其实这里 source_labels 可以省略，不需要写，也就是说，当想改变 __metrics_path__ 的时候，只需要两个字段，replacement 和 target_label
+      replacement: /metrics/cadvisor 
+      target_label: __metrics_path__  ######  注意这个地方，必须是 __metrics_path__ 否则监控的 URI 不会改变，还是 /metrics 
+      # 如果不改变 target_label 的名字，在 targets 中不会显示该 Label 字段，改变了才会出现该 Label 字段，但是 URI 就不会生效
+    - action: labelmap
+      regex: __meta_kubernetes_node_label_(.+)
+      replacement: $1
+- job_name: "apiserver"
+  kubernetes_sd_configs:
+    - role: endpoints
+  scheme: https
+  tls_config:
+    ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+  bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+  relabel_configs:
+    - action: keep
+      source_labels: [__meta_kubernetes_service_name]
+      regex: kubernetes
+- job_name: 'kubernetes-pods'
+  kubernetes_sd_configs:
+  - role: pod
+  relabel_configs:
+  - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+    action: keep
+    regex: true
+  - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+    action: replace
+    target_label: __metrics_path__
+    regex: (.+)
+  - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+    action: replace
+    regex: ([^:]+)(?::\d+)?;(\d+)
+    replacement: $1:$2
+    target_label: __address__
+  - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scheme]
+    action: replace
+    target_label: __scheme__
+    regex: (.+)
+  - action: labelmap
+    regex: d(.+)
+
+# 抓取
+- job_name: 'spring metrics'
+  kubernetes_sd_configs:
+    - role: endpoints # 基于 endpoints 的服务发现
+  relabel_configs:
+  - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_spring]  # 保留包含标签 prometheus.io/spring=true 的 target
+    action: keep
+    regex: true
+  - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_path]
+    action: replace
+    target_label: __metrics_path__
+    regex: (.+)
+  - source_labels: [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+    action: replace
+    target_label: __address__
+    regex: ([^:]+)(?::\d+)?;(\d+)
+    replacement: $1:$2
+  - action: labelmap
+    regex: __meta_kubernetes_service_label_(.+)
+  - source_labels: [__meta_kubernetes_namespace]
+    action: replace
+    target_label: spring_namespace
+  - source_labels: [__meta_kubernetes_service_name]
+    action: replace
+    target_label: spring_name

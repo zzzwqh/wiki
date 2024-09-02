@@ -1,0 +1,19 @@
+# https://kubernetes.io/docs/concepts/services-networking/ingress/
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nexus-ingress
+  namespace: kube-ops
+spec:
+  ingressClassName: nginx  # 使用 nginx 的 IngressClass（关联的 ingress-nginx 控制器）
+  rules:
+  - host: nexus.itsky.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nexus3
+            port:
+              number: 8081

@@ -1,0 +1,52 @@
+# config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alert-config
+  namespace: kube-mon
+data:
+  config.yml: |-
+    global:
+      # 当 alertmanager 持续多长时间未接收到告警后标记告警状态为 resolved
+      resolve_timeout: 5m
+      # 配置邮件发送信息
+      smtp_smarthost: 'smtp.126.com:25'
+      smtp_from: 'wqh3456@126.com'  # 126 email address
+      smtp_auth_username: 'wqh3456@126.com'
+      smtp_auth_password: 'SEWSQITGNNUOGEBP'  # 使用网易邮箱的授权码
+      smtp_hello: '126.com'
+      smtp_require_tls: false
+    # 所有报警信息进入后的根路由，用来设置报警的分发策略
+    route:
+      group_by: ['alertname','cluster'] # 根据标签进行告警的分组，具有 alertname=A  cluster="area1" 这样的标签的会被分到一个分组，每个不同分组会发送一个邮件
+      # 比如 alertname=A cluster=area1 分组发送一个邮件，alertname=A cluster=area2 又会发送一个邮件
+
+      group_wait: 30s # 当收到（某个分组的）告警的时候，等待 N 秒看（这个分组下）是否还有告警，如果有就一起发出去
+
+      # 相同的 group 之间发送告警通知的时间间隔
+      group_interval: 30s
+
+      # 如果一个报警信息已经发送成功了，等待 repeat_interval 时间来重新发送他们，不同类型告警发送频率需要具体配置
+      repeat_interval: 1h
+
+      # 默认的receiver：如果一个报警没有被一个route匹配，则发送给默认的接收器
+      receiver: default
+
+      # 上面所有的属性都由所有子路由继承，并且可以在每个子路由上进行覆盖。
+      routes:
+      - receiver: web.hook.prometheusalert
+        group_wait: 10s
+        match:
+          team: node
+    receivers:
+    - name: 'default'
+      email_configs:
+      - to: 'wqh15245223939@163.com'
+        send_resolved: true  # 接受告警恢复的通知
+    - name: 'email'
+      email_configs:
+      - to: 'wqh0143@foxmail.com'
+        send_resolved: true  # 接受告警恢复的通知
+    - name: 'web.hook.prometheusalert'
+      webhook_configs:
+      - url: 'http://prometheus-alert-center:8080/prometheusalert?type=dd&tpl=prometheus-dd&ddurl=https://oapi.dingtalk.com/robot/send?access_token=82028d6fb7469f4a31df783ca0c5ac648127d90a15229443d15ee1ae7a76ce16&at=15245223939'

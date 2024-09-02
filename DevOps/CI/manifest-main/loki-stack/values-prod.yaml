@@ -1,0 +1,27 @@
+# values-prod.yaml
+loki:
+  enabled: true
+  replicas: 1
+  rbac:
+    pspEnabled: false
+  persistence:
+    enabled: true
+    storageClassName:  nfs-client
+
+promtail:
+  enabled: true
+  rbac:
+    pspEnabled: false
+
+grafana:
+  enabled: true
+  service:
+    type: NodePort
+  rbac:
+    pspEnabled: false
+  persistence:
+    enabled: true
+    storageClassName: nfs-client
+    accessModes:
+      - ReadWriteOnce
+    size: 1Gi

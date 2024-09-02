@@ -1,0 +1,237 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: kube-mon
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
+      scrape_timeout: 15s
+      evaluation_interval: 30s
+    rule_files:
+      - /etc/prometheus/rules.yml
+    alerting:
+      alertmanagers:
+        - static_configs:
+            - targets: ["alertmanager:9093"]
+    scrape_configs:
+    - job_name: 'prometheus'
+      static_configs:
+      - targets: ['localhost:9090']
+    - job_name: 'redis'
+      static_configs:
+      - targets: ['redis.default:9121']
+    - job_name: 'node_exporter'
+      kubernetes_sd_configs:
+        - role: node
+      relabel_configs:
+      - action: replace
+        source_labels: [__address__]
+        regex: (.*):(.*)
+        replacement: "${1}:9100"
+        target_label: __address__
+      - action: labelmap
+        regex: __meta_kubernetes_node_label_(.*)
+    - job_name: "kubelet"
+      kubernetes_sd_configs:
+        - role: node
+      scheme: https
+      tls_config: # 访问 kubelet 需要的证书
+        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        insecure_skip_verify: true # 跳过 Https 认证
+      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token # 访问 kuberlet 需要的 token
+      relabel_configs:
+        - action: labelmap
+          regex: __meta_kubernetes_node_label_(.+)
+    - job_name: "cadvisor"
+      kubernetes_sd_configs:
+        - role: node
+      scheme: https
+      tls_config:
+        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        insecure_skip_verify: true # 跳过 Https 认证
+      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token # 访问 kuberlet 需要的 tocken
+      relabel_configs:
+        - action: replace
+          # source_labels: [__metrics_path__] ###### 其实这里 source_labels 可以省略，不需要写，也就是说，当想改变 __metrics_path__ 的时候，只需要两个字段，replacement 和 target_label
+          replacement: /metrics/cadvisor
+          target_label: __metrics_path__  ######  注意这个地方，必须是 __metrics_path__ 否则监控的 URI 不会改变，还是 /metrics
+          # 如果不改变 target_label 的名字，在 targets 中不会显示该 Label 字段，改变了才会出现该 Label 字段，但是 URI 就不会生效
+        - action: labelmap
+          regex: __meta_kubernetes_node_label_(.+)
+          replacement: $1
+    - job_name: "apiserver"
+      kubernetes_sd_configs:
+        - role: endpoints
+      scheme: https
+      tls_config:
+        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+      relabel_configs:
+        - action: keep
+          source_labels: [__meta_kubernetes_service_name]
+          regex: kubernetes
+    - job_name: "kubernetes-endpoints"
+      kubernetes_sd_configs:
+        - role: endpoints
+      tls_config:
+        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+      relabel_configs:
+        # 保留 Service 的注解为 prometheus.io/scrape: true 的 Endpoints
+        - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scrape]
+          action: keep
+          regex: true
+        # 指标接口协议通过 prometheus.io/scheme 这个注解获取 http 或 https
+        - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scheme]
+          action: replace
+          target_label: __scheme__
+          regex: (https?)
+        # 指标接口端点路径通过 prometheus.io/path 这个注解获取
+        - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_path]
+          action: replace
+          target_label: __metrics_path__
+          regex: (.+)
+        # 直接接口地址端口通过 prometheus.io/port 注解获取
+        - source_labels:
+            [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+          action: replace
+          target_label: __address__
+          regex: ([^:]+)(?::\d+)?;(\d+) # RE2 正则规则，+是一次或多次，?是0次或1次，其中?:表示非匹配组(意思就是不获取匹配结果)
+          replacement: $1:$2
+        # 映射 Service 的 Label 标签
+        - action: labelmap
+          regex: __meta_kubernetes_service_label_(.+)
+        # 将 namespace 映射成标签
+        - source_labels: [__meta_kubernetes_namespace]
+          action: replace
+          target_label: kubernetes_namespace
+        # 将 Service 名称映射成标签
+        - source_labels: [__meta_kubernetes_service_name]
+          action: replace
+          target_label: kubernetes_name
+        # 将 Pod 名称映射成标签
+        - source_labels: [__meta_kubernetes_pod_name]
+          action: replace
+          target_label: kubernetes_pod_name
+    - job_name: 'kubernetes-pods' # Pod 自动发现
+      kubernetes_sd_configs:
+      - role: pod
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+        action: keep
+        regex: true
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+        action: replace
+        target_label: __metrics_path__
+        regex: (.+)
+      - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+        action: replace
+        regex: ([^:]+)(?::\d+)?;(\d+)
+        replacement: $1:$2
+        target_label: __address__
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scheme]
+        action: replace
+        target_label: __scheme__
+        regex: (.+)
+      - action: labelmap
+        regex: __meta_kubernetes_namespace
+        replacement: "namespace"
+      - action: labelmap
+        regex: __meta_kubernetes_pod_name
+        replacement: pod
+      - action: labelmap
+        regex: __meta_kubernetes_pod_container_name
+        replacement: container
+      - action: labelmap
+        regex: __meta_kubernetes_pod_container_port_number
+        replacement: port
+
+    - job_name: 'kubernetes-svc'  # service 自动发现
+      kubernetes_sd_configs:
+      - role: service
+      tls_config:
+        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+      relabel_configs:
+      - action: keep
+        source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scrape]
+        regex: true
+      - source_labels: [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+        action: replace
+        target_label: __address__
+        regex: ([^:]+)(?::\d+)?;(\d+) # RE2 正则规则，+是一次或多次，?是0次或1次，其中?:表示非匹配组(意思就是>不获取匹配结果)
+        replacement: $1:$2
+      - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scheme]
+        action: replace
+        target_label: __scheme__
+        regex: (https?)
+    - job_name: 'kubernetes-ingress' # ingress 自动发现
+      scrape_interval: 20s
+      scrape_timeout: 20s
+      kubernetes_sd_configs:
+      - role: ingress
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_ingress_annotation_prometheus_io_scheme]
+        action: keep
+        regex: true
+    - job_name: 'spring-metrics'  # springboot 应用监控
+      kubernetes_sd_configs:
+      - role: endpoints
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_spring]
+        action: keep
+        regex: true
+      - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_path]
+        action: replace
+        target_label: __metrics_path__
+        regex: (.+)
+      - source_labels: [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+        action: replace
+        target_label: __address__
+        regex: ([^:]+)(?::\d+)?;(\d+)
+        replacement: $1:$2
+      - action: labelmap
+        regex: __meta_kubernetes_service_label_(.+)
+      - source_labels: [__meta_kubernetes_namespace]
+        action: replace
+        target_label: spring_namespace
+      - source_labels: [__meta_kubernetes_service_name]
+        action: replace
+        target_label: spring_name
+
+  rules.yml: |
+    groups:
+    - name: test-node-mem
+      rules:
+      - alert: NodeMemoryUsage
+        expr: (node_memory_MemTotal_bytes - (node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes)) / node_memory_MemTotal_bytes * 100 > 20
+        for: 2m
+        labels:
+          team: node
+          severity: critical
+        annotations:
+          summary: "{{$labels.instance}}: High Memory usage detected"
+          description: "{{$labels.instance}}: Memory usage is above 20% (current value is: {{ $value }})"
+    - name: test-node-cpu
+      rules:
+      - alert: NodeCpuUsage
+        expr: ((1 - sum(increase(node_cpu_seconds_total{mode="idle"}[1m])) by (instance) / sum(increase(node_cpu_seconds_total[1m])) by (instance) ) * 100) > 3
+        for: 2m
+        labels:
+          team: node
+        annotations:
+          summary: "{{$labels.instance}}: High CPU usage detected"
+          description: "{{$labels.instance}}: CPU usage is above 3% (current value is: {{ $value }})"
+    - name: test-node-load
+      rules:
+      - alert: NodeLoad
+        expr: node_load5 < 1
+        for: 1m
+        labels: 
+          team: node 
+        annotations: 
+          summery: "{{$labels.instance}}:  Low node load deteched"
+          description: "{{ $labels.instance }}: node load is below 1 (current value is: {{ $value }})"
+          

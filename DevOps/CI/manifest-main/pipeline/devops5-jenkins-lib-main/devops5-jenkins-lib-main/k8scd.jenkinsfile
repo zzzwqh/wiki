@@ -1,0 +1,96 @@
+@Library("devops5") _ 
+
+//Lib
+def gitlabTool  = new org.devops.Gitlab()
+
+env.groupName = "${JOB_NAME}".split("/")[0]   //devops5
+env.projectName = "${JOB_NAME}".split("/")[-1].split("_")[0]  //devops5-npm-web
+
+//Pipeline
+pipeline {
+    agent { label "build01"}
+    options{
+        skipDefaultCheckout true
+    }
+    stages{
+        stage("GetDeployFile"){
+            steps{
+                script{
+                    //下载发布文件
+                    projectId = 12
+                    env.deployFile = "${env.releaseVersion}.yaml"
+                    filePath = "${env.projectName}%2f${env.deployFile}"
+                    
+                    branchName = "main"
+                    fileData = gitlabTool.GetRepoFile(projectId,filePath, branchName )
+                    sh "rm -fr ${env.deployFile}"
+                    writeFile file: env.deployFile , text: fileData
+                    sh "ls -l ; cat ${env.deployFile}"
+
+                    
+
+                    //sh "sed -i 's#__RELEASE_VERSION__#${env.releaseVersion}#g' ${env.deployFile} "
+                    //sh "ls -l ; cat ${filePath}"
+                }
+            }
+        }
+
+        stage("DeployAPP"){
+            steps{
+                script{
+                    env.namespace = "${env.groupName}"
+
+                    sh """
+                        ## 发布应用
+                        kubectl apply -f ${env.deployFile} -n ${env.namespace}
+
+                    """
+
+                    // 获取应用状态
+                    5.times{
+                        sh "sleep 2; kubectl -n ${env.namespace} get pod | grep ${env.projectName}"
+                    }
+                }
+            }
+        }
+
+        stage("RollOut"){
+            input {
+                message "是否进行回滚"
+                ok "提交"
+                submitter ""
+                parameters {
+                    choice(choices: ['yes', 'no'], name: 'opts')
+                }
+            }
+
+            steps{
+                script{
+
+                    switch("${opts}") {
+                        case "yes":
+                            sh "kubectl rollout undo deployment/${env.projectName} -n ${env.namespace} "
+                        break
+
+                        case "no":
+                        break
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

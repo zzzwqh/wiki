@@ -1,0 +1,61 @@
+#  jinfo -flags 1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-demo-spring
+  labels:
+    app: authentication-center
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0  
+  selector:
+    matchLabels:
+      app: prometheus-demo 
+  template:
+    metadata:
+      labels:
+        app: prometheus-demo 
+      annotations:
+        prometheus.io/scrape: "true"        
+        prometheus.io/spring: "true"        
+        prometheus.io/path: "actuator/prometheus"        
+        prometheus.io/port: "8080"        
+    spec:
+      terminationGracePeriodSeconds: 40
+      containers:
+      - name: prometheus-demo        
+        image: registry.cn-zhangjiakou.aliyuncs.com/wqhns/javademo:v1
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: java_ops # 自定义参数变量（Dockerfile 里有）,需要在 Dockerfile 里面写下
+            value: "-XX:+UseContainerSupport  -XX:MaxRAMPercentage=50.0 -XX:+UseG1GC"
+        resources:
+          limits:
+            cpu: "2"
+            memory: "1500Mi"    
+          requests:
+            memory: "800Mi"
+            cpu: "0.1"        
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            port: 8080
+            path: /actuator/health/liveness
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          timeoutSeconds: 10     
+        readinessProbe: 
+          failureThreshold: 10
+          httpGet:
+            port: 8080
+            path: /actuator/health/readiness
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 10   
+

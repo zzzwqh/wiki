@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: gitops
+  name: jnlp-slave
+  namespace: kube-ops  
+spec:
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+      type: ''
+  - name: workspace-volume
+    emptyDir: {}      
+  - name: maven # 使用 PVC 缓存 maven 构建内容，下次无需再重新下载
+    persistentVolumeClaim:
+      claimName: maven-cache
+  - name: maven-setting
+    configMap:
+        name: maven-settings
+  serviceAccount: jenkins
+  imagePullSecrets:
+    - name: aliyun-secret
+  containers:
+  - name: jnlp
+    image: jenkins/inbound-agent
+    imagePullPolicy: IfNotPresent    
+  - name: kustomize
+    image: smartive/kustomize
+    imagePullPolicy: IfNotPresent    
+    command:
+    - cat
+    tty: true
+  - name: maven
+    image: registry.cn-hangzhou.aliyuncs.com/s-ops/maven:3.5.0-alpine
+    imagePullPolicy: IfNotPresent    
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: maven
+      mountPath: /root/.m2
+    - name: maven-setting
+      mountPath: /usr/share/maven/conf/settings.xml
+      subPath: settings.xml     
+  - name: docker
+    image: registry.cn-hangzhou.aliyuncs.com/s-ops/docker-gettext-git-xmllint:latest
+    imagePullPolicy: IfNotPresent     
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+      readOnly: true
+  - name: sonar-scanner
+    image: registry.cn-zhangjiakou.aliyuncs.com/wqhns/sonar-scanner:v1
+    imagePullPolicy: IfNotPresent    
+    command:
+    - cat
+    tty: true

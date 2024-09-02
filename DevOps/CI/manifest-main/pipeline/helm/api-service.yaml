@@ -1,0 +1,238 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appname }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.appname }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  {{- if eq .Values.appname "service-paas-video" }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  {{- else }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  {{- end }}  
+  selector:
+    matchLabels:
+      app: {{ .Values.appname }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appname }}
+      annotations:
+        prometheus.io/scrape: "true"        
+    spec:
+      {{- if eq .Values.namespace "hundun-dev" }}
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      {{- end }}
+      {{- if or (eq .Values.appname "service-city-sysmanager") (eq .Values.appname "service-energy-centre") }}
+      {{- template "test.venus.hostAliases" }}
+      {{- end }}
+      {{- if or (eq .Values.appname "weather-service") (eq .Values.appname "persistence-hbase") }}
+      {{- if eq .Values.namespace "hundun-dev" }}
+      {{- template "hbase.dev.hostAliases" }}
+      {{- else if eq .Values.namespace "hundun-test" }}
+      {{- template "hbase.test.hostAliases" }}
+      {{- else if eq .Values.namespace "hundun-demo" }}
+      {{- template "hbase.demo.hostAliases" }}
+      {{- else if and (eq .Values.namespace "hundun-prod") (eq .Values.appname "persistence-hbase") }}
+      {{- template "hbase.prod.hostAliases" }}
+      {{- else if and (eq .Values.namespace "hundun-prod") (eq .Values.appname "weather-service") }}
+      {{- template "weather.prod.hostAliases" }}      
+      {{- end }}
+      {{- end }}
+      {{- if or (eq .Values.appname "service-pay") (eq .Values.appname "service-bill") }}
+      {{- template "service-pay.hostAliases" }}
+      {{- end }}
+      terminationGracePeriodSeconds: 40
+      {{- if and (eq .Values.namespace "hundun-prod") (eq .Values.appname "service-paas-video") }}
+      {{- with .Values.video.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- else if and (eq .Values.namespace "hundun-test") (eq .Values.appname "service-paas-video") }}
+      nodeSelector:
+        kubernetes.io/hostname: k8s-node17     
+      {{- else if and (eq .Values.namespace "hundun-dev") (eq .Values.appname "service-paas-video") }}
+      nodeSelector:
+        kubernetes.io/hostname: k8s-node18      
+      {{- else }}      
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- end }}      
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - {{ .Values.appname }}
+                topologyKey: kubernetes.io/hostname
+      tolerations:
+      - key: "node.kubernetes.io/unreachable"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 2
+      - key: "node.kubernetes.io/not-ready"
+        operator: "Exists"
+        effect: "NoExecute"
+        tolerationSeconds: 2                
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecrets }}
+      {{- if eq .Values.namespace "hundun-prod" }}
+      initContainers:
+      - name: sidecar
+        image: registry.cn-shanghai.aliyuncs.com/hundun_registry/skywalking-agent-sidecar:hd-8.5.0-v7
+        imagePullPolicy: IfNotPresent
+        command: ["cp", "-r", "/data/agent", "/sidecar"]
+        volumeMounts:
+        - name: sidecar
+          mountPath: /sidecar
+      {{- else if (eq .Values.namespace "hundun-test") }}
+      initContainers:
+      - name: sidecar
+        image: registry.cn-shanghai.aliyuncs.com/hundun_registry/skywalking-agent-sidecar:hd-8.5.0-v7
+        imagePullPolicy: IfNotPresent
+        command: ["cp", "-r", "/data/agent", "/sidecar"]
+        volumeMounts:
+        - name: sidecar
+          mountPath: /sidecar
+      {{- end }}
+      containers:
+      - name: {{ .Values.appname }}
+        {{- if eq .Values.namespace "hundun-prod" }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.prod_tag }}"
+        {{- else if eq .Values.namespace "hundun-pre" }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.pre_tag }}"
+        {{- else }}        
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        {{- end }}        
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+        {{- if eq .Values.namespace "hundun-prod" }}
+        - name: SW_AGENT_NAMESPACE
+          value: {{ .Values.namespace }}        
+        - name: SW_AGENT_NAME
+          value: {{ .Values.appname }}
+        - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+          value: skywalking.efk-skywalking.svc.cluster.local:11800
+        {{- else if (eq .Values.namespace "hundun-test") }}
+        - name: SW_AGENT_NAMESPACE
+          value: {{ .Values.namespace }}        
+        - name: SW_AGENT_NAME
+          value: "{{ .Values.appname }}"
+        - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+          value: skywalking.skywalking:11800        
+        {{- end }}
+        - name: PROFILE
+          value: {{ .Values.env.profile }}
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - /bin/sh
+              - '-c'
+              - {{ .Values.lifecycle.command | quote }}
+              - sleep 60
+        volumeMounts:
+        {{- if eq .Values.namespace "hundun-prod" }}        
+        - name: sidecar
+          mountPath: /sidecar
+        {{- else if (eq .Values.namespace "hundun-test") }}
+        - name: sidecar
+          mountPath: /sidecar        
+        {{- end }}
+        {{- if eq .Values.appname "service-paas-video" }}
+        - name: videorecords
+          mountPath: /file/videorecords
+        {{- end }}               
+        - name: oom-dumpdir
+          mountPath: /dumps/oom               
+        resources:
+          {{- if and (not .Values.resources.limits.memory) (.Values.resources.limits.cpu) }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu | quote }}
+          {{- else if and (.Values.resources.limits.memory) (not .Values.resources.limits.cpu) }}
+          limits:
+            memory: {{ .Values.resources.limits.memory | quote }}
+          {{- else if and (.Values.resources.limits.cpu) (.Values.resources.limits.memory) }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu | quote }}
+            memory: {{ .Values.resources.limits.memory | quote }}                 
+          {{- end }}    
+          requests:
+            memory: {{ .Values.resources.requests.memory | quote }}
+            cpu: {{ .Values.resources.requests.cpu | quote }}        
+        ports:
+        - containerPort: {{ .Values.service.port }}
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            port: {{ .Values.service.port }}
+            path: /actuator/health/liveness
+          initialDelaySeconds: 120
+          periodSeconds: 20
+          timeoutSeconds: 10     
+        readinessProbe: 
+          failureThreshold: 10
+          httpGet:
+            port: {{ .Values.service.port }}
+            path: /actuator/health/readiness
+          initialDelaySeconds: 90
+          periodSeconds: 10
+          timeoutSeconds: 10   
+      volumes:
+      {{- if eq .Values.namespace "hundun-prod" }}
+      - name: sidecar
+        emptyDir: {}
+      {{- else if (eq .Values.namespace "hundun-test") }}
+      - name: sidecar
+        emptyDir: {}      
+      {{- end }}
+      {{- if eq .Values.appname "service-paas-video" }}     
+      - name: videorecords
+        hostPath: 
+          path: /opt/videorecords
+          type: DirectoryOrCreate
+      {{- end }}      
+      - name: oom-dumpdir
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.appname }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.appname }}
+    prometheus: springboot-metrics    
+spec:
+  {{- if eq .Values.namespace "hundun-dev" }}
+  clusterIP: None
+  {{- end }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: api
+  selector:
+    app: {{ .Values.appname }}
+  {{- if eq .Values.namespace "hundun-prod" }}
+  {{- template "common.prod.sessionAffinity" }}
+  {{- end }}
+

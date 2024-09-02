@@ -1,0 +1,77 @@
+@Library("devops5") _ 
+
+//Lib
+def gitTool  = new org.devops.Gitlab()
+def art    = new org.devops.Artifact() 
+
+//Pipeline
+pipeline {
+    agent { label "build01"}
+    options{
+        skipDefaultCheckout true
+    }
+    stages{
+        stage("PullArtifact"){
+            steps{
+                script{
+                    //下载制品
+                    currentBuild.description = "branch: ${env.branchName}"
+
+                    //获取项目ID
+                    // devops5/devops5-maven-service_CD
+                    groupName = "${JOB_NAME}".split('/')[0]   //devops5
+                    projectName = "${JOB_NAME}".split('_')[0].split('/')[-1]  //devops5-maven-service
+                    projectID = gitTool.GetProjectID(projectName, groupName)
+                    println(projectID)
+                    
+                    //获取分支的CommitID
+                    env.commitID = gitTool.GetBranchCommitID(projectID, "${env.branchName}")
+                    println("${env.commitID}")
+
+                    env.releaseVersion = "${env.branchName}-${env.commitID}"
+                    println("releaseversion: ${env.releaseVersion}")
+
+                    //http://192.168.1.200:8081/repository/devops5/devops5/devops5-maven-service/RELEASE-1.1.3-7688a43f/devops5-maven-service-RELEASE-1.1.3-7688a43f.jar
+
+                    pkgUrl = "http://192.168.1.200:8081/repository/devops5/${groupName}/${projectName}/${env.releaseVersion}/${projectName}-${env.releaseVersion}.jar"
+                    sh " wget ${pkgUrl}; ls -l  "
+
+                    env.pkgName = "${projectName}-${env.releaseVersion}.jar"
+                    env.projectName = projectName
+                }
+            }
+        }
+
+
+        stage("AnsibleDeploy"){
+            steps{
+                script {
+                    //发布
+                    art.AnsibleDeploy()
+                }
+            }
+        }
+
+        stage("RollBack"){
+            input {
+                message "是否进行回滚？"
+                ok "Yes"
+                submitter ""
+                parameters {
+                    choice choices: ['NO','YES'], name: 'OPS'
+                }
+            }
+            steps {
+                echo "OPS  ${OPS}, doing......."
+
+                script{
+                    if ("${OPS}" == "YES"){
+                        art.AnsibleRollBack()
+                    }
+                }
+                
+            }
+        }
+    }
+}
+

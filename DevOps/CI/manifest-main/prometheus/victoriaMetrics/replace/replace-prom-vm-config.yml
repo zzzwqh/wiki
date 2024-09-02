@@ -1,0 +1,26 @@
+# vm-prom-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: kube-vm
+data:
+  prometheus.yaml: |
+    global:
+      scrape_interval: 15s
+      scrape_timeout: 15s
+    scrape_configs:
+    - job_name: "nodes"
+      kubernetes_sd_configs:
+        - role: node
+      relabel_configs: # 通过 relabeling 从 __address__ 中提取 IP 信息，为了后面验证 VM 是否兼容 relabeling
+      - action: replace
+        source_labels: [__address__]
+        regex: (.*):(.*)
+        replacement: "${1}:9111"
+        target_label: __address__
+      - source_labels: [__address__]
+        regex: "(.*):(.*)"
+        replacement: "${1}"
+        target_label: 'ip'
+        action: replace

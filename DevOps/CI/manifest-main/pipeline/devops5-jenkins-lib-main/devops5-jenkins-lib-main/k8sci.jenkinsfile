@@ -1,0 +1,143 @@
+@Library("devops5") _ 
+
+//Lib
+def build  = new org.devops.Build()
+def myTool = new org.devops.Tools()
+def sonar  = new org.devops.Sonar()
+def art    = new org.devops.Artifact() 
+def gitlabTool  = new org.devops.Gitlab()
+
+//Pipeline
+pipeline {
+    agent { label "build01"}
+    options{
+        skipDefaultCheckout true
+    }
+    stages{
+        stage("CheckOut"){
+            steps{
+                script{
+                    //下载代码
+                    currentBuild.description = "branch: ${env.branchName}"
+                    myTool.GetCode("${env.branchName}", "${env.srcUrl}")
+                }
+            }
+        }
+
+        stage("Build"){
+            steps{
+                script{
+                    // 构建阶段
+                    build.Build()
+                }
+            }
+        }
+
+        stage("UnitTest"){
+            when {
+                environment name: 'skipUnitTest' , value: 'false'
+            }
+            steps{
+                script{
+                    // 单元测试
+                    build.UnitTest()
+                }
+            }
+        }
+
+        stage("CodeScan"){
+            steps{
+                script{
+                    // 代码扫描
+                    env.commitID = myTool.GetCommitID()
+                    sonar.CodeScan()
+                }
+            }
+        }
+
+        stage("DockerImage"){
+            steps{
+                script{
+                    //生成Docker镜像
+                    repoName = "${JOB_NAME}".split("/")[0]   //devops5
+                    projectName = "${JOB_NAME}".split("/")[-1].split("_")[0]  //devops5-npm-web
+                    env.registry = "192.168.1.200:8088"   //harbor 
+                    env.imageName = "${env.registry}/${repoName}/${projectName}:${env.branchName}"
+
+
+                    withCredentials([usernamePassword(credentialsId: 'd12269dd-2439-4d3e-8917-915e8404e97a', 
+                                                    passwordVariable: 'DOCKER_PASSWD', 
+                                                    usernameVariable: 'DOCKER_USER')]) {
+                        sh """
+                            # 构建镜像
+                            docker build -t ${env.imageName} .
+
+                            #登录镜像仓库
+                            docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWD} ${env.registry}
+                            
+                            # 上传镜像
+                            docker push ${env.imageName}
+
+                            # 删除镜像
+                            sleep 2
+                            docker rmi ${env.imageName}
+
+                        """
+                    }
+                }
+            }
+        }
+
+        stage("UpdateEnvFile"){
+            steps{
+                script {
+                    // 更新部署文件
+
+                    //下载发布文件
+                    projectId = 12
+                    filePath = "devops5-npm-web-deployment.yaml"
+                    branchName = "main"
+                    fileData = gitlabTool.GetRepoFile(projectId,filePath, branchName )
+                    sh "rm -fr ${filePath}"
+                    writeFile file: filePath , text: fileData
+                    env.deployFile = filePath
+                    sh "sed -i 's#__RELEASE_VERSION__#${env.branchName}#g' ${env.deployFile} "
+                    sh "ls -l ; cat ${filePath}"
+
+                    //创建/更新发布文件
+                    newYaml = sh returnStdout: true, script: "cat ${env.deployFile}"
+                    println(newYaml)
+                    //更新gitlab文件内容
+                    base64Content = newYaml.bytes.encodeBase64().toString()
+                    
+                    env.groupName = "${JOB_NAME}".split("/")[0]   //devops5
+                    env.projectName = "${JOB_NAME}".split("/")[-1].split("_")[0]  //devops5-npm-web
+
+                    // 会有并行问题，同时更新报错
+                    try {
+                        gitlabTool.UpdateRepoFile(projectId,"${env.projectName}%2f${env.branchName}.yaml",base64Content, "main")
+                    } catch(e){
+                        gitlabTool.CreateRepoFile(projectId,"${env.projectName}%2f${env.branchName}.yaml",base64Content, "main")
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

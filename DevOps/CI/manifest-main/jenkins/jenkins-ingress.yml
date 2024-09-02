@@ -1,0 +1,51 @@
+# apiVersion: apisix.apache.org/v2beta2
+# kind: ApisixRoute
+# metadata:
+#   name: jenkins
+#   namespace: kube-ops
+# spec:
+#   http:
+#     - name: main
+#       match:
+#         hosts:
+#           - jenkins.k8s.local
+#         paths:
+#           - "/*"
+#       backends:
+#       - serviceName: jenkins
+#         servicePort: 8080
+# ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins
+  namespace: kube-ops
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: jenkins.k8s.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service: 
+            name: jenkins
+            port:
+              number: 8080
+ 
+# ---
+# apiVersion: traefik.containo.us/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: jenkins
+#   namespace: kube-ops
+# spec:
+#   entryPoints:
+#     - web
+#   routes:
+#     - kind: Rule
+#       match: Host(`jenkins.k8s.local`)
+#       services:
+#         - name: jenkins
+#           port: 8080

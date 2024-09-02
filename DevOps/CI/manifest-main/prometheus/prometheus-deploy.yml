@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+  namespace: kube-mon
+  labels:
+    app: my-prom
+  annotations:
+    my-prom: my-prom-dep
+spec:
+  selector:
+    matchLabels:
+      app: prometheus
+  template:
+    metadata:
+      labels:
+        app: prometheus
+      annotations:
+        my-prom: my-prom-pod
+    spec:
+#      hostAliases:
+#        - ip: "192.168.17.101"
+#          hostnames:
+#            - "prom.itsky.com"
+#            - "grafana.itsky.com"    
+      serviceAccountName: prometheus
+      initContainers:
+        - name: fix-permissions
+          image: busybox
+          command:
+          - sh
+          - -c
+          - "chown -R nobody:nobody /prometheus"
+          volumeMounts:
+            - name: data
+              mountPath: /prometheus
+      containers:
+        - image: prom/prometheus:v2.31.1
+          name: prometheus
+          args:
+            - "--config.file=/etc/prometheus/prometheus.yml"
+            - "--storage.tsdb.path=/prometheus" # 指定tsdb数据路径
+            - "--storage.tsdb.retention.time=24h"
+            - "--web.enable-admin-api" # 控制对admin HTTP API的访问，其中包括删除时间序列等功能
+            - "--web.enable-lifecycle" # 支持热更新，直接执行localhost:9090/-/reload立即生效 
+            - "--log.level=debug"
+
+          ports:
+            - containerPort: 9090
+              name: http
+          volumeMounts:
+            - mountPath: "/etc/prometheus"
+              name: config-volume
+            - mountPath: "/prometheus"
+              name: data
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1500Mi
+            limits:
+              cpu: 500m
+              memory: 1500Mi
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: prometheus-data
+        - name: config-volume
+          configMap:
+            name: prometheus-config

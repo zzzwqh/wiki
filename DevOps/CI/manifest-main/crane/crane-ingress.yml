@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-crane-dashboard
+  namespace: crane-system
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: crane.k8s.local # change to your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: craned
+                port:
+                  number: 9090
+# https://mp.weixin.qq.com/s/jYR3_QFMQX9eJwlp8xOaBA

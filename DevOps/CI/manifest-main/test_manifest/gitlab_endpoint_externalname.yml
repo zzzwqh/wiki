@@ -1,0 +1,8 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-gitlab-domain
+  namespace: default
+spec:
+  type: ExternalName
+  externalName: gitlab.itsky.tech

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 标签页的标题 </title>
+</head>
+<body>
+<a name="tips"></a>
+<!-- I. 常用标签 -->
+<h1>标题 h1 </h1>
+<h2>标题 h2 </h2>
+<p>段落 p </p> <br/>
+<i>斜体 i </i> <br/>
+<cite>引用 cite </cite> <br/>
+<b>加粗 b </b> <br/>
+<strong>强调加粗 strong </strong> <br/>
+<del>删除 del </del> <br/>
+<a>文本 a </a>
+
+<!-- II. 无序列表 ul 和 有序列表 ol -->
+<ul type="circle"> 
+	<li> unorder 1 </li>
+	<li> unorder 2 </li>
+</ul>
+
+<ol type="I">  
+	<li> order 1</li>
+	<li> order 2</li>
+</ol>
+
+<!-- 超链接标签 -->
+<a href="https://www.itsky.tech" target="_blank">访问博客</a>
+<br/><br/>
+<a href="#tips"> 点击回到顶部 </a>
+<br/><br/>
+
+<!-- 图像标签 -->
+
+<img src="https://www.itsky.tech/2023/03/14/Kustomize-%E6%A8%A1%E6%9D%BF%E6%B8%B2%E6%9F%93/image-20230314185609068.png" alt="This is a note's image" title="Don't Copy it!" height="300" width="500">
+ <br/> <br/>
+
+<!-- 表格标签 -->
+<table border="1" >
+	<thead>
+		<tr> 
+			<th> 主机名 </th>
+			<th> IP </th>
+            <th> 操作系统 </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> www.itsky.tech </td>
+			<td> 192.168.17.101 </td>
+			<td> Windows </td>
+		</tr>
+	</tbody>
+</table>
+ <br/> <br/>
+
+
+<!-- 表单标签 -->
+<form name="login" action="index.html" method="post">
+	Email : <input type="text" name="email"/> <br/>
+	Name : <input type="text" name="name"/> <br/>
+	Address : <input type="text" name="address"/> <br/>
+	<!-- radio 返回单值 -->
+	<input type="radio" name="sex" value="male"> 男
+	<input type="radio" name="sex" value="female"> 女 <br>
+	<!-- checkbox 返回列表 -->
+	<input type="checkbox" name="hobby" value="go"> Golang  
+	<input type="checkbox" name="hobby" value="java"> Java
+	<input type="checkbox" name="hobby" value="python"> Python  
+	<!-- 其他的类型可以触发不同事件 -->
+	<input type="submit" value="提交">
+	<input type="reset" value="重置">
+	<input type="button" value="Click it ~" onclick="alert('呆子，瞎点什么！')">
+</form>
+
+
+
+<!-- 下拉选择框标签-->
+<select>
+	<option value="read"> 读书 </option>
+	<option value="read"> 画画 </option>
+	<option value="read" selected> 打游戏 </option>	
+</select>
+<select size="3" multiple> <!-- size: 选项框展示选项数 multiple: 可多选选项 -->
+	<option value="read" selected> 打游戏 </option>	
+	<option value="read"> 读书 </option>
+	<option value="read"> 画画 </option>
+	<option value="read"> Rap </option>
+	<option value="read"> Song </option>
+ </select>
+<select disabled multiple> <!-- disabled 不可选择/更改 -->
+	<option value="read"> 读书 </option>
+	<option value="read"> 画画 </option>
+	<option value="read" selected> 打游戏 </option>	
+</select>
+
+
+
+<!-- 按钮标签 -->
+<input type="button" name="一个普通 button 类型的 input 标签，是个按钮可以触发事件" value="触发按钮" onmousemove="alert('别点触发！')">
+<input type="reset" name="是个 reset 类型的 input 标签，和 form 表单一起使用">
+<input type="submit" name="是个 submit 类型的 input 标签，和 form 表单一起使用">
+
+
+<div style="color:#0000FF">
+  <h3>这是一个在 div 元素中的标题。</h3>
+  <p>这是一个在 div 元素中的文本。</p>
+</div>
+</body> 
+</html>

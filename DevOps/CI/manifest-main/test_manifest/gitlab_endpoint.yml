@@ -1,0 +1,28 @@
+# 无标签选择器的 Service 关联 Endpoints 示例
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: gitlab
+  namespace: default
+subsets:
+- addresses:
+  - ip: 42.192.150.241
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitlab # # 此处的名字，也必须和上面的 endpoints 中 metadata.name 相对应
+  namespace: default
+spec: 
+  ports:
+  - name: https # 此处的名字，也必须和上面的 endpoints 中 subsets.ports.name 相对应
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  sessionAffinity: None
+  type: NodePort
