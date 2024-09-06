@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/其他.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/其他.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md"
+                "file": "DevOps/其他.md"
               }
             }
           },
@@ -240,8 +240,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6a7136d4fb01c960",
+  "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
+    "DevOps/飞书卡片模板.md",
+    "DevOps/feishu.json",
+    "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "DevOps/elasticsearch/assets/其他",
     "DevOps/CI/Gocode-main/test.db",
     "DevOps/CI/Gocode-main/renCoding/sliceEx2.go",
@@ -251,9 +254,7 @@
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/rand_data.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/example.xlsx",
     "DevOps/CI/Gocode-main/qimiCoding/day03/oss.go",
-    "DevOps/CI/Gocode-main/qimiCoding/day03/json_ex.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/img.png",
-    "DevOps/CI/Gocode-main/qimiCoding/day03/generate.go",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/wechat_channel.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/touxiang.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/qrcode_www.cnblogs.com.png",
@@ -286,8 +287,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/AGPL3.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/README.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/LICENSE.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/source/tags/index.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/source/categories/index.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
