@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/其他.md"
+                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md"
               }
             }
           },
@@ -242,6 +242,7 @@
   },
   "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/assets/其他",
     "DevOps/CI/Gocode-main/test.db",
     "DevOps/CI/Gocode-main/renCoding/sliceEx2.go",
     "DevOps/CI/Gocode-main/renCoding",
@@ -253,7 +254,6 @@
     "DevOps/CI/Gocode-main/qimiCoding/day03/json_ex.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/img.png",
     "DevOps/CI/Gocode-main/qimiCoding/day03/generate.go",
-    "DevOps/CI/Gocode-main/qimiCoding/day03/docs",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/wechat_channel.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/touxiang.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/qrcode_www.cnblogs.com.png",
