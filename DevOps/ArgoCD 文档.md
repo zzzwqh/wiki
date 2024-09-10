@@ -1,5 +1,5 @@
-貌似没啥写的
-## 
+
+## ingress 访问
 
 ```bash
 # argocd-apisixroute.yaml
@@ -43,3 +43,6 @@ spec:
 没啥需要注意的
 ![](assets/ArgoCD%20文档/ArgoCD%20文档_image_2.png)
 
+## 通知配置
+
+在 argocd-notifications-cm 中配置，太长了，此处不写了，请见当前目录下的 argocd-install.yaml

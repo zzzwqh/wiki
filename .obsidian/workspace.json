@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/其他.md"
+                "file": "DevOps/ArgoCD 文档.md"
               }
             }
           },
@@ -240,8 +240,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "dfaf2554c063ab12",
+  "active": "a4572452b87a2dfa",
   "lastOpenFiles": [
+    "DevOps/argocd-install.yaml",
+    "DevOps/其他.md",
     "DevOps/飞书卡片模板.md",
     "DevOps/feishu.json",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
@@ -286,7 +288,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ALGOLIA-SEARCH.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/AGPL3.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/README.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/LICENSE.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
