@@ -1,4 +1,7 @@
 
+
+阿里云遇到的 CiliumIdentity 问题
+https://www.alibabacloud.com/help/zh/ack/gitops-faq
 ## ingress 访问
 
 ```bash

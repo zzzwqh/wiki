@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md"
+                "file": "DevOps/ArgoCD 文档.md"
               }
             }
           },
@@ -240,13 +240,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a4572452b87a2dfa",
+  "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "DevOps/argocd-install.yaml",
     "DevOps/其他.md",
     "DevOps/飞书卡片模板.md",
     "DevOps/feishu.json",
-    "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "DevOps/elasticsearch/assets/其他",
     "DevOps/CI/Gocode-main/test.db",
     "DevOps/CI/Gocode-main/renCoding/sliceEx2.go",
@@ -255,7 +255,6 @@
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/randfile_v2.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/rand_data.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/example.xlsx",
-    "DevOps/CI/Gocode-main/qimiCoding/day03/oss.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/img.png",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/wechat_channel.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/touxiang.jpg",
