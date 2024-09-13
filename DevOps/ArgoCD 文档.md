@@ -44,6 +44,7 @@ spec:
 
 
 没啥需要注意的
+ 
 ![](assets/ArgoCD%20文档/ArgoCD%20文档_image_2.png)
 
 ## 通知配置
