@@ -25,7 +25,6 @@ spec:
           servicePort: 80
 ```
 
-
 ```bash
 # argocd-apisixtls.yaml
 apiVersion: apisix.apache.org/v2
@@ -57,7 +56,7 @@ spec:
 
 ![](assets/ArgoCD%20文档/ArgoCD%20文档_image_3.png)
 
-
+## 流水线
 发布流水线脚本如下：
 
 ```groovy
@@ -152,4 +151,8 @@ pipeline {
 ```
 
 ![](assets/ArgoCD%20文档/ArgoCD%20文档_image_4.png)
+
+目录层级如图，实际上就是更改 Helm values.yaml tag 并提交，触发 ArgoCD 发布
+
+![](assets/ArgoCD%20文档/ArgoCD%20文档_image_5.png)
 
