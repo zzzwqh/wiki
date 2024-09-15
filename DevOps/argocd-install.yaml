@@ -21336,8 +21336,8 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-cm
 data:
-  timeout.reconciliation: 15s
-  timeout.reconciliation.jitter: 30s
+  timeout.reconciliation: 60s
+  timeout.reconciliation.jitter: 60s
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -21365,12 +21365,12 @@ metadata:
   name: argocd-notifications-cm
 data:
   service.webhook.lark: |
-    url: https://open.feishu.cn/open-apis/bot/v2/hook/061926a4-xxxxxxx
+    url: https://open.feishu.cn/open-apis/bot/v2/hook/061926a4-0419-4684-xxxxxxxxxxxx
     headers:
       - name: Content-Type
         value: application/json
   context: |
-    argocdUrl: https://xxxx-os-argocd.xxxx.xxx
+    argocdUrl: https://gasdk-os-argocd.gameale.com
   template.app-sync-change: |
     webhook:
       lark:
@@ -21487,7 +21487,57 @@ data:
                                                               "tag": "div",
                                                               "text": {
                                                                   "tag": "plain_text",
-                                                                  "content": "执行时间：{{ (call .time.Parse .app.status.operationState.startedAt).Local.Format "2006-01-02T15:04:05Z07:00" }}",
+                                                                  "content": "执行时间：{{ (call .time.Parse .app.status.operationState.startedAt).Local.Format "2006-01-02 15:04:05" }}",
+                                                                  "text_size": "normal",
+                                                                  "text_align": "left",
+                                                                  "text_color": "green"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "width": "weighted",
+                                                      "weight": 1
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "tag": "column_set",
+                                              "flex_mode": "none",
+                                              "horizontal_spacing": "default",
+                                              "background_style": "default",
+                                              "columns": [
+                                                  {
+                                                      "tag": "column",
+                                                      "elements": [
+                                                          {
+                                                              "tag": "div",
+                                                              "text": {
+                                                                  "tag": "plain_text",
+                                                                  "content": "变更提交：{{(call .repo.GetCommitMetadata .app.status.sync.revision).Author}}",
+                                                                  "text_size": "normal",
+                                                                  "text_align": "left",
+                                                                  "text_color": "green"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "width": "weighted",
+                                                      "weight": 1
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "tag": "column_set",
+                                              "flex_mode": "none",
+                                              "horizontal_spacing": "default",
+                                              "background_style": "default",
+                                              "columns": [
+                                                  {
+                                                      "tag": "column",
+                                                      "elements": [
+                                                          {
+                                                              "tag": "div",
+                                                              "text": {
+                                                                  "tag": "plain_text",
+                                                                  "content": "提交信息：{{(call .repo.GetCommitMetadata .app.status.sync.revision).Message}}",
                                                                   "text_size": "normal",
                                                                   "text_align": "left",
                                                                   "text_color": "green"
@@ -21551,7 +21601,7 @@ data:
           }
   template.app-sync-degraded: |
     webhook:
-      qywx:
+      lark:
         method: POST
         body: |
           {
@@ -21665,7 +21715,57 @@ data:
                                                               "tag": "div",
                                                               "text": {
                                                                   "tag": "plain_text",
-                                                                  "content": "执行时间：{{ (call .time.Parse .app.status.operationState.startedAt).Local.Format "2006-01-02T15:04:05Z07:00" }}",
+                                                                  "content": "执行时间：{{ (call .time.Parse .app.status.operationState.startedAt).Local.Format "2006-01-02 15:04:05" }}",
+                                                                  "text_size": "normal",
+                                                                  "text_align": "left",
+                                                                  "text_color": "red"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "width": "weighted",
+                                                      "weight": 1
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "tag": "column_set",
+                                              "flex_mode": "none",
+                                              "horizontal_spacing": "default",
+                                              "background_style": "default",
+                                              "columns": [
+                                                  {
+                                                      "tag": "column",
+                                                      "elements": [
+                                                          {
+                                                              "tag": "div",
+                                                              "text": {
+                                                                  "tag": "plain_text",
+                                                                  "content": "变更提交：{{(call .repo.GetCommitMetadata .app.status.sync.revision).Author}}",
+                                                                  "text_size": "normal",
+                                                                  "text_align": "left",
+                                                                  "text_color": "red"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "width": "weighted",
+                                                      "weight": 1
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "tag": "column_set",
+                                              "flex_mode": "none",
+                                              "horizontal_spacing": "default",
+                                              "background_style": "default",
+                                              "columns": [
+                                                  {
+                                                      "tag": "column",
+                                                      "elements": [
+                                                          {
+                                                              "tag": "div",
+                                                              "text": {
+                                                                  "tag": "plain_text",
+                                                                  "content": "提交信息：{{(call .repo.GetCommitMetadata .app.status.sync.revision).Message}}",
                                                                   "text_size": "normal",
                                                                   "text_align": "left",
                                                                   "text_color": "red"

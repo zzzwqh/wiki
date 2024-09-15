@@ -1,5 +1,6 @@
 
-
+官方文档
+https://argocd.devops.gold/understand_the_basics/
 阿里云遇到的 CiliumIdentity 问题
 https://www.alibabacloud.com/help/zh/ack/gitops-faq
 ## ingress 访问
@@ -49,4 +50,12 @@ spec:
 
 ## 通知配置
 
-在 argocd-notifications-cm 中配置，太长了，此处不写了，请见当前目录下的 argocd-install.yaml
+在 argocd-notifications-cm 中配置，卡片 Json 太长了，此处不写了，请见当前目录下的 argocd-install.yaml
+
+我使用了飞书通知，通知如图：
+
+
+![](assets/ArgoCD%20文档/ArgoCD%20文档_image_3.png)
+
+
+发布 Pipeline 如下：
