@@ -151,3 +151,5 @@ pipeline {
 }
 ```
 
+![](assets/ArgoCD%20文档/ArgoCD%20文档_image_4.png)
+
