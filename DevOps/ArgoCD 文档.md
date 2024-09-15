@@ -1,6 +1,8 @@
 
 官方文档
 https://argocd.devops.gold/understand_the_basics/
+
+
 阿里云遇到的 CiliumIdentity 问题
 https://www.alibabacloud.com/help/zh/ack/gitops-faq
 ## ingress 访问
@@ -128,14 +130,14 @@ pipeline {
                     }
                 }
                 withCredentials([sshUserPrivateKey(credentialsId: 'node-root', keyFileVariable: 'IDENTITY')]) {
-            sh(script: """
-                git config core.sshCommand 'ssh -o StrictHostKeyChecking=no -i $IDENTITY'
-                git checkout master
-                git pull origin master
-                git add ${WORKSPACE}/ug-ovs-pre/
-                git commit -m "Update ${params.SERVICES} ${TAG}" || true
-                git push origin master
-            """, label: "Push changes to repository")
+		            sh(script: """
+		                git config core.sshCommand 'ssh -o StrictHostKeyChecking=no -i $IDENTITY'
+		                git checkout master
+		                git pull origin master
+		                git add ${WORKSPACE}/ug-ovs-pre/
+		                git commit -m "Update ${params.SERVICES} ${TAG}" || true
+		                git push origin master
+		            """, label: "Push changes to repository")
                 }
            }
        }
