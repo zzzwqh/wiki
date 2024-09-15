@@ -95,7 +95,7 @@ pipeline {
         }
         stage('Update Serices Tag / Upload static resources') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [lfs(), [$class: 'RelativeTargetDirectory', relativeTargetDir: 'infra']], userRemoteConfigs: [[credentialsId: 'node-root', url: 'ssh://git@bitbucket.x.gameale.com:7999/rov/rov_server_infra.git']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [lfs(), [$class: 'RelativeTargetDirectory', relativeTargetDir: 'infra']], userRemoteConfigs: [[credentialsId: 'node-root', url: 'ssh://git@bitbucket.x.xxx.com:7999/xxx/xxx_infra.git']])
                 script {
                     def services = params.SERVICES.split(',')
                     services.each { service ->
@@ -105,7 +105,7 @@ pipeline {
                                 docker cp ug-usercenter-static-tmp:/usr/share/nginx/html ./
                                 docker rm ug-usercenter-static-tmp
                                 mv html ${TAG}
-                                ${WORKSPACE}/infra/ali_oss/ossutil64 -c ${WORKSPACE}/infra/ali_oss/alig_oss_rov_hmt_obt_accelerate --jobs 200 --loglevel info --force cp -r ./${TAG}/ oss://rov-hmt-obt-alig/static/usercenter/${TAG}
+                                ${WORKSPACE}/infra/ali_oss/ossutil64 -c ${WORKSPACE}/infra/ali_oss/xxxossconfig --jobs 200 --loglevel info --force cp -r ./${TAG}/ oss://xxxxx/static/resources/${TAG}
                                 sed -i "s#tag: .*#tag: ${TAG}#g" ${WORKSPACE}/ug-ovs-pre/${service}/values.yaml
 			    """
 			} else {
@@ -124,7 +124,7 @@ pipeline {
                         def user = env.BUILD_USER
                         def user_id = env.BUILD_USER_ID
                         sh """
-                        git config --global user.email "${user_id}@gameale.com"
+                        git config --global user.email "${user_id}@xxx.com"
                         git config --global user.name "${user}"
                         """
                     }
