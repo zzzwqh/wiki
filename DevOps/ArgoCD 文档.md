@@ -131,8 +131,8 @@ pipeline {
                 }
                 withCredentials([sshUserPrivateKey(credentialsId: 'node-root', keyFileVariable: 'IDENTITY')]) {
 		        sh(script: """
-					git config core.sshCommand 'ssh -o StrictHostKeyChecking=no -i $IDENTITY'
-					git checkout master
+                    git config core.sshCommand 'ssh -o StrictHostKeyChecking=no -i $IDENTITY'
+                    git checkout master
 	                git pull origin master
 	                git add ${WORKSPACE}/ug-ovs-pre/
 	                git commit -m "Update ${params.SERVICES} ${TAG}" || true
