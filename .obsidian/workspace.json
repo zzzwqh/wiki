@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md"
+                "file": "DevOps/ALB Ingress 配置 301 重定向.md"
               }
             }
           },
@@ -242,6 +242,7 @@
   },
   "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
+    "DevOps/ArgoCD 文档.md",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_5.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png",
     "DevOps/assets/ArgoCD 文档/image-20240915140830218.png",
@@ -265,7 +266,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/touxiang.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/qrcode_www.cnblogs.com.png",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/logo.svg",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/favicon-32x32-next.png",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/UPDATE-FROM-5.1.X.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/README.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/MATH.md",
