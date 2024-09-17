@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ALB Ingress 配置 301 重定向.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ALB Ingress 配置 301 重定向.md"
+                "file": "DevOps/ALB Ingress 配置.md"
               }
             }
           },
