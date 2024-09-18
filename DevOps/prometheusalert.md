@@ -83,3 +83,47 @@ receivers:
     send_resolved: true
 ```
 
+
+告警标题：
+![](assets/prometheusalert/prometheusalert_image_3.png)
+
+
+告警通知：
+![](assets/prometheusalert/prometheusalert_image_4.png)
+
+
+Kubernetes 环境下的告警模板：
+
+```bash
+{{ $externalURL := .externalURL -}}
+{{ $alerts := .alerts -}}
+
+{{ range $alert := $alerts -}}
+  {{ $groupKey := printf "%s|%s" $alert.labels.alertname $alert.status -}}
+  {{ if eq $alert.status "resolved" -}}
+</font>**<font color="green">Prometheus 告警通知</font>  **
+告警名称：{{ $alert.labels.alertname }} 
+告警级别：{{ $alert.labels.severity }} 
+告警状态：{{ $alert.status }}
+开始时间：{{ GetCSTtime $alert.startsAt }} 
+结束时间：{{ GetCSTtime $alert.endsAt }} 
+命名空间：{{ $alert.labels.namespace }} 
+实例名称：{{ $alert.labels.pod }}
+告警详情：**<font color="green">{{ $alert.annotations.description }}**
+  {{ else -}}
+</font>**<font color="red">Prometheus 告警通知</font>  **
+告警名称：{{ $alert.labels.alertname }} 
+告警级别：{{ $alert.labels.severity }} 
+告警状态：{{ $alert.status }}
+开始时间：{{ GetCSTtime $alert.startsAt }} 
+命名空间：{{ $alert.labels.namespace }} 
+实例名称：{{ $alert.labels.pod }}
+告警详情：**<font color="red">{{ $alert.annotations.description }}</font>**
+  {{ end -}}
+{{ end -}}
+```
+
+通知效果如下： 
+
+![](assets/prometheusalert/prometheusalert_image_5.png)
+
