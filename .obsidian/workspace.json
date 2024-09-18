@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ALB Ingress 配置.md",
+                "file": "DevOps/prometheusalert.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ALB Ingress 配置.md",
+                "file": "DevOps/prometheusalert.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ALB Ingress 配置.md",
+                "file": "DevOps/prometheusalert.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ALB Ingress 配置.md"
+                "file": "DevOps/prometheusalert.md"
               }
             }
           },
@@ -242,6 +242,11 @@
   },
   "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
+    "DevOps/assets/prometheusalert/prometheusalert_image_2.png",
+    "DevOps/assets/prometheusalert/prometheusalert_image_1.png",
+    "DevOps/assets/prometheusalert",
+    "DevOps/ALB Ingress 配置.md",
+    "DevOps/prometheusalert.md",
     "DevOps/ArgoCD 文档.md",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_5.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png",
@@ -260,12 +265,10 @@
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/study.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/randfile_v2.go",
     "DevOps/CI/Gocode-main/qimiCoding/day03/docs/rand_data.go",
-    "DevOps/CI/Gocode-main/qimiCoding/day03/docs/example.xlsx",
     "DevOps/CI/Gocode-main/qimiCoding/day03/img.png",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/wechat_channel.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/touxiang.jpg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/qrcode_www.cnblogs.com.png",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/source/images/logo.svg",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/UPDATE-FROM-5.1.X.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/README.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/MATH.md",
@@ -285,9 +288,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/INSTALLATION.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/DATA-FILES.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/AUTHORS.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ALGOLIA-SEARCH.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/AGPL3.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/README.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
