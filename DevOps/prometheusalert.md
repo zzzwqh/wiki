@@ -24,3 +24,62 @@
 
 ![](assets/prometheusalert/prometheusalert_image_2.png)
 
+alertmanager 中配置通知 webhook 地址为 prometheusalert 地址
+
+```yaml
+global:
+  resolve_timeout: 5m
+  # 飞书服务器
+  smtp_smarthost: 'smtp.feishu.cn:465'
+  # 发邮件的邮箱
+  smtp_from: 'devops@xxx.com'
+  # 发邮件的邮箱用户名
+  smtp_auth_username: 'devops@xxx.com'
+  # 发邮件的邮箱密码
+  smtp_auth_password: 'xxxxxxxxxxxxx'
+  # 进行 tls 验证
+  smtp_require_tls: false
+
+route:
+  group_by: ['instance']
+  group_wait: 60s
+  group_interval: 120s
+  repeat_interval: 60m
+  # 默认的接收器
+  receiver: 'web.hook.prometheusalert'
+  # 子路由，根据告警的标签分派到不同的接收器
+  routes:
+  # 当告警标签 Online=true  时，发送到到 Prometheus-online 飞书群
+  - match:
+      Online: "true"
+    receiver: 'online'
+    group_wait: 30s
+    group_interval: 60s
+    repeat_interval: 10m
+    continue: true # 即发送 webhook 也发送 email
+  - match:
+      Online: "true"
+    receiver: 'email'
+    group_wait: 30s
+    group_interval: 60s
+    repeat_interval: 10m
+# 其他路由暂时省略
+
+receivers:
+- name: 'web.hook.prometheusalert'
+  webhook_configs:
+  - url: 'http://prometheusalert:8080/prometheusalert?type=fs&tpl=prometheus-fs&fsurl=https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxxx'
+  - url: 'http://prometheusalert:8080/prometheusalert?type=fs&tpl=prometheus-fs&fsurl=https://open.feishu.cn/open-apis/bot/v2/hook/aaaaaa?sign=bbbbbb'
+
+- name: 'online'
+  webhook_configs:
+  - url: 'http://prometheusalert:8080/prometheusalert?type=fs&tpl=prometheus-fs&fsurl=https://open.feishu.cn/open-apis/bot/v2/hook/cccccccccc'
+
+- name: 'email'
+  email_configs:
+  - to: 'wangqihan@xxxxx.com'
+    send_resolved: true
+  - to: 'xxxxx@xxxxxx.com'
+    send_resolved: true
+```
+
