@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/test.md",
+                "file": "Excalidraw/test.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/test.md",
+                "file": "Excalidraw/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/test.md",
+                "file": "Excalidraw/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/test.md"
+                "file": "Excalidraw/test.md"
               }
             }
           },
@@ -252,10 +252,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "01cf75d367eeacb1",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
     "DevOps/备忘录.md",
-    "DevOps/test.md",
+    "Excalidraw/test.md",
     "DevOps/运维问题杂记.md",
     "DevOps/TKE Ingress.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
