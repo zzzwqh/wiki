@@ -1,0 +1,49 @@
+name: "project-cbt-gs-rules"
+type: "any"
+index: "project_cbt_gs_game*"
+is_enabled: true
+num_events: 1
+realert:
+  minutes: 1
+timeframe:
+  minutes: 2
+filter:
+  - query:
+      query_string:
+        query: level:"ERROR"
+
+alert_subject: "ERROR"
+alert_text_type: alert_text_only
+alert_text: |
+  {}
+alert_text_args:
+  - "@timestamp"
+  - sid
+  - message
+  - logger_name
+  - level
+  - num_hits
+  - _index
+  - service_name
+
+
+alert:
+  - "elastalert_modules.feishu_alert.FeishuAlert"
+
+feishualert_url: "https://open.feishu.cn/open-apis/bot/v2/hook/"
+feishualert_botid: "xxxxxxxxxxxxxxxxxxxx"
+feishualert_kibana: "project-hk-cbt_gs-kibana.xxx.com"
+index_view: 'project_cbt_gs_game'
+feishualert_title: "ROC-CBT-GS 日志告警"
+
+feishualert_body:
+  "
+   **告警规则**：ERROR 日志条数 > 1\n
+   **告警索引**：{_index}\n
+   **告警区服**：{sid}\n
+   **告警服务**：{service_name}\n
+   **日志模块**：{logger_name}\n
+   **报错信息**：{message}\n
+   **日志级别**：{level}\n
+   **异常数量**：{num_hits}
+ "

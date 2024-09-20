@@ -1,0 +1,17 @@
+version: "3"
+services:
+  elastalert2:
+    container_name: elastalert2
+    image: registry.cn-hangzhou.aliyuncs.com/devops-ns/elastalert2:latest
+    environment:
+      - Kibana_Url=xxx-kibana.xxx.com
+    privileged: true
+    volumes:
+    - "./config.yaml:/opt/elastalert/config.yaml"
+    - "./rules:/opt/elastalert/rules"
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G
