@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/备忘录.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/备忘录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/其他.md",
+                "file": "DevOps/备忘录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/其他.md"
+                "file": "DevOps/备忘录.md"
               }
             }
           },
@@ -267,7 +267,7 @@
     "DevOps/argocd-install.yaml",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
-    "DevOps/其他.md",
+    "DevOps/备忘录.md",
     "DevOps/飞书卡片模板.md",
     "DevOps/feishu.json",
     "DevOps/elasticsearch/assets/其他",
