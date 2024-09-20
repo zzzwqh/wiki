@@ -5,6 +5,7 @@
  wget https://github.com/google/cadvisor/releases/download/v0.49.1/cadvisor-v0.49.1-linux-amd64
  mkdir /data/monitor
  mv cadvisor-v0.49.1-linux-amd64 /data/monitor/
+ chmod +x /data/monitor/cadvisor-v0.49.1-linux-amd64
 ```
 
 > Systemd 管理文件
@@ -27,5 +28,8 @@ WorkingDirectory=/data/monitor
 
 [Install]
 WantedBy=multi-user.target
+
+
+systemctl daemon-reload ; systemctl start cadvisor.service
 ```
 
