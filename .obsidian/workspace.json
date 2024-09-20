@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Excalidraw/test.md",
+                "file": "DevOps/运维问题杂记.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/test.md",
+                "file": "DevOps/运维问题杂记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/test.md",
+                "file": "DevOps/运维问题杂记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/test.md"
+                "file": "DevOps/运维问题杂记.md"
               }
             }
           },
@@ -254,6 +254,7 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "Excalidraw/test.md",
     "DevOps/prometheus/docker/prometheusalert/db/prometheus-alert-template.json",
     "DevOps/prometheus/docker/prometheusalert/db/PrometheusAlertDB.db",
     "DevOps/prometheus/docker/prometheusalert/conf/app.conf",
@@ -264,10 +265,8 @@
     "DevOps/prometheus/docker/prometheus/rules.yml",
     "DevOps/prometheus/docker/prometheus/prometheus.yml",
     "DevOps/prometheus/docker/prometheus/node_exporter_all.yml",
-    "DevOps/prometheus/docker/prometheus/mysqld_all.yml",
     "DevOps/elasticsearch/elastalert2/README.md",
     "DevOps/备忘录.md",
-    "Excalidraw/test.md",
     "DevOps/运维问题杂记.md",
     "DevOps/TKE Ingress.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
