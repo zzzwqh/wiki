@@ -1,0 +1,140 @@
+version: '3'
+
+networks:
+  monitoring:
+    driver: bridge
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.45.1
+    container_name: prometheus
+    user: root
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./prometheus/:/etc/prometheus/
+      - /etc/ssl/certs/:/etc/ssl/certs/
+      - ./prometheus/data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      #开启RemoteWrite
+      - '--web.enable-remote-write-receiver'
+      #热加载配置
+      - '--web.enable-lifecycle'
+      #api配置
+      - '--storage.tsdb.retention.time=90d'
+    networks:
+      - monitoring
+    links:
+      - alertmanager
+      - blackbox_exporter
+#      - node_exporter
+    expose:
+      - '9090'
+    ports:
+      - 9090:9090
+    deploy:
+      resources:
+        limits:
+          cpus: "3.7"
+          memory: 8g
+
+  alertmanager:
+    image: prom/alertmanager:v0.25.0
+    container_name: alertmanager
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./alertmanager/:/etc/alertmanager/
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/alertmanager'
+    networks:
+      - monitoring
+    links:
+      - prometheusalert
+    expose:
+      - '9093'
+    ports:
+      - 9093:9093
+
+
+        #  node_exporter:
+        #    image: prom/node-exporter:v1.5.0
+        #    container_name: node-exporter
+        #    restart: always
+        #    volumes:
+        #      - /etc/localtime:/etc/localtime:ro
+        #      - /proc:/host/proc:ro
+        #      - /sys:/host/sys:ro
+        #      - /:/rootfs:ro
+        #    command:
+        #      - '--path.procfs=/host/proc'
+        #      - '--path.sysfs=/host/sys'
+        #      - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc|rootfs/var/lib/docker)($$|/)'
+        #    networks:
+        #      - monitoring
+        #    ports:
+        #      - 9101:9100
+        #
+
+
+  grafana:
+    image: grafana/grafana:10.0.3
+    container_name: grafana
+    user: root
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    env_file:
+      - ./grafana/config.monitoring
+    networks:
+      - monitoring
+    links:
+      - prometheus
+    ports:
+      - 3000:3000
+    deploy:
+      resources:
+        limits:
+          cpus: "3.5"
+          memory: 8G
+    depends_on:
+      - prometheus
+  
+  blackbox_exporter:
+    image: docker.io/prom/blackbox-exporter:v0.24.0
+    container_name: blackbox_exporter
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./blackbox_exporter/config.yml:/etc/blackbox_exporter/config.yml
+      - /etc/ssl/certs/:/etc/ssl/certs/
+    networks:
+      - monitoring
+    ports:
+      - 9115:9115
+
+  prometheusalert:
+    image: feiyu563/prometheus-alert:latest
+    container_name: prometheusalert
+    volumes:
+      - ./prometheusalert/db:/app/db
+      - ./prometheusalert/conf:/app/conf
+    environment:
+      - PA_LOGIN_USER=prometheusalert
+      - PA_LOGIN_PASSWORD=prometheusalert
+      - PA_TITLE=PrometheusAlert
+      - PA_OPEN_FEISHU=1
+      - PA_OPEN_DINGDING=1
+      - PA_OPEN_WEIXIN=1
+    networks:
+      - monitoring
+    restart: unless-stopped
+    ports:
+      - 9321:8080

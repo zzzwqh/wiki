@@ -1,0 +1,25 @@
+ 
+---
+- targets:
+  - https://www.baidu.com
+  labels:
+    env: "其他"
+    type: HTTP
+- targets:
+  - https://www.baidu.com
+  labels:
+    env: "公共服务"
+    type: HTTP
+- targets:
+  - https://www.baidu.com
+  labels:
+    env: "项目组-xxxxx"
+    service: "YYY-Project"
+    type: HTTP
+- targets:
+  - https://www.baidu.com
+  labels:
+    env: "项目组-yyyyy"
+    service: "XXX-Project"
+    type: HTTP
+

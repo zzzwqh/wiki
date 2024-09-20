@@ -1,0 +1,13 @@
+---
+- targets:
+  - "14.14.14.14:8083"
+  labels:
+    instance_name: "game-gate-1"
+    application: "game-gate-1"
+
+- targets:
+  - "14.14.14.14:8084"
+  labels:
+    instance_name: "game-player-1"
+    application: "game-player-1"
+

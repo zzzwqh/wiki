@@ -1,0 +1,14 @@
+---
+- targets:
+  - vpn.xxx.com:8001
+  - vpn.xxx.com:8002
+  labels:
+    env: "公共服务"
+    type: TCP
+
+- targets:
+  - 14.14.14.14:8092
+  labels:
+    env: "项目组-XXX"
+    service: "XXX-Game-Gate"
+    type: TCP

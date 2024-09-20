@@ -1,0 +1,14 @@
+- targets:
+  - "172.17.0.1:18080"
+  labels:
+    instance_name: "company-monitor"
+
+
+- targets:
+  - "11.11.11.11:18080"
+  labels:
+    instance_name: "xxx-public"
+- targets:
+  - "11.11.11.11:18080"
+  labels:
+    instance_name: "xxx-game"

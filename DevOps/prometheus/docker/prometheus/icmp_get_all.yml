@@ -1,0 +1,7 @@
+---
+- targets:
+  - 114.114.114.114
+  labels:
+    env: "DNS"
+    service: "DNS"
+    type: ICMP

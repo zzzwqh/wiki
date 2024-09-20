@@ -1,0 +1,16 @@
+- targets:
+  - "172.17.0.1:9100"
+  labels:
+    instance_name: "test-monitor"
+- targets:
+  - "14.14.14.14:9100"
+  labels:
+    instance_name: "test-public"
+- targets:
+  - "14.14.14.14:9100"
+  labels:
+    instance_name: "test-website01"
+- targets:
+  - "14.14.14.14:9100"
+  labels:
+    instance_name: "test-website02"

@@ -1,0 +1,146 @@
+global:
+  scrape_interval:     15s # 将搜刮间隔设置为每15秒一次。默认是每1分钟一次。
+  evaluation_interval: 15s # 每15秒评估一次规则。默认是每1分钟一次。
+
+# Alertmanager 配置
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: ['alertmanager:9093']
+
+# 报警(触发器)配置
+rule_files:
+  - "rules.yml"
+
+# 搜刮配置
+scrape_configs:
+  - job_name: 'prometheus'
+    # 覆盖全局默认值，每15秒从该作业中刮取一次目标
+    scrape_interval: 15s
+    static_configs:
+    - targets: ['localhost:9090']
+  - job_name: 'alertmanager'
+    scrape_interval: 15s
+    static_configs:
+    - targets: ['alertmanager:9093']
+
+ 
+  - job_name: 'icmp_get_status'
+    metrics_path: /probe
+    params:
+      module: [ping]  # Look for a HTTP 200 response.
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "icmp_get*.yml"  #具体的配置文件
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: "blackbox_exporter:9115"  # 指向实际的Blackbox exporter.
+      - target_label: region
+        replacement: "local"
+
+  # Blackbox Exporter =======> TCP
+  - job_name: 'tcp_get_status'
+    metrics_path: /probe
+    params:
+      module: [tcp_connect]  # Look for a HTTP 200 response.
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "tcp_get*.yml"  #具体的配置文件
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: "blackbox_exporter:9115"  # 指向实际的Blackbox exporter.
+      - target_label: region
+        replacement: "local"
+ 
+  # Blackbox Exporter =======> HTTP_GET
+  - job_name: 'http_get_status'
+    metrics_path: /probe
+    params:
+      module: [http_get_2xx]  # Look for a HTTP 200 response.
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "http_get*.yml"  #具体的配置文件
+    tls_config:
+      insecure_skip_verify: true
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: "blackbox_exporter:9115"  # 指向实际的Blackbox exporter.
+      - target_label: region
+        replacement: "local"
+  # node exporter 配置
+  - job_name: 'node-exporter'
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "node_exporter*.yml" 
+
+  # node exporter 配置
+  - job_name: "container-cadvisor"
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "cadvisor*.yml" 
+
+
+  - job_name: "game"
+    metrics_path: /prometheus
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "game*.yml"
+        
+  - job_name: "mysqld-exporter"
+    metrics_path: /metrics
+    file_sd_configs:
+    - refresh_interval: 2m
+      files:
+      - "mysqld*.yml"    
+
+  - job_name: "volc-cloud-exporter"
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['172.17.0.1:9123']
+
+
+
+  - job_name: 'redis_exporter_targets'
+    static_configs:
+      - targets:
+        - redis://redis-xxxxxxxxxxxxxxxxx.redis.ivolces.com:6379
+        - redis://redis-yyyyyyyyyyyyyyyyy.redis.ivolces.com:6379
+    metrics_path: /scrape
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 14.14.14.14:9121
+
+  ## config for scraping the exporter itself
+  - job_name: 'redis_exporter'
+    static_configs:
+      - targets:
+        - 14.14.14.14:9121
+
+
+
+  - job_name: "rov-sea-obt-elasticsearch-exporter"
+    static_configs:
+      - targets:
+        - 14.14.14.14:9108
