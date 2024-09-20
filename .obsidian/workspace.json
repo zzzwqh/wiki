@@ -100,9 +100,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "01cf75d367eeacb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/test.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -168,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/备忘录.md",
+                "file": "DevOps/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/备忘录.md",
+                "file": "DevOps/test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/备忘录.md"
+                "file": "DevOps/test.md"
               }
             }
           },
@@ -240,8 +252,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "dfaf2554c063ab12",
+  "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/备忘录.md",
+    "DevOps/test.md",
     "DevOps/运维问题杂记.md",
     "DevOps/TKE Ingress.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
@@ -267,7 +281,6 @@
     "DevOps/argocd-install.yaml",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
-    "DevOps/备忘录.md",
     "DevOps/飞书卡片模板.md",
     "DevOps/feishu.json",
     "DevOps/elasticsearch/assets/其他",
@@ -287,7 +300,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/CODE_OF_CONDUCT.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/ALGOLIA-SEARCH.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ru/UPDATE-FROM-5.1.X.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ru/README.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
