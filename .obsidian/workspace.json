@@ -95,7 +95,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/fake-time-injector K8S 时间服工具.md",
+                "file": "DevOps/其他.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/fake-time-injector K8S 时间服工具.md",
+                "file": "DevOps/其他.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/fake-time-injector K8S 时间服工具.md",
+                "file": "DevOps/其他.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/fake-time-injector K8S 时间服工具.md"
+                "file": "DevOps/其他.md"
               }
             }
           },
@@ -242,6 +242,9 @@
   },
   "active": "dfaf2554c063ab12",
   "lastOpenFiles": [
+    "DevOps/运维问题杂记.md",
+    "DevOps/TKE Ingress.md",
+    "DevOps/fake-time-injector K8S 时间服工具.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/kubeadm 证书更新.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
@@ -285,9 +288,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/ALGOLIA-SEARCH.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ru/UPDATE-FROM-5.1.X.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ru/README.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ru/INSTALLATION.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/ru/DATA-FILES.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/UPDATE-FROM-5.1.X.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
