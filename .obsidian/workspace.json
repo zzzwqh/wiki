@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/运维问题杂记.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/运维问题杂记.md"
+                "file": "DevOps/ArgoCD 文档.md"
               }
             }
           },
@@ -254,6 +254,8 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/AdvancedCronJob 使用实践.md",
+    "DevOps/运维问题杂记.md",
     "Excalidraw/test.md",
     "DevOps/prometheus/docker/prometheusalert/db/prometheus-alert-template.json",
     "DevOps/prometheus/docker/prometheusalert/db/PrometheusAlertDB.db",
@@ -267,7 +269,6 @@
     "DevOps/prometheus/docker/prometheus/node_exporter_all.yml",
     "DevOps/elasticsearch/elastalert2/README.md",
     "DevOps/备忘录.md",
-    "DevOps/运维问题杂记.md",
     "DevOps/TKE Ingress.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
     "DevOps/Jmeter 压测小记.md",
