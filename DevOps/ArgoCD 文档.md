@@ -158,3 +158,30 @@ pipeline {
 
 ![](assets/ArgoCD%20文档/ArgoCD%20文档_image_5.png)
 
+
+其他
+用注解避免卸载 application 时，卸载 pvc
+> helm.sh/resource-policy: keep
+
+```bash
+~/ugsdk-devops/ug-ovs-pre/ug-manager (master) » helm template test ./ -f ./values.yaml -n test --debug                                                                 wangqihan-020037@Gameale123
+install.go:214: [debug] Original chart version: ""
+install.go:231: [debug] CHART PATH: /Users/wangqihan-020037/ugsdk-devops/ug-ovs-pre/ug-manager
+
+---
+# Source: ug-manager/templates/pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ug-manager-pvc
+  namespace: test
+  annotations:
+    "helm.sh/resource-policy": keep
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ugsdk-manager-upload
+```
