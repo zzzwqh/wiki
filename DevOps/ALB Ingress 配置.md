@@ -131,3 +131,82 @@ spec:
         - ror-pre.xxx.com
       secretName: secret-xxx
 ```
+
+需求，流量按比例分批打到后端，37开
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    alb.ingress.kubernetes.io/actions.forward: |
+       [{
+           "type": "ForwardGroup",
+           "ForwardConfig": {
+             "ServerGroups" : [{
+               "ServiceName": "ug-user-center-svc",
+               "Weight": 30,
+               "ServicePort": 80
+             },
+             {
+               "ServiceName": "ug-user-center-tea-svc",
+               "Weight": 70,
+               "ServicePort": 80
+             }]
+           }
+       }]
+    alb.ingress.kubernetes.io/actions.redirect: |
+      [{
+          "type": "Redirect",
+          "RedirectConfig": {
+              "host": "${host}",
+              "path": "/pre-register",
+              "port": "443",
+              "protocol": "https",
+              "query": "${query}",
+              "httpCode": "301"
+          }
+      }]
+  name: ror.xxx.com
+  namespace: ugsdk-pre
+  labels:
+    ingress-controller: alb
+
+spec:
+  ingressClassName: alb-ugsdk-public-pre-gv
+  rules:
+    - host: ror.xxx.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: redirect
+                port:
+                  name: use-annotation
+            path: /reservation
+            pathType: Exact
+    - host: ror.xxx.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: redirect
+                port:
+                  name: use-annotation
+            path: /
+            pathType: Exact
+    - host: ror.xxx.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: forward
+                port:
+                  name: use-annotation
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - ror.xxx.com
+      secretName: secret-gameale
+```
