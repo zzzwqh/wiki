@@ -1,3 +1,36 @@
+需求：绑定控制台创建的 alb
+https://www.alibabacloud.com/help/zh/ack/serverless-kubernetes/user-guide/use-an-alb-ingress-to-configure-certificates-for-an-https-listener-1#section-f32-v8m-rfs
+```bash
+apiVersion: alibabacloud.com/v1
+kind: AlbConfig
+metadata:
+  name: alb-ugsdk-pre-public
+spec:
+  config:
+    # 如果重用已经存在的 ALB，可以直接已存在的 ALB id
+    id: alb-xxxxxxxx
+    # 如果新创建 ALB 的话，可以打开下面的注释，并注释掉上一行 id
+    #name: alb-project-env-xxx
+    # 资源组
+    #resourceGroupId: rg-xxxxxx
+    #addressType: Internet
+    # 绑定共享带宽
+    #billingConfig:
+    #  bandWidthPackageId: "cbwp-xxxxxx"
+    #zoneMappings:
+    #- vSwitchId: vsw-xxxxx
+    #- vSwitchId: vsw-xxxxx
+  listeners:
+    - port: 80
+      protocol: HTTP
+    - port: 443
+      protocol: HTTPS
+      caEnabled: false
+      certificates:
+      - CertificateId: 123456
+        IsDefault: true
+```
+
 
 需求： 访问 / 直接跳转到 /reservation
 
