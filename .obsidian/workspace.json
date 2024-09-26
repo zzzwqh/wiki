@@ -254,6 +254,8 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_1.png",
+    "DevOps/assets/ALB Ingress 配置",
     "DevOps/ArgoCD 文档.md",
     "DevOps/ALB Ingress 配置.md",
     "DevOps/AdvancedCronJob 使用实践.md",
@@ -268,7 +270,6 @@
     "DevOps/prometheus/docker/prometheus/tcp_get_all.yml",
     "DevOps/prometheus/docker/prometheus/rules.yml",
     "DevOps/prometheus/docker/prometheus/prometheus.yml",
-    "DevOps/prometheus/docker/prometheus/node_exporter_all.yml",
     "DevOps/elasticsearch/elastalert2/README.md",
     "DevOps/备忘录.md",
     "DevOps/TKE Ingress.md",
@@ -299,7 +300,6 @@
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/INSTALLATION.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/DATA-FILES.md",
     "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/CONTRIBUTING.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/CODE_OF_CONDUCT.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"

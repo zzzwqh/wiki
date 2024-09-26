@@ -29,7 +29,25 @@ spec:
       certificates:
       - CertificateId: 123456
         IsDefault: true
+
+---
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: alb-ror-pre-public
+spec:
+  controller: ingress.k8s.alibabacloud/alb
+  parameters:
+    apiGroup: alibabacloud.com
+    kind: AlbConfig
+    name: alb-ror-pre-public
 ```
+
+
+然后创建的时候选择相应的 alb ingressclass 注解加上这两个就可以
+
+![](assets/ALB%20Ingress%20配置/ALB%20Ingress%20配置_image_1.png)
+
 
 
 需求： 访问 / 直接跳转到 /reservation
