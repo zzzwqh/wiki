@@ -49,6 +49,9 @@ spec:
 ![](assets/ALB%20Ingress%20配置/ALB%20Ingress%20配置_image_1.png)
 
 
+![](assets/ALB%20Ingress%20配置/ALB%20Ingress%20配置_image_2.png)
+
+
 
 需求： 访问 / 直接跳转到 /reservation
 
