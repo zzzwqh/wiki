@@ -11,7 +11,7 @@
 > Systemd 管理文件
 
 ```bash
-cat /lib/systemd/system/cadvisor.service
+cat > /lib/systemd/system/cadvisor.service <<EOF 
 [Unit]
 Description=cAdvisor Service
 Documentation=https://github.com/google/cadvisor
@@ -28,6 +28,7 @@ WorkingDirectory=/data/monitor
 
 [Install]
 WantedBy=multi-user.target
+EOF
 
 
 systemctl daemon-reload ; systemctl start cadvisor.service
