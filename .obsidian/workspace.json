@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Excalidraw/test.md",
+                "file": "mysqlUtils/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/test.md",
+                "file": "mysqlUtils/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/test.md",
+                "file": "mysqlUtils/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/test.md"
+                "file": "mysqlUtils/README.md"
               }
             }
           },
@@ -254,6 +254,7 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "Excalidraw/test.md",
     "DevOps/Terraform 实践.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
     "DevOps/SLB 权重配置工具.md",
@@ -266,7 +267,6 @@
     "DevOps/nsenter 命令记载.md",
     "DevOps/一些文档或者常用命令.md",
     "mysqlUtils/README.md",
-    "Excalidraw/test.md",
     "DevOps/万物皆可代理.md",
     "DevOps/ALB Ingress 配置.md",
     "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_1.png",
