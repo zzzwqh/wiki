@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/ArgoCD 文档.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mysqlUtils/README.md"
+                "file": "DevOps/ArgoCD 文档.md"
               }
             }
           },
@@ -254,6 +254,7 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "mysqlUtils/README.md",
     "Excalidraw/test.md",
     "DevOps/Terraform 实践.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
@@ -266,7 +267,6 @@
     "DevOps/prometheusalert.md",
     "DevOps/nsenter 命令记载.md",
     "DevOps/一些文档或者常用命令.md",
-    "mysqlUtils/README.md",
     "DevOps/万物皆可代理.md",
     "DevOps/ALB Ingress 配置.md",
     "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_1.png",
