@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/运维问题杂记.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/运维问题杂记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/运维问题杂记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md"
+                "file": "DevOps/运维问题杂记.md"
               }
             }
           },
@@ -254,6 +254,8 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/备忘录.md",
+    "DevOps/ArgoCD 文档.md",
     "mysqlUtils/README.md",
     "Excalidraw/test.md",
     "DevOps/Terraform 实践.md",
@@ -272,7 +274,6 @@
     "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_1.png",
     "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_2.png",
     "DevOps/assets/ALB Ingress 配置",
-    "DevOps/ArgoCD 文档.md",
     "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/运维问题杂记.md",
     "DevOps/prometheus/docker/prometheusalert/db/prometheus-alert-template.json",
@@ -285,7 +286,6 @@
     "DevOps/prometheus/docker/prometheus/rules.yml",
     "DevOps/prometheus/docker/prometheus/prometheus.yml",
     "DevOps/elasticsearch/elastalert2/README.md",
-    "DevOps/备忘录.md",
     "DevOps/TKE Ingress.md",
     "DevOps/kubeadm 证书更新.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
