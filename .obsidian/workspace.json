@@ -254,6 +254,8 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/assets/备忘录/备忘录_image_1.png",
+    "DevOps/assets/备忘录",
     "DevOps/万物皆可代理.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
@@ -284,7 +286,6 @@
     "DevOps/prometheus/docker/prometheusalert/conf",
     "DevOps/prometheus/docker/prometheus/tcp_get_all.yml",
     "DevOps/prometheus/docker/prometheus/rules.yml",
-    "DevOps/prometheus/docker/prometheus/prometheus.yml",
     "DevOps/elasticsearch/elastalert2/README.md",
     "DevOps/TKE Ingress.md",
     "DevOps/kubeadm 证书更新.md",
@@ -299,7 +300,6 @@
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "DevOps/飞书卡片模板.md",
-    "DevOps/CI/Gocode-main/hexo-oss/hexo-music/themes/hexo-theme-next/docs/zh-CN/UPDATE-FROM-5.1.X.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
