@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/万物皆可代理.md",
+                "file": "DevOps/备忘录.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/万物皆可代理.md",
+                "file": "DevOps/备忘录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/万物皆可代理.md",
+                "file": "DevOps/备忘录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/万物皆可代理.md"
+                "file": "DevOps/备忘录.md"
               }
             }
           },
@@ -254,6 +254,7 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/万物皆可代理.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
     "DevOps/ALB Ingress 配置.md",
@@ -271,7 +272,6 @@
     "DevOps/prometheusalert.md",
     "DevOps/nsenter 命令记载.md",
     "DevOps/一些文档或者常用命令.md",
-    "DevOps/万物皆可代理.md",
     "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_1.png",
     "DevOps/assets/ALB Ingress 配置/ALB Ingress 配置_image_2.png",
     "DevOps/assets/ALB Ingress 配置",
