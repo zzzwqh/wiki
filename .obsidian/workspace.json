@@ -107,7 +107,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/备忘录.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "mode": "source",
                 "source": false
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/备忘录.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/备忘录.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/备忘录.md"
+                "file": "DevOps/ALB Ingress 配置.md"
               }
             }
           },
@@ -254,13 +254,13 @@
   },
   "active": "01cf75d367eeacb1",
   "lastOpenFiles": [
+    "DevOps/备忘录.md",
     "DevOps/assets/备忘录/备忘录_image_1.png",
     "DevOps/assets/备忘录",
     "DevOps/万物皆可代理.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
     "DevOps/ALB Ingress 配置.md",
-    "DevOps/备忘录.md",
     "DevOps/ArgoCD 文档.md",
     "mysqlUtils/README.md",
     "Excalidraw/test.md",
@@ -297,7 +297,6 @@
     "DevOps/assets/prometheusalert/prometheusalert_image_2.png",
     "DevOps/assets/prometheusalert/prometheusalert_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_5.png",
-    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "DevOps/飞书卡片模板.md",
     "未命名 1.canvas",
