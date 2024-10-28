@@ -135,12 +135,14 @@
             "id": "237dace30bf2fb89",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.4"
+                "file": "DevOps/ALB Ingress 配置.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
+              "title": "ALB Ingress 配置"
             }
           }
         ],
@@ -216,7 +218,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +228,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Stack Monitoring 告警 的反向链接列表"
+              "title": "ALB Ingress 配置 的反向链接列表"
             }
           },
           {
@@ -235,12 +237,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Stack Monitoring 告警 的出链列表"
+              "title": "ALB Ingress 配置 的出链列表"
             }
           },
           {
@@ -262,10 +264,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DevOps/elasticsearch/Stack Monitoring 告警.md"
+                "file": "DevOps/ALB Ingress 配置.md"
               },
               "icon": "lucide-list",
-              "title": "Stack Monitoring 告警 的大纲"
+              "title": "ALB Ingress 配置 的大纲"
             }
           },
           {
