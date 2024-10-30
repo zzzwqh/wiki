@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/未命名.md",
+                "file": "DevOps/安全相关.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "安全相关"
             }
           }
         ],
@@ -302,8 +302,10 @@
   },
   "active": "237dace30bf2fb89",
   "lastOpenFiles": [
+    "DevOps/assets/安全相关/安全相关_image_1.png",
+    "DevOps/assets/安全相关",
     "DevOps/ALB Ingress 配置.md",
-    "DevOps/未命名.md",
+    "DevOps/安全相关.md",
     "DevOps/备忘录.md",
     "DevOps/assets/备忘录/备忘录_image_1.png",
     "DevOps/assets/备忘录",
@@ -334,7 +336,6 @@
     "DevOps/prometheus/docker/prometheusalert/db",
     "DevOps/prometheus/docker/prometheusalert/conf",
     "DevOps/prometheus/docker/prometheus/tcp_get_all.yml",
-    "DevOps/prometheus/docker/prometheus/rules.yml",
     "DevOps/elasticsearch/elastalert2/README.md",
     "DevOps/TKE Ingress.md",
     "DevOps/kubeadm 证书更新.md",
@@ -347,7 +348,6 @@
     "DevOps/assets/prometheusalert/prometheusalert_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_5.png",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
-    "DevOps/飞书卡片模板.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
