@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ALB Ingress 配置.md",
+                "file": "DevOps/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ALB Ingress 配置"
+              "title": "未命名"
             }
           }
         ],
@@ -302,13 +302,14 @@
   },
   "active": "237dace30bf2fb89",
   "lastOpenFiles": [
+    "DevOps/ALB Ingress 配置.md",
+    "DevOps/未命名.md",
     "DevOps/备忘录.md",
     "DevOps/assets/备忘录/备忘录_image_1.png",
     "DevOps/assets/备忘录",
     "DevOps/万物皆可代理.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
-    "DevOps/ALB Ingress 配置.md",
     "DevOps/ArgoCD 文档.md",
     "mysqlUtils/README.md",
     "Excalidraw/test.md",
