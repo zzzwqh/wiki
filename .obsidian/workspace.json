@@ -137,12 +137,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/安全相关.md",
+                "file": "DevOps/万物皆可代理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "安全相关"
+              "title": "万物皆可代理"
             }
           }
         ],
@@ -302,10 +302,10 @@
   },
   "active": "237dace30bf2fb89",
   "lastOpenFiles": [
+    "DevOps/安全相关.md",
     "DevOps/assets/安全相关/安全相关_image_1.png",
     "DevOps/assets/安全相关",
     "DevOps/ALB Ingress 配置.md",
-    "DevOps/安全相关.md",
     "DevOps/备忘录.md",
     "DevOps/assets/备忘录/备忘录_image_1.png",
     "DevOps/assets/备忘录",
@@ -346,7 +346,6 @@
     "DevOps/image.png",
     "DevOps/assets/prometheusalert/prometheusalert_image_2.png",
     "DevOps/assets/prometheusalert/prometheusalert_image_1.png",
-    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_5.png",
     "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "未命名 1.canvas",
     "未命名.canvas",
