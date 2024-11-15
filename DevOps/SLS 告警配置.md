@@ -1,6 +1,9 @@
 因为研发一直使用 elasticsearch / kibana 查询日志，所以配置了 kibana 查询 SLS 日志，日志告警需求配置 Kibana 跳转链接，所以需要自定义 Kibana 域名 / Index Pattern Name / KQL，然后在告警卡片中，呈现出来
 
-告警配置如下：
+告警配置，其中 kibana_url 配置如下，镶嵌了几个变量，这几个变量在添加标签中定义，如图所示
+```
+kibana_url = https://${kibana_domain}/app/discover#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))&_a=(columns:!(),filters:!(),index:${index_name},interval:auto,query:(language:kuery,query:'${kql}'),sort:!(!('@timestamp',desc)))
+``` 
 
 ![](assets/SLS%20告警配置/SLS%20告警配置_image_1.png)
 
