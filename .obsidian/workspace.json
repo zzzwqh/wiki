@@ -149,14 +149,12 @@
             "id": "415ad4ed7f627534",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "DevOps/Docker.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.7.6"
               },
               "icon": "lucide-file",
-              "title": "Docker"
+              "title": "Release Notes 1.7.6"
             }
           }
         ],
