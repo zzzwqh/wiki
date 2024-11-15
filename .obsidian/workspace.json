@@ -314,6 +314,7 @@
   },
   "active": "415ad4ed7f627534",
   "lastOpenFiles": [
+    "DevOps/prometheus/python.md",
     "DevOps/Docker.md",
     "DevOps/安全相关.md",
     "DevOps/assets/安全相关/安全相关_image_1.png",
@@ -359,7 +360,6 @@
     "DevOps/image.png",
     "DevOps/assets/prometheusalert/prometheusalert_image_2.png",
     "DevOps/assets/prometheusalert/prometheusalert_image_1.png",
-    "DevOps/elasticsearch/Stack Monitoring 告警.md",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
