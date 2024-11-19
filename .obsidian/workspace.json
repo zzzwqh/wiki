@@ -151,12 +151,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mysqlUtils/README.md",
+                "file": "DevOps/ALB Ingress 配置.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "ALB Ingress 配置"
             }
           }
         ],
@@ -316,6 +316,7 @@
   },
   "active": "415ad4ed7f627534",
   "lastOpenFiles": [
+    "mysqlUtils/README.md",
     "DevOps/cadvisor 配置.md",
     "DevOps/SLS 告警配置.md",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_3.png",
@@ -335,7 +336,6 @@
     "DevOps/Jmeter 压测小记.md",
     "DevOps/运维问题杂记.md",
     "DevOps/ArgoCD 文档.md",
-    "mysqlUtils/README.md",
     "Excalidraw/test.md",
     "DevOps/Terraform 实践.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
