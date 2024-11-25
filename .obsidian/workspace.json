@@ -158,9 +158,21 @@
               "icon": "lucide-file",
               "title": "ALB Ingress 配置"
             }
+          },
+          {
+            "id": "7ad32791fd496985",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -314,7 +326,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "415ad4ed7f627534",
+  "active": "7ad32791fd496985",
   "lastOpenFiles": [
     "mysqlUtils/README.md",
     "DevOps/cadvisor 配置.md",
