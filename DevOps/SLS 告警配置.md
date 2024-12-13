@@ -17,7 +17,7 @@ kibana_url = https://${kibana_domain}/app/discover#/?_g=(filters:!(),refreshInte
 **告警模块**：{{ alert.annotations.logger_name }}
 **命中数量**：{{ alert.annotations.__count__ }}
 **告警详细**：{{ alert.annotations.message }}
-**其他链接**：{% if alert.query_url -%} [[登陆查询]]({{ alert.query_url }}){% endif -%}  {% if alert.alert_url -%}｜[[告警设置]]({{ alert.alert_url }}) {% endif -%}｜[[Kibana 查询链接]]({{ alert.annotations.kibana_url }})
+**其他链接**：{% if alert.query_url -%} [[登陆查询]]({{ alert.query_url }}){% endif -%}  {% if alert.alert_url -%}｜[[告警设置]]({{ alert.alert_url }}){% endif -%}｜[[Kibana 查询链接]]({{ alert.annotations.kibana_url }})
 
 ```
 ![](assets/SLS%20告警配置/SLS%20告警配置_image_2.png)

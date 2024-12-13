@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/备忘录.md",
+                "file": "DevOps/SLS 告警配置.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "备忘录"
+              "title": "SLS 告警配置"
             }
           }
         ],
@@ -330,6 +330,7 @@
   },
   "active": "7ad32791fd496985",
   "lastOpenFiles": [
+    "DevOps/备忘录.md",
     "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/Bitbucket 自动触发构建任务.md",
@@ -337,7 +338,6 @@
     "DevOps/assets/Bitbucket 自动触发构建任务",
     "DevOps/ArgoCD 文档.md",
     "DevOps/python 镜像.md",
-    "DevOps/备忘录.md",
     "mysqlUtils/README.md",
     "DevOps/cadvisor 配置.md",
     "DevOps/SLS 告警配置.md",
