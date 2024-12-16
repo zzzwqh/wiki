@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/SLS 告警配置.md",
+                "file": "DevOps/备忘录.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SLS 告警配置"
+              "title": "备忘录"
             }
           }
         ],
@@ -330,6 +330,7 @@
   },
   "active": "7ad32791fd496985",
   "lastOpenFiles": [
+    "DevOps/SLS 告警配置.md",
     "DevOps/备忘录.md",
     "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
@@ -340,7 +341,6 @@
     "DevOps/python 镜像.md",
     "mysqlUtils/README.md",
     "DevOps/cadvisor 配置.md",
-    "DevOps/SLS 告警配置.md",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_3.png",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_2.png",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_1.png",
