@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/ArgoCD 文档.md",
+                "file": "DevOps/python 镜像.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ArgoCD 文档"
+              "title": "python 镜像"
             }
           }
         ],
@@ -330,14 +330,15 @@
   },
   "active": "7ad32791fd496985",
   "lastOpenFiles": [
+    "DevOps/SLB 权重配置工具.md",
     "DevOps/备忘录.md",
+    "DevOps/ArgoCD 文档.md",
     "DevOps/SLS 告警配置.md",
     "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "DevOps/Bitbucket 自动触发构建任务.md",
     "DevOps/assets/Bitbucket 自动触发构建任务/Bitbucket 自动触发构建任务_image_1.png",
     "DevOps/assets/Bitbucket 自动触发构建任务",
-    "DevOps/ArgoCD 文档.md",
     "DevOps/python 镜像.md",
     "mysqlUtils/README.md",
     "DevOps/cadvisor 配置.md",
@@ -358,7 +359,6 @@
     "Excalidraw/test.md",
     "DevOps/Terraform 实践.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
-    "DevOps/SLB 权重配置工具.md",
     "DevOps/fake-time-injector K8S 时间服工具.md",
     "DevOps/opentelemetry 实践.md",
     "DevOps/prometheusalert.md",
