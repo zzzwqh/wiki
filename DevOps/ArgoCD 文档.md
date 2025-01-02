@@ -58,6 +58,8 @@ spec:
 
 ![](assets/ArgoCD%20文档/ArgoCD%20文档_image_3.png)
 
+
+
 ## 流水线
 发布流水线脚本如下：
 
