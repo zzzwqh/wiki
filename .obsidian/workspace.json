@@ -163,12 +163,14 @@
             "id": "7ad32791fd496985",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png"
+                "file": "DevOps/备忘录.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "ArgoCD 文档_image_1"
+              "icon": "lucide-file",
+              "title": "备忘录"
             }
           }
         ],
@@ -328,6 +330,7 @@
   },
   "active": "7ad32791fd496985",
   "lastOpenFiles": [
+    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png",
@@ -349,7 +352,6 @@
     "DevOps/cadvisor 配置.md",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_3.png",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_2.png",
-    "DevOps/assets/SLS 告警配置/SLS 告警配置_image_1.png",
     "DevOps/assets/SLS 告警配置",
     "DevOps/prometheus/python.md",
     "DevOps/Docker.md",
