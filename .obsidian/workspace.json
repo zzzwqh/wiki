@@ -165,12 +165,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/安全相关.md",
+                "file": "DevOps/备忘录.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "安全相关"
+              "title": "备忘录"
             }
           }
         ],
@@ -328,8 +328,9 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6a7136d4fb01c960",
+  "active": "7ad32791fd496985",
   "lastOpenFiles": [
+    "DevOps/安全相关.md",
     "DevOps/容器内执行 asprof.md",
     "DevOps/黑盒监控遇到的问题.md",
     "DevOps/ArgoCD 文档.md",
@@ -364,7 +365,6 @@
     "DevOps/assets/SLS 告警配置",
     "DevOps/prometheus/python.md",
     "DevOps/Docker.md",
-    "DevOps/安全相关.md",
     "DevOps/assets/安全相关",
     "DevOps/ALB Ingress 配置.md",
     "DevOps/assets/备忘录",
