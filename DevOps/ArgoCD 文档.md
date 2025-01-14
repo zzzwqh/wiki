@@ -2,6 +2,7 @@
 官方文档
 https://argocd.devops.gold/understand_the_basics/
 
+p
 
 阿里云遇到的 CiliumIdentity 问题
 https://www.alibabacloud.com/help/zh/ack/gitops-faq

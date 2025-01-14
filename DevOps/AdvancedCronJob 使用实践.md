@@ -201,13 +201,13 @@ spec:
             volumes:
               - name: services-logdir
                 hostPath:
-                  path: "/data/logs"
+                  path: "/var/lib/container/data/logs"
               - name: analytic-logdir
                 hostPath:
-                  path: "/data/Analytic"
+                  path: "/var/lib/container/data/Analytic"
               - name: temp-storage
                 hostPath:
-                  path: "/data/temp-storage"
+                  path: "/var/lib/container/data/temp-storage"
               - name: secret-volume
                 secret:
                   secretName: ossutilconfig-secret
@@ -215,6 +215,11 @@ spec:
             failurePolicy:
               type: FailFast
               restartLimit: 1
+            # 设置不可调度的节点，仍可调度
+            tolerations:
+              - key: "node.kubernetes.io/unschedulable"
+                operator: "Exists"
+                effect: "NoSchedule"
 ```
 
 ## 其他资源创建
