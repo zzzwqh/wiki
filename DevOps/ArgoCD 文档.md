@@ -1,8 +1,8 @@
 
 官方文档
 https://argocd.devops.gold/understand_the_basics/
-
-p
+配置用户
+https://cloud.tencent.com/developer/article/2316900?from=15425
 
 阿里云遇到的 CiliumIdentity 问题
 https://www.alibabacloud.com/help/zh/ack/gitops-faq
