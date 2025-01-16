@@ -172,9 +172,21 @@
               "icon": "lucide-file",
               "title": "ArgoCD 文档"
             }
+          },
+          {
+            "id": "b9d0ca51b7ab803d",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-01-16 16.12.13.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-01-16 16.12.13.excalidraw"
+            }
           }
         ],
-        "currentTab": 11
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -328,8 +340,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "7ad32791fd496985",
+  "active": "b9d0ca51b7ab803d",
   "lastOpenFiles": [
+    "DevOps/ArgoCD 文档.md",
+    "Excalidraw/Drawing 2025-01-16 16.12.13.excalidraw.md",
     "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/prometheusalert.md",
     "Excalidraw/OKG 实践思路.md",
@@ -337,7 +351,6 @@
     "DevOps/安全相关.md",
     "DevOps/容器内执行 asprof.md",
     "DevOps/黑盒监控遇到的问题.md",
-    "DevOps/ArgoCD 文档.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
@@ -368,7 +381,6 @@
     "DevOps/prometheus/python.md",
     "DevOps/Docker.md",
     "DevOps/assets/安全相关",
-    "DevOps/ALB Ingress 配置.md",
     "DevOps/assets/备忘录",
     "DevOps/assets/ALB Ingress 配置",
     "DevOps/prometheus/docker/prometheusalert/db/prometheus-alert-template.json",
