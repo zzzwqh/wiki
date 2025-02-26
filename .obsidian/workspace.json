@@ -210,9 +210,21 @@
               "icon": "lucide-book-up",
               "title": "Release Notes 1.8.4"
             }
+          },
+          {
+            "id": "ed7f66417a3d847f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-02-26 11.24.31.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-02-26 11.24.31.excalidraw"
+            }
           }
         ],
-        "currentTab": 14
+        "currentTab": 15
       }
     ],
     "direction": "vertical"
@@ -367,8 +379,9 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "85fa447d2e301a20",
+  "active": "ed7f66417a3d847f",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-02-26 11.24.31.excalidraw.md",
     "DevOps/ArgoCD 文档.md",
     "Excalidraw/kubesphere.md",
     "Excalidraw/Drawing 2025-01-16 16.12.13.excalidraw.md",
@@ -406,7 +419,6 @@
     "DevOps/cadvisor 配置.md",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_3.png",
     "DevOps/assets/SLS 告警配置",
-    "DevOps/prometheus/python.md",
     "DevOps/assets/安全相关",
     "DevOps/assets/备忘录",
     "DevOps/assets/ALB Ingress 配置",
