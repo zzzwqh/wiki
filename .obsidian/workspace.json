@@ -198,9 +198,21 @@
               "icon": "lucide-file",
               "title": "备忘录"
             }
+          },
+          {
+            "id": "85fa447d2e301a20",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
         ],
-        "currentTab": 13
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -219,7 +231,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -354,7 +367,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "e0e0c5fc3f99619c",
+  "active": "85fa447d2e301a20",
   "lastOpenFiles": [
     "DevOps/ArgoCD 文档.md",
     "Excalidraw/kubesphere.md",
