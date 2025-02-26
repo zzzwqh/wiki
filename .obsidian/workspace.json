@@ -215,12 +215,14 @@
             "id": "ed7f66417a3d847f",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2025-02-26 11.24.31.excalidraw.md"
+                "file": "DevOps/elasticsearch/配置索引生命周期.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-02-26 11.24.31.excalidraw"
+              "icon": "lucide-file",
+              "title": "配置索引生命周期"
             }
           }
         ],
