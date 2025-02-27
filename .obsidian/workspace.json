@@ -224,9 +224,21 @@
               "icon": "lucide-file",
               "title": "配置索引生命周期"
             }
+          },
+          {
+            "id": "35ccf8e21b0a3f9b",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-02-27 14.34.09.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-02-27 14.34.09.excalidraw"
+            }
           }
         ],
-        "currentTab": 15
+        "currentTab": 16
       }
     ],
     "direction": "vertical"
@@ -381,8 +393,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "ed7f66417a3d847f",
+  "active": "35ccf8e21b0a3f9b",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/配置索引生命周期.md",
+    "Excalidraw/Drawing 2025-02-27 14.34.09.excalidraw.md",
     "Excalidraw/Drawing 2025-02-26 11.24.31.excalidraw.md",
     "DevOps/ArgoCD 文档.md",
     "Excalidraw/kubesphere.md",
@@ -417,8 +431,6 @@
     "DevOps/Bitbucket 自动触发构建任务.md",
     "DevOps/assets/Bitbucket 自动触发构建任务/Bitbucket 自动触发构建任务_image_1.png",
     "DevOps/assets/Bitbucket 自动触发构建任务",
-    "mysqlUtils/README.md",
-    "DevOps/cadvisor 配置.md",
     "DevOps/assets/SLS 告警配置/SLS 告警配置_image_3.png",
     "DevOps/assets/SLS 告警配置",
     "DevOps/assets/安全相关",
