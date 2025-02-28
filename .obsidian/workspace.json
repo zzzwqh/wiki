@@ -229,12 +229,14 @@
             "id": "35ccf8e21b0a3f9b",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2025-02-27 14.34.09.excalidraw.md"
+                "file": "DevOps/备忘录.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-02-27 14.34.09.excalidraw"
+              "icon": "lucide-file",
+              "title": "备忘录"
             }
           }
         ],
@@ -395,8 +397,9 @@
   },
   "active": "35ccf8e21b0a3f9b",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-02-26 11.24.31.excalidraw.md",
+    "DevOps/elasticsearch/ECK operator 安装集群.md",
     "Excalidraw/Drawing 2025-02-27 14.34.09.excalidraw.md",
+    "Excalidraw/Drawing 2025-02-26 11.24.31.excalidraw.md",
     "Excalidraw/kubesphere.md",
     "Excalidraw/test.md",
     "Excalidraw/OKG 实践思路.md",
@@ -420,7 +423,6 @@
     "DevOps/python 镜像.md",
     "DevOps/Docker Registry Proxy.md",
     "DevOps/MongoDB 7.0 ShardCluster 搭建.md",
-    "DevOps/GOST 代理配置.md",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",
