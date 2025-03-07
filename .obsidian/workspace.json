@@ -243,14 +243,12 @@
             "id": "3085434afccc4b8b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "DevOps/备忘录.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2025-02-27 14.34.09.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "备忘录"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-02-27 14.34.09.excalidraw"
             }
           }
         ],
@@ -411,6 +409,8 @@
   },
   "active": "3085434afccc4b8b",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
+    "DevOps/备忘录.md",
     "DevOps/elasticsearch/xxx.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
     "Excalidraw/Drawing 2025-02-27 14.34.09.excalidraw.md",
@@ -418,14 +418,12 @@
     "Excalidraw/kubesphere.md",
     "Excalidraw/test.md",
     "Excalidraw/OKG 实践思路.md",
-    "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
     "Excalidraw/Drawing 2025-01-16 16.12.13.excalidraw.md",
     "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/ArgoCD 文档.md",
     "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/prometheusalert.md",
-    "DevOps/备忘录.md",
     "DevOps/安全相关.md",
     "DevOps/容器内执行 asprof.md",
     "DevOps/黑盒监控遇到的问题.md",
