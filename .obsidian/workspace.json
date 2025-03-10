@@ -255,12 +255,14 @@
             "id": "1d40888897752bcc",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.9"
+                "file": "DevOps/备忘录.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.9"
+              "icon": "lucide-file",
+              "title": "备忘录"
             }
           }
         ],
@@ -419,7 +421,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "091c070524119eda",
+  "active": "1d40888897752bcc",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "DevOps/备忘录.md",
