@@ -250,9 +250,21 @@
               "icon": "excalidraw-icon",
               "title": "Drawing 2025-02-27 14.34.09.excalidraw"
             }
+          },
+          {
+            "id": "1d40888897752bcc",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
         ],
-        "currentTab": 17
+        "currentTab": 18
       }
     ],
     "direction": "vertical"
@@ -407,7 +419,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "3085434afccc4b8b",
+  "active": "091c070524119eda",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "DevOps/备忘录.md",
