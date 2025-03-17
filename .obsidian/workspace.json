@@ -298,7 +298,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ncent",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -319,7 +319,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -421,7 +422,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "1d40888897752bcc",
+  "active": "ed05400097a28b6a",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "DevOps/备忘录.md",
