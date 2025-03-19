@@ -257,12 +257,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/nsenter 命令记载.md",
+                "file": "DevOps/opentelemetry 实践.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nsenter 命令记载"
+              "title": "opentelemetry 实践"
             }
           }
         ],
@@ -421,8 +421,9 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "1d40888897752bcc",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "DevOps/nsenter 命令记载.md",
     "DevOps/备忘录.md",
     "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "DevOps/elasticsearch/xxx.md",
@@ -448,7 +449,6 @@
     "DevOps/SLS 告警配置.md",
     "DevOps/opentelemetry 实践.md",
     "DevOps/python 镜像.md",
-    "DevOps/Docker Registry Proxy.md",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",
