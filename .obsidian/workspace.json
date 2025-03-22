@@ -266,7 +266,7 @@
             }
           }
         ],
-        "currentTab": 18
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -421,11 +421,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "1d40888897752bcc",
+  "active": "85fa447d2e301a20",
   "lastOpenFiles": [
+    "DevOps/备忘录.md",
     "DevOps/opentelemetry 实践.md",
     "DevOps/nsenter 命令记载.md",
-    "DevOps/备忘录.md",
     "Excalidraw/Drawing 2024-08-19 22.43.49.excalidraw.md",
     "DevOps/elasticsearch/xxx.md",
     "DevOps/elasticsearch/ECK operator 安装集群.md",
