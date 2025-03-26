@@ -1,4 +1,15 @@
+```bash
+# 安装环境
+apt install openjdk-11-jdk
+wget [https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz](https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz)
+tar xf [apache-jmeter-5.6.3.tgz](https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz)
 
+# 将下面环境变量，追加到 .zshrc ( 如果没有 zsh ，加入到 /etc/profile )
+export HISTTIMEFORMAT='%F %T ' 
+export JMETER_HOME=/root/apache-jmeter-5.6.3 
+export CLASSPATH=${JMETER_HOME}/lib/ext/ApacheJMeter_core.jar:${JMETER_HOME}/lib/jorphan.jar:${CLASSPATH} 
+export PATH=${JMETER_HOME}/bin:$PATH
+```
 ## 1. SSL 相关报错
 
 > 最开始压测命令是这样写的 ...
