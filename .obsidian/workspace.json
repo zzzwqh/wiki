@@ -205,12 +205,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/万物皆可代理.md",
+                "file": "DevOps/Jmeter 压测小记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "万物皆可代理"
+              "title": "Jmeter 压测小记"
             }
           },
           {
@@ -425,6 +425,8 @@
   },
   "active": "85fa447d2e301a20",
   "lastOpenFiles": [
+    "DevOps/GOST 代理配置.md",
+    "DevOps/万物皆可代理.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/黑盒监控遇到的问题.md",
     "DevOps/容器内执行 asprof.md",
@@ -449,8 +451,6 @@
     "DevOps/SLB 权重配置工具.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
     "DevOps/Terraform 实践.md",
-    "DevOps/SLS 告警配置.md",
-    "DevOps/python 镜像.md",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",

@@ -1,3 +1,4 @@
+##  0. 安装
 ```bash
 # 安装环境
 apt install openjdk-11-jdk
