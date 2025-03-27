@@ -106,6 +106,8 @@ https://zuozewei.blog.csdn.net/article/details/115299107
 ![[Jmeter 压测小记_image_9.png]]
 
 
+
+
 其他：
 https://www.cnblogs.com/dreamanddead/p/why-should-you-set-hostname-in-jmeter-distribute-test.html
 
