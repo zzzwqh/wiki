@@ -101,16 +101,24 @@ https://zuozewei.blog.csdn.net/article/details/115299107
 - 使用 -R 指定 slave 节点，要注意用 -GThreadCount 而不是 -JThreadCount（其他命令行选项也是），-J 无法将数值下传到各个 slave 节点
 
 ```bash
+# 压测命令
  jmeter -n -t gasdk-pressure-test.jmx -R 10.66.2.46,10.66.2.82 -GThreadCount=4000 -GRampUpTime=10 -GRunTime=300 -GHttp=https -GHost=www.test.com -GPort=443 -l test.jtl -e -o  /data/intranet_report_thread_4000_replicaCount_8_distribute-$(date +%Y%m%d_%H%M%S)
+# nginx 配置
+server {
+    listen 80;
+
+    location /data/ {
+        autoindex on;                             # 显示目录列表
+        autoindex_exact_size off;                 # 文件大小以KB, MB显示
+        autoindex_localtime on;                   # 显示本地时间
+        alias /data/;                     # 指定实际的文件目录
+
+    }
+}
 ```
 
-
-
-
-![[Jmeter 压测小记_image_9.png]]
-
-
-
+上面命令将放到 nginx 下，
+![[assets/Jmeter 压测小记/Jmeter 压测小记_image_9.png]]
 
 
 
@@ -119,4 +127,5 @@ https://www.cnblogs.com/dreamanddead/p/why-should-you-set-hostname-in-jmeter-dis
 
 
 ## 8. 压测标准
-一直 增加 threadCount 直到
+1. 一直增加 threadCount 直到报错
+2. 观察 请求平均耗时，直到不可承受的情况

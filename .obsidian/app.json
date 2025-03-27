@@ -1,4 +1,6 @@
 {
   "attachmentFolderPath": "./assets/Jmeter 压测小记",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "relative"
 }
