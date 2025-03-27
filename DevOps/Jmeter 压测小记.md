@@ -99,3 +99,6 @@ jmeter -JThreadCount=10000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeou
 ```bash
  jmeter -n -t gasdk-pressure-test.jmx -R 10.66.2.46,10.66.2.82 -GThreadCount=4000 -GRampUpTime=10 -GRunTime=300 -GHttp=https -GHost=www.test.com -GPort=443 -l test.jtl -e -o  /data/intranet_report_thread_4000_replicaCount_8_distribute-$(date +%Y%m%d_%H%M%S)
 ```
+
+其他：
+https://www.cnblogs.com/dreamanddead/p/why-should-you-set-hostname-in-jmeter-distribute-test.html
