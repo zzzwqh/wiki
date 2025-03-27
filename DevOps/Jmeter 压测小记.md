@@ -119,7 +119,9 @@ server {
 
 上面命令将放到 nginx 下，
 
-![](Jmeter%20压测小记_image_9.png)
+![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_9.png)
+
+
 
 
 
