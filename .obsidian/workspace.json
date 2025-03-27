@@ -217,14 +217,12 @@
             "id": "8bb7d8f3258a71d1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "DevOps/Jmeter 压测小记.md",
-                "mode": "source",
-                "source": false
+                "file": "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png"
               },
-              "icon": "lucide-file",
-              "title": "Jmeter 压测小记"
+              "icon": "lucide-image",
+              "title": "ArgoCD 文档_image_4"
             }
           },
           {
@@ -439,8 +437,9 @@
   },
   "active": "8bb7d8f3258a71d1",
   "lastOpenFiles": [
-    "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_9.png",
+    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/Jmeter 压测小记.md",
+    "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_9.png",
     "DevOps/assets/Jmeter 压测小记/tmp1743060856736_Jmeter 压测小记_image_9.png",
     "DevOps/assets/Jmeter 压测小记/tmp1743060838257_Jmeter 压测小记_image_9.png",
     "DevOps/assets/Jmeter 压测小记/tmp1743060588112_Jmeter 压测小记_image_9.png",
@@ -469,7 +468,6 @@
     "DevOps/安全相关.md",
     "DevOps/SLB 权重配置工具.md",
     "DevOps/WorkloadSpread 按比例分布负载.md",
-    "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_1.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_2.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_3.png",
     "DevOps/assets/ArgoCD 文档/ArgoCD 文档_image_4.png",
