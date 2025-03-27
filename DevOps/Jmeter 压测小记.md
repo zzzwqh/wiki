@@ -99,9 +99,10 @@ jmeter -JThreadCount=10000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeou
 https://zuozewei.blog.csdn.net/article/details/115299107
 - 分布式压测，就是指定多个发压 slave 节点，执行压测
 - 使用 -R 指定 slave 节点，要注意用 -GThreadCount 而不是 -JThreadCount（其他命令行选项也是），-J 无法将数值下传到各个 slave 节点
+- 每个要执行压测的节点，使用 jmeter-server 命令启动（有些 jmeter.properties 配置需要调整，可以百度下）然后用 jmeter 命令去调用 slave 执行压测
 
 ```bash
-# 压测命令
+# 压测命令，jmeter 命令去调用 slave 执行压测
  jmeter -n -t gasdk-pressure-test.jmx -R 10.66.2.46,10.66.2.82 -GThreadCount=4000 -GRampUpTime=10 -GRunTime=300 -GHttp=https -GHost=www.test.com -GPort=443 -l test.jtl -e -o  /data/intranet_report_thread_4000_replicaCount_8_distribute-$(date +%Y%m%d_%H%M%S)
 # nginx 配置
 server {
@@ -117,7 +118,7 @@ server {
 }
 ```
 
-上面命令将放到 nginx 下，
+上面命令将放到 nginx 下
 
 ![](assets/Jmeter%20压测小记/Jmeter%20压测小记_image_9.png)
 
