@@ -93,6 +93,9 @@ jmeter -JThreadCount=10000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeou
 
 ## 7. 分布式压测
 
+为什么要分布式压测 ： https://baijiahao.baidu.com/s?id=1784588482195041235&wfr=spider&for=pc
+有些分布式压测，使用了 master + slave pod 的方式，放到了 Kubernetes ： https://cloud.tencent.com/developer/article/1808175 
+
 - 分布式压测，就是指定多个发压 slave 节点，执行压测
 - 使用 -R 指定 slave 节点，要注意用 -GThreadCount 而不是 -JThreadCount（其他命令行选项也是），-J 无法将数值下传到各个 slave 节点
 
