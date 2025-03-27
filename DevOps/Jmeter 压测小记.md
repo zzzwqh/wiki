@@ -93,9 +93,9 @@ jmeter -JThreadCount=10000 -JRunTime=30 -Jresponse_timeout=2000 -Jconnect_timeou
 
 ## 7. 分布式压测
 
-
-分布式压测，使用 -R 指定 slave 节点，要注意用 -GThreadCount 而不是 -JThreadCount，-J 无法将数值下传到各个 Slave 节点
+- 分布式压测，就是指定多个发压 slave 节点，执行压测
+- 使用 -R 指定 slave 节点，要注意用 -GThreadCount 而不是 -JThreadCount（其他命令行选项也是），-J 无法将数值下传到各个 slave 节点
 
 ```bash
-root@master:~# rm -rf test.jtl ;  jmeter -n -t gasdk-pressure-test.jmx -R 10.66.2.46,10.66.2.82 -GThreadCount=4000 -JRampUpTime=10 -JRunTime=30 -JHttp=https -JHost=xx.xxx.com -JPort=443 -l test.jtl -e -o  /data/intranet_report_thread_4000_replicaCount_8_distribute-$(date +%Y%m%d_%H%M%S)
+ jmeter -n -t gasdk-pressure-test.jmx -R 10.66.2.46,10.66.2.82 -GThreadCount=4000 -GRampUpTime=10 -GRunTime=300 -GHttp=https -GHost=www.test.com -GPort=443 -l test.jtl -e -o  /data/intranet_report_thread_4000_replicaCount_8_distribute-$(date +%Y%m%d_%H%M%S)
 ```
