@@ -135,4 +135,5 @@ https://www.cnblogs.com/dreamanddead/p/why-should-you-set-hostname-in-jmeter-dis
 
 ## 8. 压测标准
 1. 一直增加 threadCount 直到报错
-2. 观察 请求平均耗时，直到不可承受的情况
+2. 有时候，一直增加 threadCount 的情况下（也不会报错），吞吐量 TPS 不会继续增加，但是耗时会一致增加，大概率是服务端出现了瓶颈，导致耗时，吞吐量到达了上限
+3. 总结第二点，其实就是观察请求平均耗时，直到不可承受的情况
