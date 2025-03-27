@@ -103,7 +103,7 @@ https://zuozewei.blog.csdn.net/article/details/115299107
 
 ```bash
 # 压测命令，jmeter 命令去调用 slave 执行压测
-# 此处 Thead
+# 此处 TheadCount 的总数就要乘以 slave 数量了
  jmeter -n -t gasdk-pressure-test.jmx -R 10.66.2.46,10.66.2.82 -GThreadCount=4000 -GRampUpTime=10 -GRunTime=300 -GHttp=https -GHost=www.test.com -GPort=443 -l test.jtl -e -o  /data/intranet_report_thread_4000_replicaCount_8_distribute-$(date +%Y%m%d_%H%M%S)
 # nginx 配置
 server {
