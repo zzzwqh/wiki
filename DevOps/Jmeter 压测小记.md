@@ -1,7 +1,7 @@
 ##  0. 安装
 ```bash
 # 安装环境
-apt install openjdk-11-jdk
+apt update && apt install -y openjdk-11-jdk
 wget https://dlcdn.apache.org/jmeter/binaries/apache-jmeter-5.6.3.tgz
 tar xf apache-jmeter-5.6.3.tgz
 
