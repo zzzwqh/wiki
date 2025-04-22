@@ -1,0 +1,53 @@
+version: '3'
+networks:
+  es:
+services:
+  elasticsearch:
+    image: elasticsearch:7.17.0             
+    container_name: elasticsearch
+    restart: unless-stopped                           
+    volumes:                              
+      - ./es/data:/usr/share/elasticsearch/data
+      - ./es/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./es/plugins:/usr/share/elasticsearch/plugins
+      - ./es/logs:/usr/share/elasticsearch/logs
+    environment:                             
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xmx4g -Xms4g"
+      ELASTIC_PASSWORD: "123123" 
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - es
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+
+  kibana:
+    image: kibana:7.17.0
+    container_name: kibana
+    restart: unless-stopped
+    environment:
+      - "ELASTICSEARCH_HOSTS=http://elasticsearch:9200"
+      - "ELASTICSEARCH_USERNAME=elastic"
+      - "ELASTICSEARCH_PASSWORD=123123"
+    volumes:
+      - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    links:
+      - elasticsearch
+    networks:
+      - es
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G

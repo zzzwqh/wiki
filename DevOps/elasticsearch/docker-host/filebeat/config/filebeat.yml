@@ -1,0 +1,31 @@
+filebeat:
+    logging.level: debug
+    logging.selectors: ["*"]
+    inputs:
+        - type: log
+          close_inactive: 5m
+          close_timeout: 1h
+          ignore_older: 1h
+          json:
+            keys_under_root: true
+            overwrite_keys: true
+          paths:
+            - /data/logs/*.log
+          tail_files: false
+output.elasticsearch:
+      username: 'elastic'
+      password: '123123'
+      protocol: http
+      hosts: ["10.30.122.125:9200"]
+      index: stress-%{+yyyy.MM.dd}
+      work: 2
+      bulk_max_size: 10240
+setup:
+    ilm:
+        enabled: false
+    template:
+        name: stress
+        pattern: stress
+        settings:
+            index:
+                number_of_shards: 1 

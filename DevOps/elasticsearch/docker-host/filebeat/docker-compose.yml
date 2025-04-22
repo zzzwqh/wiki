@@ -1,0 +1,13 @@
+version: '3'
+services:
+  filebeat:
+    restart: always
+    image: filebeat:7.17.3
+    hostname: ${HOSTNAME} 
+    user: root
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "/etc/hosts:/etc/hosts"
+      - "/etc/timezone:/etc/timezone"
+      - "/data/logs:/data/logs"
+      - "./config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro"
