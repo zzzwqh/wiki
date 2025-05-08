@@ -219,12 +219,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/万物皆可代理.md",
+                "file": "DevOps/备忘录.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "万物皆可代理"
+              "title": "备忘录"
             }
           },
           {
@@ -437,17 +437,19 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6a7136d4fb01c960",
+  "active": "8bb7d8f3258a71d1",
   "lastOpenFiles": [
+    "DevOps/安全相关.md",
+    "DevOps/备忘录.md",
+    "DevOps/运维问题杂记.md",
+    "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/docker-host/efk",
     "DevOps/elasticsearch/docker-host/filebeat/config/filebeat.yml",
     "DevOps/elasticsearch/docker-host/filebeat/config",
     "DevOps/elasticsearch/docker-host/filebeat/docker-compose.yml",
     "DevOps/elasticsearch/docker-host/filebeat",
     "DevOps/elasticsearch/docker-host/未命名.md",
-    "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/docker-host",
-    "DevOps/备忘录.md",
     "DevOps/Jmeter 压测小记.md",
     "DevOps/assets/Jmeter 压测小记/Jmeter 压测小记_image_9.png",
     "DevOps/Argocd部署.md",
@@ -479,12 +481,10 @@
     "Excalidraw/Drawing 2025-01-16 16.12.13.excalidraw.md",
     "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/ArgoCD 文档.md",
-    "DevOps/AdvancedCronJob 使用实践.md",
     "DevOps/assets/Bitbucket 自动触发构建任务",
     "DevOps/assets/SLS 告警配置",
     "DevOps/assets/安全相关",
     "DevOps/assets/备忘录",
-    "DevOps/assets/ALB Ingress 配置",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
