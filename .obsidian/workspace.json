@@ -437,8 +437,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8bb7d8f3258a71d1",
+  "active": "6a7136d4fb01c960",
   "lastOpenFiles": [
+    "DevOps/elasticsearch/docker-host/efk",
+    "DevOps/elasticsearch/docker-host/filebeat/config/filebeat.yml",
+    "DevOps/elasticsearch/docker-host/filebeat/config",
+    "DevOps/elasticsearch/docker-host/filebeat/docker-compose.yml",
+    "DevOps/elasticsearch/docker-host/filebeat",
     "DevOps/elasticsearch/docker-host/未命名.md",
     "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/docker-host",
@@ -475,16 +480,11 @@
     "DevOps/elasticsearch/配置索引生命周期.md",
     "DevOps/ArgoCD 文档.md",
     "DevOps/AdvancedCronJob 使用实践.md",
-    "DevOps/prometheusalert.md",
     "DevOps/assets/Bitbucket 自动触发构建任务",
     "DevOps/assets/SLS 告警配置",
     "DevOps/assets/安全相关",
     "DevOps/assets/备忘录",
     "DevOps/assets/ALB Ingress 配置",
-    "DevOps/prometheus/docker/prometheusalert/db/prometheus-alert-template.json",
-    "DevOps/prometheus/docker/prometheusalert/db/PrometheusAlertDB.db",
-    "DevOps/prometheus/docker/prometheusalert/conf/app.conf",
-    "DevOps/prometheus/docker/alertmanager/template/em.tmpl",
     "未命名 1.canvas",
     "未命名.canvas",
     "image.canvas"
