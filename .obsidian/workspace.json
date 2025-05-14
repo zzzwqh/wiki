@@ -228,6 +228,18 @@
             }
           },
           {
+            "id": "78bef163ead002ec",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-05-14 16.22.33.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-05-14 16.22.33.excalidraw"
+            }
+          },
+          {
             "id": "ed7f66417a3d847f",
             "type": "leaf",
             "state": {
@@ -282,7 +294,7 @@
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 16
       }
     ],
     "direction": "vertical"
@@ -437,10 +449,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "8bb7d8f3258a71d1",
+  "active": "78bef163ead002ec",
   "lastOpenFiles": [
-    "DevOps/安全相关.md",
     "DevOps/备忘录.md",
+    "Excalidraw/Drawing 2025-05-14 16.22.33.excalidraw.md",
+    "DevOps/安全相关.md",
     "DevOps/运维问题杂记.md",
     "DevOps/万物皆可代理.md",
     "DevOps/elasticsearch/docker-host/efk",
@@ -480,7 +493,6 @@
     "Excalidraw/Drawing 2024-08-08 18.41.55.excalidraw.md",
     "Excalidraw/Drawing 2025-01-16 16.12.13.excalidraw.md",
     "DevOps/elasticsearch/配置索引生命周期.md",
-    "DevOps/ArgoCD 文档.md",
     "DevOps/assets/Bitbucket 自动触发构建任务",
     "DevOps/assets/SLS 告警配置",
     "DevOps/assets/安全相关",
