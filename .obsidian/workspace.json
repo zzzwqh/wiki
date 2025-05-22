@@ -240,6 +240,18 @@
             }
           },
           {
+            "id": "04ef657232d95aa5",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
+            }
+          },
+          {
             "id": "ed7f66417a3d847f",
             "type": "leaf",
             "state": {
@@ -294,7 +306,7 @@
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 17
       }
     ],
     "direction": "vertical"
@@ -449,7 +461,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "78bef163ead002ec",
+  "active": "baf5f5e4b6b3b029",
   "lastOpenFiles": [
     "DevOps/备忘录.md",
     "Excalidraw/Drawing 2025-05-14 16.22.33.excalidraw.md",
