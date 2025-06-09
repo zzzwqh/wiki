@@ -305,8 +305,7 @@
               "title": "备忘录"
             }
           }
-        ],
-        "currentTab": 17
+        ]
       }
     ],
     "direction": "vertical"
@@ -461,7 +460,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "baf5f5e4b6b3b029",
+  "active": "e0cde44126cafdaf",
   "lastOpenFiles": [
     "DevOps/备忘录.md",
     "Excalidraw/Drawing 2025-05-14 16.22.33.excalidraw.md",
